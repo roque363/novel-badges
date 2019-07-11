@@ -21,8 +21,8 @@ class Badge extends React.Component {
         </div>
         <div className="badge_section-info">
           <div className="info-group">
-            <h3 class="info-secondary-font">Japanese</h3>
-            <div class="badge-font">
+            <h3 className="info-secondary-font">Japanese</h3>
+            <div className="badge-font">
               <span lang="ja">
                 <ruby>
                   <rb>中</rb>
@@ -40,8 +40,8 @@ class Badge extends React.Component {
             </div>
           </div>
           <div className="info-group">
-            <h3 class="info-secondary-font">Rōmaji</h3>
-            <div class="badge-font">
+            <h3 className="info-secondary-font">Rōmaji</h3>
+            <div className="badge-font">
               {firstName} {lastName}
             </div>
           </div>
