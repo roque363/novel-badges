@@ -13,7 +13,7 @@ class Badge extends React.Component {
     return (
       <div className="badge">
         <div className="badge_header">
-          <img className="logo" src={badgeImage} alt="Badge"/>
+          <img className="logo" src={badgeImage} alt={firstName}/>
         </div>
         <div className="badge_section-name">
           <img className="badge_avatar" src={avatarImage} alt={firstName}/>

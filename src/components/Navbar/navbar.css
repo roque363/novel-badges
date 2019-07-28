@@ -1,16 +1,19 @@
 
 .nav-container {
   background-color: white;
-  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
+  text-align: start;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.28);
 }
 
 .navbar {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-bottom: 16px;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
 }
 
-.navbar img {
-  width: 55%;
-  height: 55%;
+.navbar .logo {
+  font-family: 'Mali', cursive;
+  color: #212529;
+  font-weight: 700;
+  font-size: 24px;
+  text-decoration: none;
 }
