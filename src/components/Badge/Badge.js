@@ -34,8 +34,16 @@ class Badge extends React.Component {
                   <rt>の</rt>
                   <rp>)</rp>
                 </ruby>
-                <ruby><rb>二</rb><rp>(</rp><rt>に</rt><rp>)</rp></ruby>
-                <ruby><rb>乃</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>
+                <ruby>
+                  <rb>二</rb>
+                  <rt>に</rt>
+                </ruby>
+                <ruby>
+                  <rb>乃</rb>
+                  <rp>(</rp>
+                  <rt>の</rt>
+                  <rp>)</rp>
+                </ruby>
               </span>
             </div>
           </div>
