@@ -1,5 +1,5 @@
 import React from 'react';
-import badge from './Badge.css'
+import './Badge.scss'
 
 class Badge extends React.Component {
   render() {
@@ -11,7 +11,7 @@ class Badge extends React.Component {
       mangaTitle
     } = this.props
     return (
-      <div className={badge.badge}>
+      <div className="badge">
         <div className="badge_header">
           <img className="logo" src={badgeImage} alt={firstName}/>
         </div>

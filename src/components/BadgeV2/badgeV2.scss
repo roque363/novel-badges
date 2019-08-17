@@ -1,0 +1,26 @@
+
+.badgeV2 ul>li {
+  margin-bottom: 1rem;
+}
+
+.badgeItem {
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
+  display: flex;
+  padding: 1rem;
+  .badgeItem__avatar {
+    border-radius: 50%;
+    background: #a3a3a3;
+    margin-right: 0.8rem;
+    width: 80px;
+    height: 80px;
+  }
+  .badgeItem__footer {
+    height: auto;
+    display: flex;
+    color: #98ca3f;
+    font-weight: bold;
+    font-style: italic;
+  }
+}

@@ -11,17 +11,25 @@ class BadgeList extends React.Component {
         firstName: 'Nino',
         lastName: 'Nakano',
         mangaTitle: '5Toubun no Hanayome',
-        avatarImage: '',
+        avatarImage: 'https://66.media.tumblr.com/bce6f07582df80a47c2adce923642744/tumblr_pl7iqav9lZ1u2xpn7o1_500.jpg',
         badgeImage: ''
       },
       {
-        id: '',
+        id: '2',
         firstName: 'Miku',
         lastName: 'Nakano',
         mangaTitle: '5Toubun no Hanayome',
-        avatarImage: '',
+        avatarImage: 'https://pa1.narvii.com/7129/988461aa59487d4d3343e59642f838f0787dbb6cr1-600-338_hq.gif',
         badgeImage: ''
-      }
+      },
+      {
+        id: '3',
+        firstName: 'Eriri',
+        lastName: 'Spencer Sawamura',
+        mangaTitle: 'Saenai Heroine no Sodatekata ',
+        avatarImage: 'https://pm1.narvii.com/6983/d8fcb602077a23c009b66ef0cb946051b4347e50r1-721-720v2_hq.jpg',
+        badgeImage: ''
+      },
     ]
   }
   render() {
