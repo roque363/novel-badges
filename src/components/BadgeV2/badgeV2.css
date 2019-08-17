@@ -1,0 +1,12 @@
+
+.badge {
+  background: #ffffff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 10px 10px;
+  overflow: hidden;
+  padding: 0;
+  margin: 16px;
+  height: 120px;
+  min-width: 460px;
+  max-width: 460px;
+}
