@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import BadgeNew from './views/BadgeNew/BadgeNew';
 import BadgeList from './views/BadgeList/BadgeList';
@@ -9,7 +9,12 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <BadgeList/>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/badges" component={BadgeList}></Route>
+          <Route exact path="/badges/new" component={BadgeNew}></Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
