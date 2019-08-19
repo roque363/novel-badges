@@ -1,18 +1,21 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 
+import Navbar from './components/Navbar/Navbar';
 import BadgeNew from './views/BadgeNew/BadgeNew';
 import BadgeList from './views/BadgeList/BadgeList';
-import Navbar from './components/Navbar/Navbar';
+import NotFound from './views/NotFound/NotFound';
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
       <BrowserRouter>
+        <Navbar/>
         <Switch>
-          <Route exact path="/badges" component={BadgeList}></Route>
-          <Route exact path="/badges/new" component={BadgeNew}></Route>
+          <Route exact path="/badges" component={BadgeList}/>
+          <Route exact path="/badges/new" component={BadgeNew}/>
+          <Route path="/404" component={NotFound}/>
+          <Redirect from="*" to="/404"/>
         </Switch>
       </BrowserRouter>
     </div>

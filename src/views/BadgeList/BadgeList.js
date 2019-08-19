@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './badgeList.css'
 
 import BadgeV2 from '../../components/BadgeV2/BadgeV2';
@@ -35,7 +35,7 @@ class BadgeList extends React.Component {
   }
   render() {
     return (
-      <div>
+      <React.Fragment>
         <div className="Badges__hero">
           <div className="Badges__container">
             <h1 className="title">New Waifu</h1>
@@ -53,7 +53,7 @@ class BadgeList extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
