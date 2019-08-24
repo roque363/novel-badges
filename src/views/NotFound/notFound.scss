@@ -1,0 +1,17 @@
+
+.NotFound__container {
+  background: white;
+  margin: 16px;
+  text-align: center;
+
+  .NotFound_img {
+    width: 55%;
+    height: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
