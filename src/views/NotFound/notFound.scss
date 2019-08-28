@@ -1,17 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:900|Shadows+Into+Light+Two');
 
-.NotFound__container {
-  background: white;
-  margin: 16px;
-  text-align: center;
+.notfound-section { 
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 
-  .NotFound_img {
-    width: 55%;
-    height: 55%;
-    margin-left: auto;
-    margin-right: auto;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+  .inner {
+    display: table;
+    width: 100%;
+    max-width: 26em;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 1px 5px rgba(0,0,0,.6);
+  }
+
+  .inner > div { 
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 12em;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  
+  h1 { 
+    font-family: "Raleway", sans-serif; 
+    font-size: 3em; 
+    line-height: .9;
+    font-weight: 900;
+    letter-spacing: -.025em;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+    color: rgb(230, 230, 230);
+  }
+
+  h1 + p { 
+    margin-bottom: 2rem;
+    font-family: "Shadows Into Light Two", cursive; 
+    color: white;
+    font-weight: 600;
+    font-size: 1.6em; 
+    color: rgb(230, 230, 230);
+  }
+
+  &::before {
+    content: ""; 
+    background: url(./../../assets/images/error.gif) no-repeat center center fixed;
     background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  &::after {
+    content: ""; 
+    background: rgba(20, 26, 37, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
   }
 }

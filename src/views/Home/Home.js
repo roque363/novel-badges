@@ -2,11 +2,13 @@ import React from 'react'
 import './home.scss';
 
 
-function NotFound() {
-  return (
-    <div>
-    </div>
-  );
+class Home extends React.Component {
+  render() {
+    return (
+      <div>
+      </div>
+    );
+  }
 }
 
-export default NotFound
+export default Home

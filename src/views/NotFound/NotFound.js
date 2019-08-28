@@ -1,14 +1,30 @@
 import React from 'react'
 import './notFound.scss';
 
-import notFound from '../../assets/error_404.png';
-
-function NotFound() {
-  return (
-    <div className="NotFound__container">
-      <img className="NotFound_img" src={notFound} alt="Error 404"></img>
-    </div>
-  );
+class NotFound extends React.Component {
+  handleBackdClick = () => {
+    this.props.history.goBack();
+  }
+  render() {
+    return (
+      <React.Fragment>
+        <section className="notfound-section">
+          <div className="inner">
+            <div>
+              <h1>Error 404</h1>
+              <p>La página que buscas no parece existir.</p>
+              <button 
+                type="button"
+                className="btn btn-outline-light btn-lg btn-block"
+                onClick={this.handleBackdClick}>
+                Atras
+              </button>
+            </div>
+          </div>
+        </section>
+      </React.Fragment>
+    );
+  }
 }
 
 export default NotFound
