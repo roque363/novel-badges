@@ -46,6 +46,13 @@
     color: rgb(230, 230, 230);
   }
 
+  button {
+    font-weight: 400;
+    svg {
+      margin-right: 0.5rem;
+    }
+  }
+
   &::before {
     content: ""; 
     background: url(./../../assets/images/error.gif) no-repeat center center fixed;

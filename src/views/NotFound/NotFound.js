@@ -1,5 +1,7 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './notFound.scss';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 class NotFound extends React.Component {
   handleBackdClick = () => {
@@ -15,8 +17,9 @@ class NotFound extends React.Component {
               <p>La página que buscas no parece existir.</p>
               <button 
                 type="button"
-                className="btn btn-outline-light btn-lg btn-block"
+                className="btn btn-outline-light btn-lg"
                 onClick={this.handleBackdClick}>
+                <FontAwesomeIcon icon={faArrowLeft} />
                 Atras
               </button>
             </div>

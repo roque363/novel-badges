@@ -20,7 +20,7 @@ class BadgeItem extends React.Component {
   }
 }
 
-class BadgeV2 extends React.Component {
+class List extends React.Component {
   render() {
     return (
       <div className="badgeV2">
@@ -38,4 +38,4 @@ class BadgeV2 extends React.Component {
   }
 }
 
-export default BadgeV2;
+export default List;

@@ -1,13 +1,71 @@
+$primary: #1C2331;
+$primaryDark: #000009;
+$primaryLight: #444b5a;
+$white: #fff;
 
 .navbar {
-  background-color: #fff;
+  background-color: $primary;
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.28);
   z-index: 999;
-  .logo {
-    font-family: 'Mali', cursive;
-    color: #222;
-    font-weight: 700;
-    font-size: 24px;
-    text-decoration: none;
+  .container {
+    padding-right: 0px;
+    padding-left: 0px;
+    .logo {
+      font-family: 'Mali', cursive;
+      color: $white;
+      font-weight: 700;
+      font-size: 24px;
+      text-decoration: none;
+    }
+    .nav-item {
+      margin: 0 0.5rem;
+      text-align: center;
+      .nav-link {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        color: rgba(255, 255, 255, 0.8);
+        position: relative;
+        text-decoration: none;
+        font-size: 18px;
+        &::before,
+        &::after {
+          content: '';
+          height: 14px;
+          width: 14px;
+          position: absolute;
+          transition: all .35s ease;
+          opacity: 0;
+        }
+
+        &::before {
+          content: '';
+          right: 0;
+          top: 0;
+          border-top: 3px solid $white;
+          border-right: 3px solid $white;
+          transform: translate(-100%, 50%);
+        }
+
+        &:after {
+          content: '';
+          left: 0;
+          bottom: 0;
+          border-bottom: 3px solid $white;
+          border-left: 3px solid $white;
+          transform: translate(100%, -50%)
+        }
+
+        &:hover:before,
+        &:hover:after{
+          transform: translate(0,0);
+          opacity: 1;
+        }
+
+        &:hover {
+          color: $white !important;
+        }
+      }
+      
+    }
   }
 }
