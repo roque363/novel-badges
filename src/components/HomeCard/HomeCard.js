@@ -9,6 +9,7 @@ class HomeCard extends React.Component {
   render() {
     return (
       <article className="home-card">
+        {/* Header Oculto */}
         <div className="home-card__header">
           <FontAwesomeIcon className="home-card__header__like" icon={faHeart} style={{color:'rgb(189, 69, 69)'}}/>
           <div className="home-card__header__season">
@@ -16,10 +17,12 @@ class HomeCard extends React.Component {
             <span className="time">{this.props.serie.season}</span>
           </div>
         </div>
+        {/* Header Image */}
         <div className="home-card__img" style={{backgroundImage: `url(${this.props.serie.cover})`}}/>
         <Link to="#">
           <div className="home-card__img--hover" style={{backgroundImage: `url(${this.props.serie.cover})`}}/>
         </Link>
+        {/* Header Content */}
         <div className="home-card__info">
           <span className="badge badge-dark">Wiki</span>
           <h3 className="card-title">{this.props.serie.title}</h3>
@@ -42,7 +45,7 @@ class Grid extends React.Component {
           )
         })}
       </React.Fragment>
-    )
+    );
   }
 }
 
