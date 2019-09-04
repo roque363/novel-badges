@@ -76,6 +76,15 @@
       text-decoration: none;
       color: #AD7D52;
     }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 380px;
+      height: 34px;
+    }
   }
   &:hover {
     box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
@@ -84,8 +93,7 @@
   &:hover &__img--hover {
     height: 100%;
     opacity: 0.3;
-  }
-  
+  }  
   &:hover &__info {
     background-color: transparent;
     position: relative;

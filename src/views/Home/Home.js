@@ -3,6 +3,10 @@ import './home.scss';
 
 import HomeCard from '../../components/HomeCard/HomeCard';
 
+import banner1 from '../../assets/images/banner_1.jpg';
+import banner2 from '../../assets/images/banner_2.png';
+import banner3 from '../../assets/images/banner_3.jpeg';
+
 
 class Home extends React.Component {
   state = {
@@ -33,18 +37,22 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home-main">
+        {/* Hero start */}
         <div className="hero">
           {/* Content before waves*/}
           <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <img src="https://images4.alphacoders.com/102/1022500.jpg" className="d-block w-100" alt="name"/>
+                <img src={banner1} className="d-block w-100" alt="banner"/>
+                <h1>Go-Tōbun no Hanayome</h1>
               </div>
               <div className="carousel-item">
-                <img src="https://www.wallpapermaiden.com/wallpaper/27973/download/3840x2160/hibiki-yuuta-ssss-gridman-anti-shinjou-akane-takarada-rikka-kimono.jpeg" className="d-block w-100" alt="name"/>
+                <img src={banner2} className="d-block w-100" alt="banner"/>
+                <h1>Saenai Heroine no Sodatekata</h1>
               </div>
               <div className="carousel-item">
-                <img src="https://i.ytimg.com/vi/jMk9xXikz6E/maxresdefault.jpg" className="d-block w-100" alt="name"/>
+                <img src={banner3} className="d-block w-100" alt="banner"/>
+                <h1>SSSS. GRIDMAN</h1>
               </div>
             </div>
             <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

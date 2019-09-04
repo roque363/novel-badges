@@ -31,6 +31,22 @@ class BadgeList extends React.Component {
         avatarImage: 'https://pm1.narvii.com/6983/d8fcb602077a23c009b66ef0cb946051b4347e50r1-721-720v2_hq.jpg',
         badgeImage: ''
       },
+      {
+        id: '4',
+        firstName: 'Eriri',
+        lastName: 'Spencer Sawamura',
+        mangaTitle: 'Saenai Heroine no Sodatekata ',
+        avatarImage: 'https://pm1.narvii.com/6983/d8fcb602077a23c009b66ef0cb946051b4347e50r1-721-720v2_hq.jpg',
+        badgeImage: ''
+      },
+      {
+        id: '5',
+        firstName: 'Eriri',
+        lastName: 'Spencer Sawamura',
+        mangaTitle: 'Saenai Heroine no Sodatekata ',
+        avatarImage: 'https://pm1.narvii.com/6983/d8fcb602077a23c009b66ef0cb946051b4347e50r1-721-720v2_hq.jpg',
+        badgeImage: ''
+      },
     ]
   }
   render() {

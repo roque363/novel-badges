@@ -5,23 +5,37 @@
     text-align:center;
     color:white;
     .carousel {
-      .carousel-inner {
-        .carousel-item {
-          max-height: 480px;
-          overflow: hidden;
-          img {
-            height: 480px;
-            object-fit: cover;
-          }
+      .carousel-item {
+        max-height: 480px;
+        overflow: hidden;
+        img {
+          height: 480px;
+          object-fit: cover;
+        }
+        h1 {
+          position: absolute;
+          top: 38%;
+          left: 0; 
+          right: 0; 
+          margin-left: auto; 
+          margin-right: auto; 
+          font-family: 'Mali', sans-serif;
+          font-weight: 600;
+          letter-spacing: 2px;
+          font-size:48px;
+          text-decoration: none;
+          text-shadow: 0px 0px 5px #1C2331;
         }
       }
-      h1 {
-        font-family: 'Mali', sans-serif;
-        font-weight:600;
-        letter-spacing: 2px;
-        font-size:48px;
-        text-decoration: none;
-        text-shadow: 0px 0px 5px #1C2331;
+      .carousel-control-prev-icon {
+        width: 2rem;
+        height: 2rem;
+        background-image: url(./../../assets/images/arrow-prev.svg);
+      }
+      .carousel-control-next-icon {
+        width: 2rem;
+        height: 2rem;
+        background-image: url(./../../assets/images/arrow-next.svg);
       }
     }
     .waves {
