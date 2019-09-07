@@ -9,32 +9,58 @@ import banner3 from '../../assets/images/banner_3.jpeg';
 
 
 class Home extends React.Component {
-  state = {
-    data: [
-      {
-        id: '1',
-        title: 'Go-Tōbun no Hanayome',
-        author: 'Negi Haruba',
-        season: 'Winter 2019',
-        cover: 'https://vignette.wikia.nocookie.net/5toubun-no-hanayome/images/4/4d/Quintuplets_color_art_-_volume_6_release.jpg/revision/latest?cb=20190122040542'
-      },
-      {
-        id: '2',
-        title: 'Saenai Heroine no Sodatekata',
-        author: 'Fumiaki Maruto',
-        season: 'Winter 2015',
-        cover: 'https://www.saenai.tv/images/top/top_vsl_main1.png'
-      },
-      {
-        id: '3',
-        title: 'SSSS.GRIDMAN',
-        author: 'Studio Trigger',
-        season: 'Winter 2018',
-        cover: 'https://gridman.net/img/home/visual_07.jpg'
-      }
-    ]
+
+  constructor(props) {
+    super(props);
+    console.log('1. constructor()');
+
+    this.state = {
+      data: []
+    }
   }
+
+  componentDidMount() {
+    console.log('3. componentDidMount()');
+    this.timeoutId = setTimeout(() => {
+      this.setState({
+        data: [
+          {
+            id: '1',
+            title: 'Go-Tōbun no Hanayome',
+            author: 'Negi Haruba',
+            season: 'Winter 2019',
+            cover: 'https://vignette.wikia.nocookie.net/5toubun-no-hanayome/images/4/4d/Quintuplets_color_art_-_volume_6_release.jpg/revision/latest?cb=20190122040542'
+          },
+          {
+            id: '2',
+            title: 'Saenai Heroine no Sodatekata',
+            author: 'Fumiaki Maruto',
+            season: 'Winter 2015',
+            cover: 'https://www.saenai.tv/images/top/top_vsl_main1.png'
+          },
+          {
+            id: '3',
+            title: 'SSSS.GRIDMAN',
+            author: 'Studio Trigger',
+            season: 'Winter 2018',
+            cover: 'https://gridman.net/img/home/visual_07.jpg'
+          }
+        ]
+      });
+    }, 1000);
+  }
+
+  componentDidUpdate(prevProps, preState){
+    console.log('5. componentDidUpdate()');
+  }
+
+  componentWillUnmount() {
+    console.log('6. componentWillUnmount()');
+    clearTimeout(this.timeoutId);
+  }
+
   render() {
+    console.log('2/4. render()');
     return (
       <div className="home-main">
         {/* Hero start */}
