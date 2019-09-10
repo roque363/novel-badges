@@ -50,7 +50,7 @@ class Home extends React.Component {
     }, 1000);
   }
 
-  componentDidUpdate(prevProps, preState){
+  componentDidUpdate(prevProps, preState) {
     console.log('5. componentDidUpdate()');
   }
 
