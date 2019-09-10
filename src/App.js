@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './views/Home/Home';
 import BadgeNew from './views/BadgeNew/BadgeNew';
 import BadgeList from './views/BadgeList/BadgeList';
+import BadgeRickAndMorty from './views/BadgeRickAndMorty/BadgeRickAndMorty';
 import NotFound from './views/NotFound/NotFound';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/" component={Home}/>
           <Route exact path="/badges" component={BadgeList}/>
           <Route exact path="/badges/new" component={BadgeNew}/>
+          <Route exact path="/badges/RickAndMorty" component={BadgeRickAndMorty}/>
           <Route path="/404" component={NotFound}/>
           <Redirect from="*" to="/404"/>
         </Switch>

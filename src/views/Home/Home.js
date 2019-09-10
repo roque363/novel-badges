@@ -47,7 +47,7 @@ class Home extends React.Component {
           }
         ]
       });
-    }, 1000);
+    }, 800);
   }
 
   componentDidUpdate(prevProps, preState) {

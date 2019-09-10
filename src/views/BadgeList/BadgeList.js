@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './badgeList.css'
 
+import BadgeHero from '../../components/BadgeHero/BadgeHero';
 import BadgeV2 from '../../components/BadgeV2/BadgeV2';
 
 class BadgeList extends React.Component {
@@ -52,11 +53,9 @@ class BadgeList extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="Badges__hero">
-          <div className="Badges__container">
-            <h1 className="title">New Waifu</h1>
-          </div>
-        </div>
+        {/* Header starts */}
+        <BadgeHero title="New Waifu"/>
+        {/* Header ends */}
         <div className="Badges__container">
           <div className="Badges__buttons">
             <Link to="/badges/new" className="btn btn-primary">
