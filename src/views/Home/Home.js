@@ -7,7 +7,6 @@ import banner1 from '../../assets/images/banner_1.jpg';
 import banner2 from '../../assets/images/banner_2.png';
 import banner3 from '../../assets/images/banner_3.jpeg';
 
-
 class Home extends React.Component {
 
   constructor(props) {
