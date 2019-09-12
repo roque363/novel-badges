@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './badgeNew.css'
 
 import Badge from '../../components/Badge/Badge';
+import BadgeHero from '../../components/BadgeHero/BadgeHero';
 import BadgeForm from '../../components/BadgeForm/BadgeForm';
 
 import nino_profile from '../../assets/nino_profile.jpg';
@@ -29,10 +30,8 @@ class BadgeNew extends Component {
 
   render() {
     return (
-      <div className="badge-new-container">
-        <div className="BadgeNew__hero">
-          <h1 className="title">New Waifu</h1>
-        </div>
+      <React.Fragment>
+        <BadgeHero title="New Waifu"/>
         <div className="container">
           <div className="row">
             <div className="col-6">
@@ -57,7 +56,7 @@ class BadgeNew extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

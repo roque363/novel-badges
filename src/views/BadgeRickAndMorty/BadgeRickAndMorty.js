@@ -5,17 +5,40 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import BadgeHero from '../../components/BadgeHero/BadgeHero';
 import Loader from '../../components/Loader/Loader';
 
-function CharacterCard(props) {
-  const { character } = props;
-  return (
-    <React.Fragment>
-      <div className="CharacterCard" style={{ backgroundImage: `url(${character.image})` }}>
-        <div className="CharacterCard__name-container text-truncate">
-          {character.name}
+class CharacterCard extends React.Component {
+  handleHover = e => {
+    console.log( "Button was hover" )
+  }
+
+  render() {
+    const { character } = this.props;
+    let status;
+
+    if (character.status === "Alive") {
+      status = <div className="title title--alive">{character.status}</div>;
+    } else if (character.status === "Dead") {
+      status = <div className="title title--dead">{character.status}</div>;
+    } else {
+      status = <div className="title title--unknown">{character.status}</div>;
+    }
+
+    return (
+      <React.Fragment>
+        <div className="character-card">
+          <h2 className="name">{character.name}</h2>
+          {status}
+          <div className="desc">
+            Origen: {character.origin.name}
+          </div>
+          <img src={character.image} alt={character.name}/>
+          <div className="actions">
+            <button className="actions__trade" onMouseOver={this.handleHover}>{character.species}</button>
+            <button className="actions__cancel" onMouseOver={this.handleHover}>{character.gender}</button>
+          </div>
         </div>
-      </div>
-    </React.Fragment>
-  );
+      </React.Fragment>
+    );
+  }
 }
 
 function LoaderBottom() {
@@ -93,7 +116,7 @@ class BadgeRickAndMorty extends React.Component {
           <div className="container">
             <div className="row">
               {this.state.data.results.map(character => (
-                <div className="col-6 col-md-4 col-lg-3" key={character.id}>
+                <div className="col-md-4 col-lg-3" key={character.id}>
                   <CharacterCard character={character} />
                 </div>
               ))}
