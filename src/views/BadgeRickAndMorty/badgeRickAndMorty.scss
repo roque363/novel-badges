@@ -27,6 +27,14 @@
   overflow: hidden;
 }
 
+.loader-text {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: rgb(32, 32, 32);
+  text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 0.3);
+}
+
 button {
   background-color: #44c767;
   border-radius: 4px;
