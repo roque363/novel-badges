@@ -1,6 +1,6 @@
 {
   "name": "novel-badges",
-  "homepage": "https://roque363.github.io/novel-badges/",
+  "homepage": "https://roque363.github.io/novel-badges",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -26,7 +26,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  
   "eslintConfig": {
     "extends": "react-app"
   },
