@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/novel-badges/static/css/main.0de6f7f4.chunk.css",
+    "main.js": "/novel-badges/static/js/main.8fd8b446.chunk.js",
+    "main.js.map": "/novel-badges/static/js/main.8fd8b446.chunk.js.map",
+    "runtime~main.js": "/novel-badges/static/js/runtime~main.cc0064cb.js",
+    "runtime~main.js.map": "/novel-badges/static/js/runtime~main.cc0064cb.js.map",
+    "static/css/2.266e55a5.chunk.css": "/novel-badges/static/css/2.266e55a5.chunk.css",
+    "static/js/2.739a172b.chunk.js": "/novel-badges/static/js/2.739a172b.chunk.js",
+    "static/js/2.739a172b.chunk.js.map": "/novel-badges/static/js/2.739a172b.chunk.js.map",
+    "index.html": "/novel-badges/index.html",
+    "precache-manifest.1513beab75f0b6a6c8ee6c10fe0ec039.js": "/novel-badges/precache-manifest.1513beab75f0b6a6c8ee6c10fe0ec039.js",
+    "service-worker.js": "/novel-badges/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/novel-badges/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.0de6f7f4.chunk.css.map": "/novel-badges/static/css/main.0de6f7f4.chunk.css.map",
+    "static/media/home.scss": "/novel-badges/static/media/arrow-prev.64226eee.svg",
+    "static/media/banner_1.jpg": "/novel-badges/static/media/banner_1.75ea5578.jpg",
+    "static/media/banner_2.png": "/novel-badges/static/media/banner_2.0df83e36.png",
+    "static/media/banner_3.jpeg": "/novel-badges/static/media/banner_3.b74e7b9c.jpeg",
+    "static/media/notFound.scss": "/novel-badges/static/media/error.d185187f.gif",
+    "static/media/nino.jpg": "/novel-badges/static/media/nino.91f04904.jpg",
+    "static/media/nino_profile.jpg": "/novel-badges/static/media/nino_profile.740357b0.jpg",
+    "static/media/badgeHero.scss": "/novel-badges/static/media/stars.1d17360a.svg"
+  }
+}
