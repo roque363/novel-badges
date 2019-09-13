@@ -11,7 +11,7 @@ import NotFound from './views/NotFound/NotFound';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/novel-badges">
         <Navbar/>
         <Switch>
           <Route exact path="/" component={Home}/>
