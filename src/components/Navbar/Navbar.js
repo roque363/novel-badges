@@ -18,6 +18,9 @@ class BadgeNew extends Component {
                   <Link className="nav-link" to="/">Inicio</Link>
                 </li>
                 <li className="nav-item">
+                  <Link className="nav-link" to="/search">Buscar</Link>
+                </li>
+                <li className="nav-item">
                   <Link className="nav-link" to="/badges/RickAndMorty">Rick y Morty</Link>
                 </li>
                 <li className="nav-item">
