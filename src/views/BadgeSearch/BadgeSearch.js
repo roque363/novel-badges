@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './badgeSearch.scss'
-import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 import BadgeHero from '../../components/BadgeHero/BadgeHero';
 import Loader from '../../components/Loader/Loader';
@@ -71,7 +72,7 @@ class BadgeSearch extends Component {
   state = {
     loading: false,
     error: null,
-    searchName: 'Love is War',
+    searchName: '',
     data: {
       data: {
         Page: {
@@ -91,11 +92,29 @@ class BadgeSearch extends Component {
 
   componentDidMount() {
     this._isMounted = true;
-    this.fetchData()
+    this.fetchData();
   };
 
   componentWillUnmount() {
     this._isMounted = false;
+  }
+
+  handleChange = e => {
+    // console.log({ name: e.target.name, values: e.target.value })
+    if (e.target.name === "search") {
+      this.setState({
+        searchName: e.target.value
+      })
+    }
+  }
+
+  handleClick = e => {
+    // console.log( "Button Search was clicked" )
+    this.fetchData();
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
   }
 
   fetchData = async() => {
@@ -141,7 +160,7 @@ class BadgeSearch extends Component {
     var variables = {
       search: this.state.searchName,
       page: 1,
-      perPage: 12
+      perPage: 15
     };
 
     var url = 'https://graphql.anilist.co'
@@ -181,8 +200,19 @@ class BadgeSearch extends Component {
     return (
       <React.Fragment>
         <BadgeHero title="Buscar Serie"/>
-        {this.state.loading && ( <Loader/> )}
-        {this.state.data.data.Page.media === 0 && ( <h3>No encontramos datos</h3> )}
+        <div className="container search-main">
+          <form className="search-form" action="" onSubmit={this.handleSubmit}>
+            <input
+              onChange={this.handleChange}
+              type="search" 
+              id="search"
+              placeholder="Buscar series ..."
+              name="search"/>
+            <button type="submit" className="search-form__icon" onClick={this.handleClick}>
+                <FontAwesomeIcon icon={faSearch}/>
+              </button>
+          </form>
+        </div>
         <div className="container search-main">
           <div className="row">
             {this.state.data.data.Page.media.map(media => (
@@ -192,6 +222,10 @@ class BadgeSearch extends Component {
             ))}
           </div>
         </div>
+
+        {this.state.loading && ( <Loader/> )}
+        {this.state.data.data.Page.media === 0 && ( <h3>No encontramos datos</h3> )}
+
       </React.Fragment>
     )
   }
