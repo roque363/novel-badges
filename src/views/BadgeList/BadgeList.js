@@ -14,24 +14,36 @@ class BadgeList extends React.Component {
     error: null,
     data: undefined
   }
+  _isMounted = true;
 
   componentDidMount() {
-    this.fetchData()
+    this._isMounted = true;
+    this.fetchData();
+    this.intervalId = setInterval(this.fetchData, 5000);
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
+    clearInterval(this.intervalId);
   }
 
   fetchData = async() => {
-    this.setState({ loading: true, error: null})
+    this.setState({ loading: true, error: null});
 
     try {
       const data = db
-      this.setState({ loading: false, data: data})
+      if (this._isMounted) {
+        setTimeout(() => {
+          this.setState({ loading: false, data: data});
+        }, 800);
+      }
     } catch (error) {
-      this.setState({ loading: true, error: error})
+      this.setState({ loading: true, error: error});
     }
   }
 
   render() {
-    if (this.state.loading === true) {
+    if (this.state.loading === true && !this.state.data) {
       return <Loader/>;
     }
 

@@ -14,17 +14,17 @@ class BadgeForm extends React.Component {
     console.log( "Button Save was clicked" )
   }
 
-  handleSubmit = e => {
-    e.preventDefault();
-    console.log( "Form was submited" )
-    console.log( this.state )
-  }
+  //handleSubmit = e => {
+  //  e.preventDefault();
+  //  console.log( "Form was submited" )
+  //  console.log( this.state )
+  //}
 
   render() {
     return(
       <div>
         <h1>New Waifu</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             <label htmlFor="">First Name</label>
             <input 
@@ -70,7 +70,12 @@ class BadgeForm extends React.Component {
               name="avatarImage"
               value={this.props.formValues.avatarImage}/>
           </div>
-          <button type="submit" onClick={this.handleClick} className="btn btn-primary">Save</button>
+          <button type="submit" onClick={this.handleClick} className="btn btn-primary">
+            Save
+          </button>
+          {this.props.error && (
+            <p className="text-danger">Error en el Formulario</p>
+          )}
         </form>
       </div>
     )
