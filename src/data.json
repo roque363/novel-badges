@@ -2,43 +2,68 @@
   "results": [
     {
       "id": "1",
-      "firstName": "Nino",
-      "lastName": "Nakano",
-      "mangaTitle": "5Toubun no Hanayome",
-      "avatarImage": "https://66.media.tumblr.com/bce6f07582df80a47c2adce923642744/tumblr_pl7iqav9lZ1u2xpn7o1_500.jpg",
-      "badgeImage": ""
+      "title": "Go-Tōbun no Hanayome",
+      "author": "Negi Haruba",
+      "season": "Winter 2019",
+      "cover": "https://vignette.wikia.nocookie.net/5toubun-no-hanayome/images/4/4d/Quintuplets_color_art_-_volume_6_release.jpg/revision/latest?cb=20190122040542",
+      "characters": [
+        {
+          "id": "11",
+          "firstName": "Nino",
+          "lastName": "Nakano",
+          "mangaTitle": "5Toubun no Hanayome",
+          "avatarImage": "https://66.media.tumblr.com/bce6f07582df80a47c2adce923642744/tumblr_pl7iqav9lZ1u2xpn7o1_500.jpg",
+          "badgeImage": ""
+        },
+        {
+          "id": "12",
+          "firstName": "Miku",
+          "lastName": "Nakano",
+          "mangaTitle": "5Toubun no Hanayome",
+          "avatarImage": "https://pa1.narvii.com/7129/988461aa59487d4d3343e59642f838f0787dbb6cr1-600-338_hq.gif",
+          "badgeImage": ""
+        }
+      ]
     },
     {
       "id": "2",
-      "firstName": "Miku",
-      "lastName": "Nakano",
-      "mangaTitle": "5Toubun no Hanayome",
-      "avatarImage": "https://pa1.narvii.com/7129/988461aa59487d4d3343e59642f838f0787dbb6cr1-600-338_hq.gif",
-      "badgeImage": ""
+      "title": "Saenai Heroine no Sodatekata",
+      "author": "Fumiaki Maruto",
+      "season": "Winter 2015",
+      "cover": "https://www.saenai.tv/images/top/top_vsl_main1.png",
+      "characters": [
+        {
+          "id": "21",
+          "firstName": "Eriri",
+          "lastName": "Spencer Sawamura",
+          "mangaTitle": "Saenai Heroine no Sodatekata ",
+          "avatarImage": "https://pm1.narvii.com/6983/d8fcb602077a23c009b66ef0cb946051b4347e50r1-721-720v2_hq.jpg",
+          "badgeImage": ""
+        },
+        {
+          "id": "22",
+          "firstName": "Eriri",
+          "lastName": "Spencer Sawamura",
+          "mangaTitle": "Saenai Heroine no Sodatekata ",
+          "avatarImage": "https://pm1.narvii.com/6983/d8fcb602077a23c009b66ef0cb946051b4347e50r1-721-720v2_hq.jpg",
+          "badgeImage": ""
+        },
+        {
+          "id": "23",
+          "firstName": "Eriri",
+          "lastName": "Spencer Sawamura",
+          "mangaTitle": "Saenai Heroine no Sodatekata ",
+          "avatarImage": "https://pm1.narvii.com/6983/d8fcb602077a23c009b66ef0cb946051b4347e50r1-721-720v2_hq.jpg",
+          "badgeImage": ""
+        }
+      ]
     },
     {
       "id": "3",
-      "firstName": "Eriri",
-      "lastName": "Spencer Sawamura",
-      "mangaTitle": "Saenai Heroine no Sodatekata ",
-      "avatarImage": "https://pm1.narvii.com/6983/d8fcb602077a23c009b66ef0cb946051b4347e50r1-721-720v2_hq.jpg",
-      "badgeImage": ""
-    },
-    {
-      "id": "4",
-      "firstName": "Eriri",
-      "lastName": "Spencer Sawamura",
-      "mangaTitle": "Saenai Heroine no Sodatekata ",
-      "avatarImage": "https://pm1.narvii.com/6983/d8fcb602077a23c009b66ef0cb946051b4347e50r1-721-720v2_hq.jpg",
-      "badgeImage": ""
-    },
-    {
-      "id": "5",
-      "firstName": "Eriri",
-      "lastName": "Spencer Sawamura",
-      "mangaTitle": "Saenai Heroine no Sodatekata ",
-      "avatarImage": "https://pm1.narvii.com/6983/d8fcb602077a23c009b66ef0cb946051b4347e50r1-721-720v2_hq.jpg",
-      "badgeImage": ""
+      "title": "SSSS.GRIDMAN",
+      "author": "Studio Trigger",
+      "season": "Winter 2018",
+      "cover": "https://gridman.net/img/home/visual_07.jpg"
     }
   ]
 }

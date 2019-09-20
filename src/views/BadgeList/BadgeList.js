@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './badgeList.scss'
-
 import db from '../../data.json';
 
 import BadgeHero from '../../components/BadgeHero/BadgeHero';
@@ -58,7 +57,7 @@ class BadgeList extends React.Component {
           </div>
           <div className="Badges__list">
             <div className="Badges__container">
-              <BadgeV2 badges={this.state.data}/>
+              <BadgeV2 badges={this.state.data.results}/>
             </div>
           </div>
         </div>

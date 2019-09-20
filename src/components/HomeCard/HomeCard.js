@@ -19,7 +19,12 @@ class HomeCard extends React.Component {
         </div>
         {/* Header Image */}
         <div className="home-card__img" style={{backgroundImage: `url(${this.props.serie.cover})`}}/>
-        <Link to="#">
+        <Link to={{
+          pathname: `/badges/${this.props.serie.id}`,
+          state: {
+            badgeData: this.props.serie
+          }
+        }}>
           <div className="home-card__img--hover" style={{backgroundImage: `url(${this.props.serie.cover})`}}/>
         </Link>
         {/* Header Content */}
