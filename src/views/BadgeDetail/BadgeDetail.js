@@ -9,13 +9,13 @@ export class BadgeDetail extends Component {
   state = {
     loading: true,
     error: null,
+    modalIsOpen: false,
     data: undefined
   }
 
   componentDidMount() {
     const { badgeData } = this.props.location.state;
     // console.log( badgeData );
-    
     this.fetchData(badgeData);
   }
 
@@ -27,6 +27,14 @@ export class BadgeDetail extends Component {
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
+  }
+
+  handleOpenModal = e => {
+    this.setState({ modalIsOpen: true })
+  }
+
+  handleCloseModal = e => {
+    this.setState({ modalIsOpen: false })
   }
 
   render() {
@@ -42,8 +50,12 @@ export class BadgeDetail extends Component {
         <div className="container">
           <p>Id: {this.props.match.params.badgeId}</p>
           <p>Autor: {this.state.data.author}</p>
-          <button className="btn btn-danger">Elminar</button>
-          <Modal isOpen={true}>Menaje de Test</Modal>
+          <button onClick={this.handleOpenModal} className="btn btn-primary">Ver</button>
+          <Modal
+            isOpen={this.state.modalIsOpen}
+            onClose={this.handleCloseModal} >
+            Menaje de Test
+          </Modal>
         </div>
       </React.Fragment>
     )

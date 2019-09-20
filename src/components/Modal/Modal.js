@@ -8,8 +8,8 @@ function Modal (props) {
   }
   return ReactDOM.createPortal(
     <div className="modal">
-      <div className="modal-container">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <div className="modal__container">
+        <button className="close" onClick={props.onClose} type="button">
           <span aria-hidden="true">&times;</span>
         </button>
         {props.children}

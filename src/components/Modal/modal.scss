@@ -8,4 +8,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  &__container{
+    position: relative;
+    top: 10rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 400px;
+  }
 }
