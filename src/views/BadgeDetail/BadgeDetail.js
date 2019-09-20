@@ -5,13 +5,14 @@ import BadgeHero from '../../components/BadgeHero/BadgeHero';
 import Loader from '../../components/Loader/Loader';
 import Modal from '../../components/Modal/Modal';
 
-export class BadgeDetail extends Component {
+class BadgeDetail extends Component {
   state = {
     loading: true,
     error: null,
     modalIsOpen: false,
     data: undefined
   }
+  _isMounted = true;
 
   componentDidMount() {
     const { badgeData } = this.props.location.state;

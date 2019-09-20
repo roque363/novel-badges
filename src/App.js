@@ -6,7 +6,7 @@ import Home from './views/Home/Home';
 import BadgeSearch from './views/BadgeSearch/BadgeSearch';
 import BadgeNew from './views/BadgeNew/BadgeNew';
 import BadgeDetail from './views/BadgeDetail/BadgeDetail';
-import BadgeList from './views/BadgeList/BadgeList';
+import BadgeListContainer from './views/BadgeListContainer/BadgeListContainer';
 import BadgeRickAndMorty from './views/BadgeRickAndMorty/BadgeRickAndMorty';
 import NotFound from './views/NotFound/NotFound';
 
@@ -18,8 +18,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/search" component={BadgeSearch}/>
-          <Route exact path="/badges" component={BadgeList}/>
-          <Route exact path="/badges/:badgeId" component={BadgeDetail}/>
+          <Route exact path="/badges" component={BadgeListContainer}/>
+          <Route exact path="/badges/detail/:badgeId" component={BadgeDetail}/>
           <Route exact path="/badges/new" component={BadgeNew}/>
           <Route exact path="/badges/RickAndMorty" component={BadgeRickAndMorty}/>
           <Route path="/404" component={NotFound}/>

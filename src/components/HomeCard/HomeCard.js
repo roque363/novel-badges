@@ -20,7 +20,7 @@ class HomeCard extends React.Component {
         {/* Header Image */}
         <div className="home-card__img" style={{backgroundImage: `url(${this.props.serie.cover})`}}/>
         <Link to={{
-          pathname: `/badges/${this.props.serie.id}`,
+          pathname: `/badges/detail/${this.props.serie.id}`,
           state: {
             badgeData: this.props.serie
           }

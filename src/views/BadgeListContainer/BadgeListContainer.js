@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './badgeList.scss'
+import './badgeListContainer.scss'
 import db from '../../data.json';
 
 import BadgeHero from '../../components/BadgeHero/BadgeHero';
 import Loader from '../../components/Loader/Loader';
-import BadgeV2 from '../../components/BadgeV2/BadgeV2';
+import BadgeList from '../../components/BadgeList/BadgeList';
 
-class BadgeList extends React.Component {
+class BadgeListContainer extends React.Component {
   state = {
     loading: true,
     error: null,
@@ -28,7 +28,6 @@ class BadgeList extends React.Component {
 
   fetchData = async() => {
     this.setState({ loading: true, error: null});
-
     try {
       const data = db
       if (this._isMounted) {
@@ -48,7 +47,7 @@ class BadgeList extends React.Component {
 
     return (
       <React.Fragment>
-        <BadgeHero title="New Waifu"/>
+        <BadgeHero title="Lista"/>
         <div className="Badges__container">
           <div className="Badges__buttons">
             <Link to="/badges/new" className="btn btn-primary">
@@ -56,9 +55,7 @@ class BadgeList extends React.Component {
             </Link>
           </div>
           <div className="Badges__list">
-            <div className="Badges__container">
-              <BadgeV2 badges={this.state.data.results}/>
-            </div>
+            <BadgeList badges={this.state.data.results}/>
           </div>
         </div>
       </React.Fragment>
@@ -66,4 +63,4 @@ class BadgeList extends React.Component {
   }
 }
 
-export default BadgeList;
+export default BadgeListContainer;
