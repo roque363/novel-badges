@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e13f2838dba08abd77934ba46b61506d",
+    "revision": "014802161e0d091b41d7dcdb7191a8fa",
     "url": "/novel-badges/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/novel-badges/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "24a2e1dfc0d4c204772a",
+    "revision": "5dac0f70d613e0c6fc70",
     "url": "/novel-badges/static/css/main.15160856.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/novel-badges/static/js/2.5ebeb91c.chunk.js"
   },
   {
-    "revision": "24a2e1dfc0d4c204772a",
-    "url": "/novel-badges/static/js/main.50aadf75.chunk.js"
+    "revision": "5dac0f70d613e0c6fc70",
+    "url": "/novel-badges/static/js/main.eee27e96.chunk.js"
   },
   {
     "revision": "b599b507d6a65070969a",
