@@ -11,7 +11,7 @@
           "id": "11",
           "firstName": "Nino",
           "lastName": "Nakano",
-          "mangaTitle": "5Toubun no Hanayome",
+          "mangaTitle": "Go-Tōbun no Hanayome",
           "avatarImage": "https://66.media.tumblr.com/bce6f07582df80a47c2adce923642744/tumblr_pl7iqav9lZ1u2xpn7o1_500.jpg",
           "badgeImage": ""
         },
@@ -19,7 +19,7 @@
           "id": "12",
           "firstName": "Miku",
           "lastName": "Nakano",
-          "mangaTitle": "5Toubun no Hanayome",
+          "mangaTitle": "Go-Tōbun no Hanayome",
           "avatarImage": "https://pa1.narvii.com/7129/988461aa59487d4d3343e59642f838f0787dbb6cr1-600-338_hq.gif",
           "badgeImage": ""
         }
@@ -64,6 +64,27 @@
       "author": "Studio Trigger",
       "season": "Winter 2018",
       "cover": "https://gridman.net/img/home/visual_07.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Gamers!",
+      "author": "Sekina Aoi",
+      "season": "Summer 2017",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/71JVeEL3NQL._SL1000_.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Hitori Bocchi no Marumaru Seikatsu",
+      "author": "Katsuwo",
+      "season": "Spring 2019",
+      "cover": "https://3.bp.blogspot.com/-0JZak1IyUVk/XOaomjaI5cI/AAAAAAAAESI/fhLIbRRiC6oNfQPt2o8XZxHgfEIqX0b6gCLcBGAs/s1600/645654465.jpg"
+    },
+    {
+      "id": "6",
+      "title": "White Album 2",
+      "author": "Aquaplus",
+      "season": "Fall 2013",
+      "cover": "https://img1.ak.crunchyroll.com/i/spire3/eb8e031b31c11a2dc86f67356c3b33fe1380822049_main.jpg"
     }
   ]
 }

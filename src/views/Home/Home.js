@@ -12,7 +12,7 @@ class Home extends React.Component {
 
   constructor(props) {
     super(props);
-    console.log('1. constructor()');
+    // console.log('1. constructor()');
 
     this.state = {
       data: {
@@ -22,7 +22,7 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    console.log('3. componentDidMount()');
+    // console.log('3. componentDidMount()');
     this.timeoutId = setTimeout(() => {
       this.setState({
         data: db
@@ -31,11 +31,11 @@ class Home extends React.Component {
   }
 
   componentDidUpdate(prevProps, preState) {
-    console.log('5. componentDidUpdate()');
+    // console.log('5. componentDidUpdate()');
   }
 
   componentWillUnmount() {
-    console.log('6. componentWillUnmount()');
+    // console.log('6. componentWillUnmount()');
     clearTimeout(this.timeoutId);
   }
 
