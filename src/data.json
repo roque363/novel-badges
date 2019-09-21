@@ -5,7 +5,7 @@
       "title": "Go-Tōbun no Hanayome",
       "author": "Negi Haruba",
       "season": "Winter 2019",
-      "cover": "https://vignette.wikia.nocookie.net/5toubun-no-hanayome/images/4/4d/Quintuplets_color_art_-_volume_6_release.jpg/revision/latest?cb=20190122040542",
+      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/Go-T%C5%8Dbun%20no%20Hanayome.jpg",
       "characters": [
         {
           "id": "11",
@@ -30,7 +30,7 @@
       "title": "Saenai Heroine no Sodatekata",
       "author": "Fumiaki Maruto",
       "season": "Winter 2015",
-      "cover": "https://www.saenai.tv/images/top/top_vsl_main1.png",
+      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/Saenai%20Heroine%20no%20Sodatekata.png",
       "characters": [
         {
           "id": "21",
@@ -63,28 +63,28 @@
       "title": "SSSS.GRIDMAN",
       "author": "Studio Trigger",
       "season": "Winter 2018",
-      "cover": "https://gridman.net/img/home/visual_07.jpg"
+      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/SSSS.GRIDMAN.jpg"
     },
     {
       "id": "4",
       "title": "Gamers!",
       "author": "Sekina Aoi",
       "season": "Summer 2017",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/71JVeEL3NQL._SL1000_.jpg"
+      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/Gamers.jpg"
     },
     {
       "id": "5",
       "title": "Hitori Bocchi no Marumaru Seikatsu",
       "author": "Katsuwo",
       "season": "Spring 2019",
-      "cover": "https://3.bp.blogspot.com/-0JZak1IyUVk/XOaomjaI5cI/AAAAAAAAESI/fhLIbRRiC6oNfQPt2o8XZxHgfEIqX0b6gCLcBGAs/s1600/645654465.jpg"
+      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/Hitori%20Bocchi.jpg"
     },
     {
       "id": "6",
       "title": "White Album 2",
       "author": "Aquaplus",
       "season": "Fall 2013",
-      "cover": "https://img1.ak.crunchyroll.com/i/spire3/eb8e031b31c11a2dc86f67356c3b33fe1380822049_main.jpg"
+      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/White%20Album%202.jpg"
     }
   ]
 }
