@@ -1,18 +1,12 @@
-$primary: #1C2331;
-$primaryDark: #000009;
-$primaryLight: #444b5a;
-$white: #fff;
-
 .navbar {
-  background-color: $primary;
+  background-color: var(--primary);
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.28);
-  z-index: 999;
   .container {
     padding-right: 0px;
     padding-left: 0px;
     .logo {
       font-family: 'Mali', cursive;
-      color: $white;
+      color: var(--white);
       font-weight: 700;
       font-size: 24px;
       text-decoration: none;
@@ -41,8 +35,8 @@ $white: #fff;
           content: '';
           right: 0;
           top: 0;
-          border-top: 3px solid $white;
-          border-right: 3px solid $white;
+          border-top: 3px solid var(--white);
+          border-right: 3px solid var(--white);
           transform: translate(-100%, 50%);
         }
 
@@ -50,8 +44,8 @@ $white: #fff;
           content: '';
           left: 0;
           bottom: 0;
-          border-bottom: 3px solid $white;
-          border-left: 3px solid $white;
+          border-bottom: 3px solid var(--white);
+          border-left: 3px solid var(--white);
           transform: translate(100%, -50%)
         }
 
@@ -62,7 +56,7 @@ $white: #fff;
         }
 
         &:hover {
-          color: $white !important;
+          color: var(--white) !important;
         }
       }
       

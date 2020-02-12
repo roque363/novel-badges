@@ -38,20 +38,18 @@ class HomeCard extends React.Component {
   }
 }
 
-class Grid extends React.Component {
-  render() {
-    return (
-      <React.Fragment>
-        {this.props.series.map((serie) => {
-          return(
-            <div className="col-md-6 col-lg-4" key={serie.id}>
-              <HomeCard serie={serie}/>
-            </div>
-          )
-        })}
-      </React.Fragment>
-    );
-  }
+function Grid ({series}) {
+  return (
+    <React.Fragment>
+      {series.map((serie) => {
+        return(
+          <div className="col-md-6 col-lg-4" key={serie.id}>
+            <HomeCard serie={serie}/>
+          </div>
+        )
+      })}
+    </React.Fragment>
+  )
 }
 
 export default Grid;

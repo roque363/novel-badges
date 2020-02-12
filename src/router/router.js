@@ -1,5 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
+// Constans
+import * as ROUTES from '../constants/routes'
 // Layouts
 import BasicLayout from '../layout/BasicLayout'
 // Generic Views
@@ -13,16 +15,16 @@ import NotFound from '../views/NotFound/NotFound'
 
 function router() {
   return (
-    <BrowserRouter basename="/novel-badges">
+    <BrowserRouter basename={ROUTES.BASE_ROUTE}>
       <Switch>
-        <BasicRoute exact path="/" component={Home}/>
-        <BasicRoute exact path="/search" component={BadgeSearch}/>
-        <BasicRoute exact path="/badges" component={BadgeListContainer}/>
-        <BasicRoute exact path="/badges/detail/:badgeId" component={BadgeDetail}/>
-        <BasicRoute exact path="/badges/new" component={BadgeNew}/>
-        <BasicRoute exact path="/badges/RickAndMorty" component={BadgeRickAndMorty}/>
-        <Route path="/404" component={NotFound}/>
-        <Redirect from="*" to="/404"/>
+        <BasicRoute exact path={ROUTES.HOME} component={Home}/>
+        <BasicRoute exact path={ROUTES.SEARCH} component={BadgeSearch}/>
+        <BasicRoute exact path={ROUTES.BADGES} component={BadgeListContainer}/>
+        <BasicRoute exact path={ROUTES.BADGES_DETAIL} component={BadgeDetail}/>
+        <BasicRoute exact path={ROUTES.BADGES_NEW} component={BadgeNew}/>
+        <BasicRoute exact path={ROUTES.RICKANDMORTY} component={BadgeRickAndMorty}/>
+        <Route path={ROUTES.NOT_FOUND} component={NotFound}/>
+        <Redirect from="*" to={ROUTES.NOT_FOUND}/>
       </Switch>
     </BrowserRouter>
   )

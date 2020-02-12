@@ -1,6 +1,5 @@
-
 .home-main {
-  .hero {
+  &__hero {
     position:relative;
     text-align:center;
     color:white;
@@ -92,9 +91,8 @@
       }
     }
   }
-
-  .home-content {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+  &__content {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
