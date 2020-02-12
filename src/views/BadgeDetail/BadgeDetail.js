@@ -1,66 +1,58 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import './badgeDetail.scss';
 
 import BadgeHero from '../../components/BadgeHero/BadgeHero';
 import Loader from '../../components/Loader/Loader';
 import Modal from '../../components/Modal/Modal';
 
-class BadgeDetail extends Component {
-  state = {
-    loading: true,
-    error: null,
-    modalIsOpen: false,
-    data: undefined
-  }
-  _isMounted = true;
+function BadgeDetail() {
+  const [loading, setLoading] = useState(true)
+  const [isMounted, setIsMounted] = useState(true)
+  const [error, setError] = useState(null)
+  const [modalIsOpen, setModalIsOpen] = useState(false)
+  const [data, setData] = useState(undefined)
 
-  componentDidMount() {
-    const { badgeData } = this.props.location.state;
-    // console.log( badgeData );
-    this.fetchData(badgeData);
-  }
-
-  fetchData = async (badgeData) => {
-    this.setState({ loading: true, error: null });
+  const fetchData = async (id) => {
+    setLoading(true)
+    setError(null)
     try {
       // console.log( this.props.match.params.badgeId )
-      this.setState({ loading: false, data: badgeData });
+      setLoading(false)
     } catch (error) {
-      this.setState({ loading: false, error: error });
+      setLoading(false)
+      setError(error)
     }
   }
 
-  handleOpenModal = e => {
-    this.setState({ modalIsOpen: true })
+  const handleOpenModal = e => {
+    setModalIsOpen(true)
   }
 
-  handleCloseModal = e => {
-    this.setState({ modalIsOpen: false })
+  const handleCloseModal = e => {
+    setModalIsOpen(false)
   }
 
-  render() {
-    if (this.state.loading) {
-      return <Loader/>
-    }
-    if (this.state.error) {
-      return <h3>{this.state.error}</h3>
-    }
-    return (
-      <React.Fragment>
-        <BadgeHero title={this.state.data.title}/>
-        <div className="container">
-          <p>Id: {this.props.match.params.badgeId}</p>
-          <p>Autor: {this.state.data.author}</p>
-          <button onClick={this.handleOpenModal} className="btn btn-primary">Ver</button>
-          <Modal
-            isOpen={this.state.modalIsOpen}
-            onClose={this.handleCloseModal} >
-            Menaje de Test
-          </Modal>
-        </div>
-      </React.Fragment>
-    )
+  if (loading) {
+    return <Loader/>
   }
+  if (error) {
+    return <h3>{error}</h3>
+  }
+  return (
+    <React.Fragment>
+      <BadgeHero title={data.title}/>
+      <div className="container">
+        <p>Id: {data.id}</p>
+        <p>Autor: {data.author}</p>
+        <button onClick={handleOpenModal} className="btn btn-primary">Ver</button>
+        <Modal
+          isOpen={modalIsOpen}
+          onClose={handleCloseModal} >
+          Menaje de Test
+        </Modal>
+      </div>
+    </React.Fragment>
+  )
 }
 
 export default BadgeDetail

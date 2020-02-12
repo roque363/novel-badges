@@ -2,16 +2,16 @@
   "series": [
     {
       "id": "1",
-      "title": "Go-Tōbun no Hanayome",
+      "title": "The Quintessential Quintuplets",
       "author": "Negi Haruba",
       "season": "Winter 2019",
-      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/the_quintessential_quintuplets.jpg",
+      "cover": "the_quintessential_quintuplets.jpg",
       "characters": [
         {
           "id": "11",
           "firstName": "Nino",
           "lastName": "Nakano",
-          "mangaTitle": "Go-Tōbun no Hanayome",
+          "mangaTitle": "The Quintessential Quintuplets",
           "avatarImage": "https://66.media.tumblr.com/bce6f07582df80a47c2adce923642744/tumblr_pl7iqav9lZ1u2xpn7o1_500.jpg",
           "badgeImage": ""
         },
@@ -19,7 +19,7 @@
           "id": "12",
           "firstName": "Miku",
           "lastName": "Nakano",
-          "mangaTitle": "Go-Tōbun no Hanayome",
+          "mangaTitle": "The Quintessential Quintuplets",
           "avatarImage": "https://pa1.narvii.com/7129/988461aa59487d4d3343e59642f838f0787dbb6cr1-600-338_hq.gif",
           "badgeImage": ""
         }
@@ -30,7 +30,7 @@
       "title": "Saenai Heroine no Sodatekata",
       "author": "Fumiaki Maruto",
       "season": "Winter 2015",
-      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/saekano.png",
+      "cover": "saekano.png",
       "characters": [
         {
           "id": "21",
@@ -63,28 +63,28 @@
       "title": "SSSS.GRIDMAN",
       "author": "Studio Trigger",
       "season": "Winter 2018",
-      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/ssss_gridman.jpg"
+      "cover": "ssss_gridman.jpg"
     },
     {
       "id": "4",
       "title": "Gamers!",
       "author": "Sekina Aoi",
       "season": "Summer 2017",
-      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/Gamers.jpg"
+      "cover": "Gamers.jpg"
     },
     {
       "id": "5",
       "title": "Hitori Bocchi no Marumaru Seikatsu",
       "author": "Katsuwo",
       "season": "Spring 2019",
-      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/hitori_bocchi.jpg"
+      "cover": "hitori_bocchi.jpg"
     },
     {
       "id": "6",
       "title": "White Album 2",
       "author": "Aquaplus",
       "season": "Fall 2013",
-      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/white_album_2.jpg"
+      "cover": "white_album_2.jpg"
     }
   ]
 }

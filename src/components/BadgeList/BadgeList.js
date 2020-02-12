@@ -1,5 +1,7 @@
 import React from 'react'
 import './badgeList.scss'
+// Constanst
+import * as VARIABLES from '../../constants/variables'
 
 class BadgeItem extends React.Component {
   render() {
@@ -7,12 +9,12 @@ class BadgeItem extends React.Component {
       <div className="badgeItem">
         <img
           className="badgeItem__avatar"
-          src={this.props.badge.cover || "https://66.media.tumblr.com/bce6f07582df80a47c2adce923642744/tumblr_pl7iqav9lZ1u2xpn7o1_500.jpg"}
-          alt={this.props.badge.title || "Cover"}/>
+          src={`${VARIABLES.URL_IMAGE}${this.props.badge.cover}`}
+          alt={this.props.badge.title}/>
         <div>
-          <h2>{this.props.badge.title || "Titulo"}</h2>
+          <h2>{this.props.badge.title}</h2>
           <div className="badgeItem__footer">
-            #{this.props.badge.author || "Autor"}
+            #{this.props.badge.author}
           </div>
         </div>
       </div>

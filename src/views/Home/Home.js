@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './home.scss';
 import db from '../../data.json';
 // Components
-import HomeCard from '../../components/HomeCard/HomeCard';
+import CardSerie from '../../components/CardSerie/CardSerie';
 // Images
 import banner1 from '../../assets/images/the_quintessential_quintuplets_banner.jpg';
 import banner2 from '../../assets/images/saekano_banner.png';
@@ -81,7 +81,13 @@ function Home() {
       <div className="container home-main__content">
         {!loading &&
           <div className="row">
-            <HomeCard series={data.series}/>
+            {data.series.map((serie, index) => {
+              return (
+                <div className="col-md-6 col-lg-4" key={index}>
+                  <CardSerie serie={serie}/>
+                </div>
+              )
+            })}
           </div>
         }
       </div>

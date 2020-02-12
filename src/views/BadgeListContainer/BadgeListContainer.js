@@ -55,7 +55,7 @@ class BadgeListContainer extends React.Component {
             </Link>
           </div>
           <div className="Badges__list">
-            <BadgeList badges={this.state.data.results}/>
+            <BadgeList badges={this.state.data.series}/>
           </div>
         </div>
       </React.Fragment>
