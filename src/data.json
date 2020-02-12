@@ -5,7 +5,7 @@
       "title": "Go-Tōbun no Hanayome",
       "author": "Negi Haruba",
       "season": "Winter 2019",
-      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/Go-T%C5%8Dbun%20no%20Hanayome.jpg",
+      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/the_quintessential_quintuplets.jpg",
       "characters": [
         {
           "id": "11",
@@ -30,7 +30,7 @@
       "title": "Saenai Heroine no Sodatekata",
       "author": "Fumiaki Maruto",
       "season": "Winter 2015",
-      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/Saenai%20Heroine%20no%20Sodatekata.png",
+      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/saekano.png",
       "characters": [
         {
           "id": "21",
@@ -63,7 +63,7 @@
       "title": "SSSS.GRIDMAN",
       "author": "Studio Trigger",
       "season": "Winter 2018",
-      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/SSSS.GRIDMAN.jpg"
+      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/ssss_gridman.jpg"
     },
     {
       "id": "4",
@@ -77,14 +77,14 @@
       "title": "Hitori Bocchi no Marumaru Seikatsu",
       "author": "Katsuwo",
       "season": "Spring 2019",
-      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/Hitori%20Bocchi.jpg"
+      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/hitori_bocchi.jpg"
     },
     {
       "id": "6",
       "title": "White Album 2",
       "author": "Aquaplus",
       "season": "Fall 2013",
-      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/White%20Album%202.jpg"
+      "cover": "https://raw.githubusercontent.com/roque363/novel-badges/master/src/assets/images/white_album_2.jpg"
     }
   ]
 }
