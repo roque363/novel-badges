@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5d11c2e965398488cdb1337d4157c082",
+    "revision": "109673dc21e6b501687cf8c479e30e0b",
     "url": "/novel-badges/index.html"
   },
   {
-    "revision": "a2d7be68a3277f139bcb",
+    "revision": "016ca6be6dd332432480",
     "url": "/novel-badges/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "bfd7e11a239b3ac76265",
-    "url": "/novel-badges/static/css/main.716da7d5.chunk.css"
+    "revision": "cbb2c3578d5603b046cd",
+    "url": "/novel-badges/static/css/main.e5ba74ab.chunk.css"
   },
   {
-    "revision": "a2d7be68a3277f139bcb",
-    "url": "/novel-badges/static/js/2.0588519d.chunk.js"
+    "revision": "016ca6be6dd332432480",
+    "url": "/novel-badges/static/js/2.7b490d94.chunk.js"
   },
   {
-    "revision": "bfd7e11a239b3ac76265",
-    "url": "/novel-badges/static/js/main.72188301.chunk.js"
+    "revision": "cbb2c3578d5603b046cd",
+    "url": "/novel-badges/static/js/main.64667257.chunk.js"
   },
   {
     "revision": "b599b507d6a65070969a",
@@ -32,18 +32,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/novel-badges/static/media/arrow-prev.64226eee.svg"
   },
   {
-    "revision": "75ea5578f4ed1c3d1b94b5b3758c8107",
-    "url": "/novel-badges/static/media/banner_1.75ea5578.jpg"
-  },
-  {
-    "revision": "0df83e363492e8a225fa69f688392656",
-    "url": "/novel-badges/static/media/banner_2.0df83e36.png"
-  },
-  {
-    "revision": "b74e7b9c40c23328a4f7c127255cc6d0",
-    "url": "/novel-badges/static/media/banner_3.b74e7b9c.jpeg"
-  },
-  {
     "revision": "d185187feba0e4daa627f344d07cfad7",
     "url": "/novel-badges/static/media/error.d185187f.gif"
   },
@@ -56,7 +44,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/novel-badges/static/media/nino_profile.740357b0.jpg"
   },
   {
+    "revision": "0df83e363492e8a225fa69f688392656",
+    "url": "/novel-badges/static/media/saekano_banner.0df83e36.png"
+  },
+  {
+    "revision": "b74e7b9c40c23328a4f7c127255cc6d0",
+    "url": "/novel-badges/static/media/ssss_gridman_banner.b74e7b9c.jpeg"
+  },
+  {
     "revision": "1d17360a685ac86023b90aa14fd2c62d",
     "url": "/novel-badges/static/media/stars.1d17360a.svg"
+  },
+  {
+    "revision": "75ea5578f4ed1c3d1b94b5b3758c8107",
+    "url": "/novel-badges/static/media/the_quintessential_quintuplets_banner.75ea5578.jpg"
   }
 ]);
