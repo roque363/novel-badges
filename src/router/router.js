@@ -20,8 +20,8 @@ function router() {
         <BasicRoute exact path={ROUTES.HOME} component={Home}/>
         <BasicRoute exact path={ROUTES.SEARCH} component={BadgeSearch}/>
         <BasicRoute exact path={ROUTES.BADGES} component={BadgeListContainer}/>
-        <BasicRoute exact path={ROUTES.BADGES_DETAIL} component={BadgeDetail}/>
         <BasicRoute exact path={ROUTES.BADGES_NEW} component={BadgeNew}/>
+        <BasicRoute exact path={ROUTES.BADGES_DETAIL} component={BadgeDetail}/>
         <BasicRoute exact path={ROUTES.RICKANDMORTY} component={BadgeRickAndMorty}/>
         <Route path={ROUTES.NOT_FOUND} component={NotFound}/>
         <Redirect from="*" to={ROUTES.NOT_FOUND}/>

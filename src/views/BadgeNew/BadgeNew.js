@@ -54,14 +54,16 @@ class BadgeNew extends Component {
                 lastName={this.state.form.lastName || "Nakano"}
                 badgeImage={this.state.form.badgeImage || nino}
                 avatarImage={this.state.form.avatarImage || nino_profile}
-                mangaTitle={this.state.form.mangaTitle || "5Toubun no Hanayome"} />
+                mangaTitle={this.state.form.mangaTitle || "5Toubun no Hanayome"}
+              />
             </div>
             <div className="col-md-6">
               <BadgeForm 
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}
                 formValues={this.state.form}
-                error={this.state.error} />
+                error={this.state.error}
+              />
             </div>
           </div>
         </div>

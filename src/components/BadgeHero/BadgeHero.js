@@ -1,21 +1,25 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './badgeHero.scss'
 
-class BadgeHero extends React.Component {
-  render() {
-    const { title } = this.props
-    return (
-      <React.Fragment>
-        {/* Header starts */}
-        <div className="Badges__hero">
-          <div className="Badges__container">
-            <h1 className="title">{title}</h1>
-          </div>
-        </div>
-        {/* Header ends */}
-      </React.Fragment>
-    );
-  }
+function BadgeHero (props) {
+  const { title } = props
+  return (
+    <div className="badge-hero">
+      <div className="badge-hero__container">
+        <h1 className="badge-hero__title">{title}</h1>
+      </div>
+    </div>
+  )
 }
 
-export default BadgeHero;
+// Especifica los valores por defecto de props:
+BadgeHero.defaultProps = {
+  title:""
+};
+
+BadgeHero.propTypes = {
+  title: PropTypes.string,
+}
+
+export default BadgeHero

@@ -1,23 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import './badgeDetail.scss';
-
+import db from '../../data.json';
+// Components
 import BadgeHero from '../../components/BadgeHero/BadgeHero';
 import Loader from '../../components/Loader/Loader';
 import Modal from '../../components/Modal/Modal';
 
-function BadgeDetail() {
+function BadgeDetail(props) {
+  const id = props.match.params.id
   const [loading, setLoading] = useState(true)
   const [isMounted, setIsMounted] = useState(true)
   const [error, setError] = useState(null)
   const [modalIsOpen, setModalIsOpen] = useState(false)
   const [data, setData] = useState(undefined)
 
-  const fetchData = async (id) => {
+  useEffect(()=> {
+    fetchData()
+    return () => {
+      setIsMounted(false)
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  const fetchData = async () => {
     setLoading(true)
     setError(null)
     try {
-      // console.log( this.props.match.params.badgeId )
+      const serie = db.series.find(serie => serie.id === id)
       setLoading(false)
+      if (isMounted) {
+        setData(serie)
+        // console.log(serie)
+      }
     } catch (error) {
       setLoading(false)
       setError(error)

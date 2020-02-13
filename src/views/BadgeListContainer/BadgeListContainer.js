@@ -2,7 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './badgeListContainer.scss'
 import db from '../../data.json';
-
+// Constans
+import * as ROUTES from '../../constants/routes'
+// Components
 import BadgeHero from '../../components/BadgeHero/BadgeHero';
 import Loader from '../../components/Loader/Loader';
 import BadgeList from '../../components/BadgeList/BadgeList';
@@ -50,7 +52,7 @@ class BadgeListContainer extends React.Component {
         <BadgeHero title="Lista"/>
         <div className="Badges__container">
           <div className="Badges__buttons">
-            <Link to="/badges/new" className="btn btn-primary">
+            <Link to={ROUTES.BADGES_NEW} className="btn btn-primary">
               Nuevo Badge
             </Link>
           </div>
