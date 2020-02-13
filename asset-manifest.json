@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/novel-badges/static/css/main.716da7d5.chunk.css",
-    "main.js": "/novel-badges/static/js/main.72188301.chunk.js",
-    "main.js.map": "/novel-badges/static/js/main.72188301.chunk.js.map",
+    "main.css": "/novel-badges/static/css/main.e5ba74ab.chunk.css",
+    "main.js": "/novel-badges/static/js/main.64667257.chunk.js",
+    "main.js.map": "/novel-badges/static/js/main.64667257.chunk.js.map",
     "runtime~main.js": "/novel-badges/static/js/runtime~main.cc0064cb.js",
     "runtime~main.js.map": "/novel-badges/static/js/runtime~main.cc0064cb.js.map",
     "static/css/2.266e55a5.chunk.css": "/novel-badges/static/css/2.266e55a5.chunk.css",
-    "static/js/2.0588519d.chunk.js": "/novel-badges/static/js/2.0588519d.chunk.js",
-    "static/js/2.0588519d.chunk.js.map": "/novel-badges/static/js/2.0588519d.chunk.js.map",
+    "static/js/2.7b490d94.chunk.js": "/novel-badges/static/js/2.7b490d94.chunk.js",
+    "static/js/2.7b490d94.chunk.js.map": "/novel-badges/static/js/2.7b490d94.chunk.js.map",
     "index.html": "/novel-badges/index.html",
-    "precache-manifest.a9f754d6e176012dfc9d6f4279cdf737.js": "/novel-badges/precache-manifest.a9f754d6e176012dfc9d6f4279cdf737.js",
+    "precache-manifest.9c83fb22cf0ae0a116d4372124a2c14e.js": "/novel-badges/precache-manifest.9c83fb22cf0ae0a116d4372124a2c14e.js",
     "service-worker.js": "/novel-badges/service-worker.js",
     "static/css/2.266e55a5.chunk.css.map": "/novel-badges/static/css/2.266e55a5.chunk.css.map",
-    "static/css/main.716da7d5.chunk.css.map": "/novel-badges/static/css/main.716da7d5.chunk.css.map",
+    "static/css/main.e5ba74ab.chunk.css.map": "/novel-badges/static/css/main.e5ba74ab.chunk.css.map",
     "static/media/home.scss": "/novel-badges/static/media/arrow-prev.64226eee.svg",
-    "static/media/banner_1.jpg": "/novel-badges/static/media/banner_1.75ea5578.jpg",
-    "static/media/banner_2.png": "/novel-badges/static/media/banner_2.0df83e36.png",
-    "static/media/banner_3.jpeg": "/novel-badges/static/media/banner_3.b74e7b9c.jpeg",
     "static/media/notFound.scss": "/novel-badges/static/media/error.d185187f.gif",
     "static/media/nino.jpg": "/novel-badges/static/media/nino.91f04904.jpg",
     "static/media/nino_profile.jpg": "/novel-badges/static/media/nino_profile.740357b0.jpg",
-    "static/media/badgeHero.scss": "/novel-badges/static/media/stars.1d17360a.svg"
+    "static/media/saekano_banner.png": "/novel-badges/static/media/saekano_banner.0df83e36.png",
+    "static/media/ssss_gridman_banner.jpeg": "/novel-badges/static/media/ssss_gridman_banner.b74e7b9c.jpeg",
+    "static/media/badgeHero.scss": "/novel-badges/static/media/stars.1d17360a.svg",
+    "static/media/the_quintessential_quintuplets_banner.jpg": "/novel-badges/static/media/the_quintessential_quintuplets_banner.75ea5578.jpg"
   }
 }
