@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './badgeDetail.scss';
 import db from '../../data.json';
+// Constanst
+import * as VARIABLES from '../../constants/variables'
 // Components
 import BadgeHero from '../../components/BadgeHero/BadgeHero';
 import Loader from '../../components/Loader/Loader';
-import Modal from '../../components/Modal/Modal';
+import ModalFoto from '../../components/ModalFoto/ModalFoto';
 
 function BadgeDetail(props) {
   const id = props.match.params.id
@@ -55,16 +57,23 @@ function BadgeDetail(props) {
   return (
     <React.Fragment>
       <BadgeHero title={data.title}/>
-      <div className="container">
-        <p>Id: {data.id}</p>
-        <p>Autor: {data.author}</p>
-        <button onClick={handleOpenModal} className="btn btn-primary">Ver</button>
-        <Modal
-          isOpen={modalIsOpen}
-          onClose={handleCloseModal} >
-          Menaje de Test
-        </Modal>
+      <div className="container badge-detail-container">
+        <div className="row">
+          <div className="col-sm-4 col-12">
+            <div className="detail-cover">
+              <img src={`${VARIABLES.URL_IMAGE}${data.cover}`} alt={data.title}/>
+            </div>
+          </div>
+          <div className="col-sm-8 col-12">
+            <div className="detail-content">
+              <p>Temporada: {data.season}</p>
+              <p>Autor: {data.author}</p>
+              <button onClick={handleOpenModal} className="btn btn-primary">Ver</button>
+            </div>
+          </div>
+        </div>
       </div>
+      <ModalFoto isOpen={modalIsOpen} onClose={handleCloseModal} img={`${VARIABLES.URL_IMAGE}${data.cover}`} alt={data.title}/>
     </React.Fragment>
   )
 }

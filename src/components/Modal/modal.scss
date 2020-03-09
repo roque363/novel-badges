@@ -10,10 +10,11 @@
   align-items: center;
   &__container{
     position: relative;
-    top: 10rem;
+    top: 6rem;
     background-color: #fff;
     border-radius: 0.5rem;
     padding: 1rem;
-    width: 400px;
+    width: 450px;
+    max-height: 450px;
   }
 }
