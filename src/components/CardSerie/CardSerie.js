@@ -3,13 +3,18 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import './cardSerie.scss'
 // Constanst
-import * as VARIABLES from '../../constants/variables'
+import * as VARIABLES from 'constants/variables'
+// Constans
+import * as ROUTES from 'constants/routes'
+// Utils
+import replacePathParams from 'utils/replacePathParams'
 // Dependencies
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarTimes } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 
-function CardSerie ({serie}) {
+const CardSerie = (props) => {
+  const { serie } = props
   return (
     <article className="card-serie">
       {/* Header Oculto */}
@@ -21,9 +26,15 @@ function CardSerie ({serie}) {
         </div>
       </div>
       {/* Header Image */}
-      <div className="card-serie__img" style={{backgroundImage: `url(${VARIABLES.URL_IMAGE}${serie.cover})`}}/>
-      <Link to={`/badges/${serie.id}`}>
-        <div className="card-serie__img--hover" style={{backgroundImage: `url(${VARIABLES.URL_IMAGE}${serie.cover})`}}/>
+      <div 
+        className="card-serie__img"
+        style={{backgroundImage: `url(${VARIABLES.URL_IMAGE}${serie.cover})`}}
+      />
+      <Link to={replacePathParams(ROUTES.BADGES_DETAIL, { id: serie.id })}>
+        <div
+          className="card-serie__img--hover"
+          style={{backgroundImage: `url(${VARIABLES.URL_IMAGE}${serie.cover})`}}
+        />
       </Link>
       {/* Header Content */}
       <div className="card-serie__info">

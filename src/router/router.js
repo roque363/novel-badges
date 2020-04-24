@@ -5,7 +5,7 @@ import * as ROUTES from 'constants/routes'
 // Layouts
 import { BasicLayout } from 'layout'
 // Generic Views
-import Home from 'views/Home/Home'
+import Home from 'views/Home'
 import BadgeSearch from 'views/BadgeSearch/BadgeSearch'
 import BadgeNew from 'views/BadgeNew/BadgeNew'
 import BadgeDetail from 'views/BadgeDetail/BadgeDetail'

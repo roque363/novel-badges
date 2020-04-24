@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import './home.scss';
-import db from '../../data.json';
+import db from 'data.json';
 // Components
-import CardSerie from '../../components/CardSerie/CardSerie';
+import CardSerie from 'components/CardSerie';
 // Images
-import banner1 from '../../assets/images/the_quintessential_quintuplets_banner.jpg';
-import banner2 from '../../assets/images/saekano_banner.png';
-import banner3 from '../../assets/images/ssss_gridman_banner.jpeg';
+import banner1 from 'assets/images/banner/the_quintessential_quintuplets_banner.jpg';
+import banner2 from 'assets/images/banner/saekano_banner.png';
+import banner3 from 'assets/images/banner/ssss_gridman_banner.jpeg';
+// Icons
+import ArrowNext from 'assets/icons/arrow-next.svg';
+import ArrowPrev from 'assets/icons/arrow-prev.svg';
 
 function Home() {
   const [loading, setLoading] = useState(true)
@@ -14,13 +17,10 @@ function Home() {
   const [data, setData] = useState({
     series: []
   })
-  // console.log('1. render')
 
   useEffect(()=> {
-    // console.log('2. componentDidMount/componentDidUpdate')
     fetchData()
     return () => {
-      // console.log('3. componentWillUnmount')
       setIsMounted(false)
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -36,7 +36,6 @@ function Home() {
   return (
     <div className="home-main">
       <div className="home-main__hero">
-        {/* Content before waves*/}
         <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
           <div className="carousel-inner">
             <div className="carousel-item active">
@@ -53,11 +52,11 @@ function Home() {
             </div>
           </div>
           <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="carousel-control-prev-icon" aria-hidden="true" style={{ backgroundImage: `url(${ArrowPrev})` }}/>
             <span className="sr-only">Previous</span>
           </a>
           <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="carousel-control-next-icon" aria-hidden="true" style={{ backgroundImage: `url(${ArrowNext})` }}/>
             <span className="sr-only">Next</span>
           </a>
         </div>

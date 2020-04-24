@@ -10,7 +10,7 @@ const Item = ({path, text}) => (
   </li>
 )
 
-function Navbar() {
+const Navbar = () => {
   return (
     <nav className="navbar sticky-top navbar-expand-lg navbar-dark">
       <div className="container">
