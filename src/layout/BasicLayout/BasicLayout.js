@@ -1,6 +1,6 @@
 import React from 'react'
 // Components
-import Navbar from '../components/Navbar/Navbar'
+import { Navbar } from './components'
 
 function BasicLayout(props) {
   return (

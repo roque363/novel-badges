@@ -10,6 +10,7 @@
       font-weight: 700;
       font-size: 24px;
       text-decoration: none;
+      user-select: none;
     }
     .nav-item {
       margin: 0 0.5rem;
@@ -21,6 +22,7 @@
         position: relative;
         text-decoration: none;
         font-size: 18px;
+        user-select: none;
         &::before,
         &::after {
           content: '';

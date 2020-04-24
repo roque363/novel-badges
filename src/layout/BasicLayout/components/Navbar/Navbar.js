@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.scss';
 // Constans
-import * as ROUTES from '../../constants/routes'
+import * as ROUTES from 'constants/routes'
 
 const Item = ({path, text}) => (
   <li className="nav-item">
