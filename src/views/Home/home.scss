@@ -10,6 +10,7 @@
         img {
           height: 480px;
           object-fit: cover;
+          user-select: none;
         }
         h1 {
           position: absolute;
@@ -24,6 +25,12 @@
           font-size:48px;
           text-decoration: none;
           text-shadow: 0px 0px 5px #1C2331;
+          &::selection {
+            background: rgba(28, 35, 49, 0.5); /* WebKit/Blink Browsers */
+          }
+          &::-moz-selection {
+            background: rgba(28, 35, 49, 0.5); /* Gecko Browsers */
+          }
         }
       }
       .carousel-control-prev-icon {
@@ -72,12 +79,6 @@
           transform: translate3d(85px,0,0);
         }
       }
-    }
-    .flex { /*Flexbox for containers*/
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
     }
     /*Shrinking for mobile*/
     @media (max-width: 768px) {

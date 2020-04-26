@@ -83,7 +83,9 @@ function Home() {
             {data.series.map((serie, index) => {
               return (
                 <div className="col-md-6 col-lg-4" key={index}>
-                  <CardSerie serie={serie}/>
+                  <CardSerie
+                    serie={serie}
+                  />
                 </div>
               )
             })}

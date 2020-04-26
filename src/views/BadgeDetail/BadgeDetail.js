@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './badgeDetail.scss';
-import db from '../../data.json';
+import db from 'data.json';
 // Constanst
-import * as VARIABLES from '../../constants/variables'
+import * as VARIABLES from 'constants/variables'
 // Components
-import BadgeHero from '../../components/BadgeHero/BadgeHero';
-import Loader from '../../components/Loader/Loader';
-import ModalFoto from '../../components/ModalFoto/ModalFoto';
+import BadgeHero from 'components/BadgeHero/BadgeHero';
+import Loader from 'components/Loader/Loader';
+import ModalFoto from 'components/ModalFoto/ModalFoto';
 
 function BadgeDetail(props) {
   const id = props.match.params.id

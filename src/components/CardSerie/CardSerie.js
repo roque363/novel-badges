@@ -13,7 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarTimes } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 
-const CardSerie = (props) => {
+const CardSerie = props => {
   const { serie } = props
   return (
     <article className="card-serie">
@@ -46,7 +46,6 @@ const CardSerie = (props) => {
   )
 }
 
-// Especifica los valores por defecto de props:
 CardSerie.defaultProps = {
   serie: {
     id: "1",
