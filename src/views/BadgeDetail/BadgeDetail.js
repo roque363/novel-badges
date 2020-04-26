@@ -4,25 +4,17 @@ import db from 'data.json';
 // Constanst
 import * as VARIABLES from 'constants/variables'
 // Components
-import BadgeHero from 'components/BadgeHero/BadgeHero';
-import Loader from 'components/Loader/Loader';
-import ModalFoto from 'components/ModalFoto/ModalFoto';
+import BadgeHero from 'components/BadgeHero';
+import Loader from 'components/Loader';
+import ModalFoto from 'components/ModalFoto';
 
 function BadgeDetail(props) {
   const id = props.match.params.id
   const [loading, setLoading] = useState(true)
   const [isMounted, setIsMounted] = useState(true)
   const [error, setError] = useState(null)
-  const [modalIsOpen, setModalIsOpen] = useState(false)
-  const [data, setData] = useState(undefined)
 
-  useEffect(()=> {
-    fetchData()
-    return () => {
-      setIsMounted(false)
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  const [data, setData] = useState({})
 
   const fetchData = async () => {
     setLoading(true)
@@ -40,27 +32,31 @@ function BadgeDetail(props) {
     }
   }
 
-  const handleOpenModal = e => {
-    setModalIsOpen(true)
-  }
-
-  const handleCloseModal = e => {
-    setModalIsOpen(false)
-  }
+  useEffect(()=> {
+    fetchData()
+    return () => {
+      setIsMounted(false)
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   if (loading) {
     return <Loader/>
   }
+
   if (error) {
     return <h3>{error}</h3>
   }
+
   return (
-    <React.Fragment>
-      <BadgeHero title={data.title}/>
-      <div className="container badge-detail-container">
+    <div className="badge-detail">
+      <BadgeHero
+        title={data.title}
+      />
+      <div className="container badge-detail__container">
         <div className="row">
           <div className="col-sm-4 col-12">
-            <div className="detail-cover">
+            <div className="detail-cover" data-toggle="modal" data-target="#imageModal">
               <img src={`${VARIABLES.URL_IMAGE}${data.cover}`} alt={data.title}/>
             </div>
           </div>
@@ -68,13 +64,15 @@ function BadgeDetail(props) {
             <div className="detail-content">
               <p>Temporada: {data.season}</p>
               <p>Autor: {data.author}</p>
-              <button onClick={handleOpenModal} className="btn btn-primary">Ver</button>
+              <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#imageModal">
+                Ver
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <ModalFoto isOpen={modalIsOpen} onClose={handleCloseModal} img={`${VARIABLES.URL_IMAGE}${data.cover}`} alt={data.title}/>
-    </React.Fragment>
+      <ModalFoto image={data.cover} name={data.title}/>
+    </div>
   )
 }
 

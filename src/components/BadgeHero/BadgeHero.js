@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './badgeHero.scss'
 
-function BadgeHero (props) {
+const BadgeHero = props => {
   const { title } = props
   return (
     <div className="badge-hero">

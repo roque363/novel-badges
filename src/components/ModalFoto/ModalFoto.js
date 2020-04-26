@@ -1,26 +1,43 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
-import './modalFoto.scss';
+import PropTypes from 'prop-types'
+import './modalFoto.scss'
+// Constanst
+import * as VARIABLES from 'constants/variables'
 
-function ModalFoto (props) {
-  const { img, alt } = props
-  if (!props.isOpen) {
-    return null;
-  }
-  return ReactDOM.createPortal(
-    <div className="modal-foto">
-      <div className="modal-foto__container">
-        <button className="close" onClick={props.onClose} type="button">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div className="img-container">
-          <img src={img} alt={alt}/>
+const ModalFoto = props => {
+  const { image, name } = props
+
+  return (
+    <div className="nb-modal-foto">
+      <div className="modal fade" id="imageModal" tabIndex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div className="modal-dialog modal-dialog-centered" role="document">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="imageModalLabel">{name}</h5>
+              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div className="modal-body">
+              <div className="img-container">
+                {image &&
+                  <img src={VARIABLES.URL_IMAGE + image} alt={name}/>
+                }
+              </div>
+            </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
         </div>
-        {props.children}
       </div>
-    </div>,
-    document.getElementById('modal')
-  );
+    </div>
+  )
+}
+
+ModalFoto.propTypes = {
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string
 }
 
 export default ModalFoto

@@ -5,7 +5,7 @@
       "title": "The Quintessential Quintuplets",
       "author": "Negi Haruba",
       "season": "Winter 2019",
-      "cover": "the_quintessential_quintuplets.jpg",
+      "cover": "cover/the_quintessential_quintuplets.jpg",
       "characters": [
         {
           "id": "11",
@@ -30,7 +30,7 @@
       "title": "Saenai Heroine no Sodatekata",
       "author": "Fumiaki Maruto",
       "season": "Winter 2015",
-      "cover": "saekano.png",
+      "cover": "cover/saekano.png",
       "characters": [
         {
           "id": "21",
@@ -63,28 +63,28 @@
       "title": "SSSS.GRIDMAN",
       "author": "Studio Trigger",
       "season": "Winter 2018",
-      "cover": "ssss_gridman.jpg"
+      "cover": "cover/ssss_gridman.jpg"
     },
     {
       "id": "4",
       "title": "Gamers!",
       "author": "Sekina Aoi",
       "season": "Summer 2017",
-      "cover": "Gamers.jpg"
+      "cover": "cover/gamers.jpg"
     },
     {
       "id": "5",
       "title": "Hitori Bocchi no Marumaru Seikatsu",
       "author": "Katsuwo",
       "season": "Spring 2019",
-      "cover": "hitori_bocchi.jpg"
+      "cover": "cover/hitori_bocchi.jpg"
     },
     {
       "id": "6",
       "title": "White Album 2",
       "author": "Aquaplus",
       "season": "Fall 2013",
-      "cover": "white_album_2.jpg"
+      "cover": "cover/white_album_2.jpg"
     }
   ]
 }

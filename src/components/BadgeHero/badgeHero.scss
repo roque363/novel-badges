@@ -1,14 +1,13 @@
 .badge-hero {
   width: 100%;
   padding: 2rem 0;
-  // background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('../../assets/stars.svg'), #1B1B25;
+  // background: linear-gradient(rgba(28, 35, 49,.5),rgba(28, 35, 49,.5)),url('../../assets/stars.svg'), #1B1B25;
   background: url('../../assets/stars.svg'), #1B1B25;
-  // background: url('../../assets/images/the_quintessential_quintuplets_banner.jpg'), #1B1B25;
-  // background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('../../assets/images/the_quintessential_quintuplets_banner.jpg');
+  // background: url('../../assets/images/banner/the_quintessential_quintuplets_banner.jpg'), #1B1B25;
+  // background: linear-gradient(rgba(28, 35, 49,.5),rgba(28, 35, 49,.5)),url('../../assets/images/banner/the_quintessential_quintuplets_banner.jpg');
   background-repeat: repeat;
   background-size: cover;
   background-position: center;
-  margin-bottom: 1rem;
   &__container {
     width: 100%;
     max-width: 580px;
