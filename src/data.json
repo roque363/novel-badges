@@ -2,9 +2,13 @@
   "series": [
     {
       "id": "1",
+      "slug": "the-quintessential-quintuplets",
       "title": "The Quintessential Quintuplets",
-      "author": "Negi Haruba",
+      "story_author": "Haruba Negi (春場ねぎ)",
+      "art_author": "Haruba Negi (春場ねぎ)",
       "season": "Winter 2019",
+      "published_japan": "Kodansha Ltd.",
+      "sumary": "For those who enjoy harem stories or a story about an intelligent student taking on a paying job (which is important for his poor family) of tutoring quintuplets who are doing bad in school, don’t really like him or studying and must do all he can to make sure they graduate.  A fun story and an entertaining first volume of Haruba Negi’s “The Quintessential Quintuplets”!",
       "cover": "cover/the_quintessential_quintuplets.jpg",
       "characters": [
         {
@@ -27,9 +31,13 @@
     },
     {
       "id": "2",
+      "slug": "saenai-heroine-no-sodatekata",
       "title": "Saenai Heroine no Sodatekata",
-      "author": "Fumiaki Maruto",
+      "story_author": "Fumiaki Maruto",
+      "art_author": "Kurehito Misaki",
       "season": "Winter 2015",
+      "published_japan": "Fujimi Shobō",
+      "sumary": "Tomoya Aki, an otaku, has been obsessed with collecting anime and light novels for years, attaching himself to various series with captivating stories and characters. Now, he wants to have a chance of providing the same experience for others by creating his own game, but unfortunately, Tomoya cannot do this task by himself. He successfully recruits childhood friend Eriri Spencer Sawamura to illustrate and literary elitist Utaha Kasumigaoka to write the script for his visual novel, while he directs. Super-group now in hand, Tomoya only needs an inspiration to base his project on, and luckily meets the beautiful, docile Megumi Katou, who he then models his main character after.",
       "cover": "cover/saekano.png",
       "characters": [
         {
@@ -60,30 +68,46 @@
     },
     {
       "id": "3",
+      "slug": "ssss-gridman",
       "title": "SSSS.GRIDMAN",
-      "author": "Studio Trigger",
+      "story_author": "Studio Trigger",
+      "art_author": "Studio Trigger",
       "season": "Winter 2018",
+      "published_japan": "Funimation",
+      "sumary": "I enjoyed “SSSS Gridman”.  It’s different from the series which I grew up watching when I was much younger, but I like the vibe, I like the characters and maybe, just maybe one day, we can see the Gridman return to live action, may it be film or a television series.  But the return of “Gridman” as an anime series and keeping the “Gridman” name live once again, definitely makes this series worth watching!",
       "cover": "cover/ssss_gridman.jpg"
     },
     {
       "id": "4",
+      "slug": "gamers",
       "title": "Gamers!",
-      "author": "Sekina Aoi",
+      "story_author": "Sekina Aoi",
+      "art_author": "Sekina Aoi",
       "season": "Summer 2017",
+      "published_japan": "Funimation",
+      "sumary": "Gamers!” will satisfy anime fans who don’t want to invest in a series for years and just want something short, fun and enjoyable.  So, if you love romantic comedies and video games, definitely give “Gamers!.",
       "cover": "cover/gamers.jpg"
     },
     {
       "id": "5",
+      "slug": "hitori-bocchi-no-marumaru-seikatsu",
       "title": "Hitori Bocchi no Marumaru Seikatsu",
-      "author": "Katsuwo",
+      "story_author": "Katsuwo",
+      "art_author": "Katsuwo",
       "season": "Spring 2019",
+      "published_japan": "Dengeki Daioh",
+      "sumary": "Many of us know what it is like to transition to a new school with few to no friends in a new environment, going through the arduous process of getting to know people again. Bocchi Hitori knows this struggle all too well, having just graduated from elementary school and thrown into middle school. Unfortunately, she suffers from extreme social anxiety: she faints when overwhelmed, vomits when nervous, and draws up ridiculously convoluted plans to avoid social contact. It does not help that her only friend from elementary school, Kai Yawara, will not be attending the same middle school as Bocchi. However, wanting to help her, Kai severs ties with Bocchi and promises to reconcile with her when she befriends all of her classmates in her new middle school class.",
       "cover": "cover/hitori_bocchi.jpg"
     },
     {
       "id": "6",
+      "slug": "white-album-2",
       "title": "White Album 2",
-      "author": "Aquaplus",
+      "story_author": "Aquaplus",
+      "art_author": "Aquaplus",
       "season": "Fall 2013",
+      "published_japan": "",
+      "sumary": "",
       "cover": "cover/white_album_2.jpg"
     }
   ]

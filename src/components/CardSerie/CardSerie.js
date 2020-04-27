@@ -30,7 +30,7 @@ const CardSerie = props => {
         className="card-serie__img"
         style={{backgroundImage: `url(${VARIABLES.URL_IMAGE}${serie.cover})`}}
       />
-      <Link to={replacePathParams(ROUTES.BADGES_DETAIL, { id: serie.id })}>
+      <Link to={replacePathParams(ROUTES.BADGES_DETAIL, { slug: serie.slug })}>
         <div
           className="card-serie__img--hover"
           style={{backgroundImage: `url(${VARIABLES.URL_IMAGE}${serie.cover})`}}
@@ -40,7 +40,7 @@ const CardSerie = props => {
       <div className="card-serie__info">
         <span className="badge badge-dark">Wiki</span>
         <h3 className="card-title">{serie.title}</h3>
-        <span className="card-author">{serie.author}</span>
+        <span className="card-author">{serie.story_author}</span>
       </div>
     </article>
   )

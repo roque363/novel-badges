@@ -1,14 +1,41 @@
 .nb-modal-foto {
+  .modal-content {
+    border-radius: 0.4rem;
+  }
   .modal-body {
     padding: 0;
+    border-radius: 0.3rem;
+    .img-header {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1rem;
+      background: linear-gradient(rgba(28, 35, 49, 0.8),rgba(28, 35, 49, 0));
+      border-radius: 0.3rem;
+      h5 {
+        color: var(--textWhite);
+      }
+      .close {
+        user-select: none;
+        opacity: 1;
+        span {
+          user-select: none;
+          color: var(--iconWhite);
+        }
+      }
+    }
     .img-container {
       height: 100%;
       width: 100%;
+      border-radius: 0.3rem;
       img {
         height: 100%;
         width: 100%;
         object-fit: cover;
         transition: 0.2s ease;
+        border-radius: 0.3rem;
       }
     }
   }

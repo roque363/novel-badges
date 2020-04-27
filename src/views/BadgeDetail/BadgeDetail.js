@@ -9,7 +9,7 @@ import Loader from 'components/Loader';
 import ModalFoto from 'components/ModalFoto';
 
 function BadgeDetail(props) {
-  const id = props.match.params.id
+  const slug = props.match.params.slug
   const [loading, setLoading] = useState(true)
   const [isMounted, setIsMounted] = useState(true)
   const [error, setError] = useState(null)
@@ -20,7 +20,7 @@ function BadgeDetail(props) {
     setLoading(true)
     setError(null)
     try {
-      const serie = db.series.find(serie => serie.id === id)
+      const serie = db.series.find(serie => serie.slug === slug)
       setLoading(false)
       if (isMounted) {
         setData(serie)
@@ -59,19 +59,27 @@ function BadgeDetail(props) {
             <div className="detail-cover" data-toggle="modal" data-target="#imageModal">
               <img src={`${VARIABLES.URL_IMAGE}${data.cover}`} alt={data.title}/>
             </div>
+            <button type="button" className="btn btn-accent" data-toggle="modal" data-target="#imageModal">
+              Ver Imagen
+            </button>
           </div>
           <div className="col-sm-8 col-12">
             <div className="detail-content">
+              <p><em>{data.sumary}</em></p>
+              <h2>Información</h2>
+              <p>Id: #{data.id}</p>
               <p>Temporada: {data.season}</p>
-              <p>Autor: {data.author}</p>
-              <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#imageModal">
-                Ver
-              </button>
+              <p>Historia por: {data.story_author}</p>
+              <p>Arte por: {data.art_author}</p>
+              <p>Publicado en Japón por: {data.published_japan}</p>
             </div>
           </div>
         </div>
       </div>
-      <ModalFoto image={data.cover} name={data.title}/>
+      <ModalFoto
+        image={data.cover}
+        name={data.title}
+      />
     </div>
   )
 }
