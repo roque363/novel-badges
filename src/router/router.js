@@ -6,10 +6,10 @@ import * as ROUTES from 'constants/routes'
 import { BasicLayout } from 'layout'
 // Generic Views
 import Home from 'views/Home'
-import BadgeSearch from 'views/BadgeSearch/BadgeSearch'
+import BadgeSearch from 'views/BadgeSearch'
 import BadgeNew from 'views/BadgeNew/BadgeNew'
 import BadgeDetail from 'views/BadgeDetail'
-import BadgeListContainer from 'views/BadgeListContainer/BadgeListContainer'
+import BadgeList from 'views/BadgeList'
 import BadgeRickAndMorty from 'views/BadgeRickAndMorty/BadgeRickAndMorty'
 import NotFound from 'views/NotFound/NotFound'
 
@@ -19,7 +19,7 @@ function router() {
       <Switch>
         <BasicRoute exact path={ROUTES.HOME} component={Home}/>
         <BasicRoute exact path={ROUTES.SEARCH} component={BadgeSearch}/>
-        <BasicRoute exact path={ROUTES.BADGES} component={BadgeListContainer}/>
+        <BasicRoute exact path={ROUTES.BADGES} component={BadgeList}/>
         <BasicRoute exact path={ROUTES.BADGES_NEW} component={BadgeNew}/>
         <BasicRoute exact path={ROUTES.BADGES_DETAIL} component={BadgeDetail}/>
         <BasicRoute exact path={ROUTES.RICKANDMORTY} component={BadgeRickAndMorty}/>

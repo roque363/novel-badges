@@ -27,10 +27,10 @@ function Home() {
   }, [])
 
   const fetchData = async() => {
-    setLoading(false)
     if (isMounted) {
       setData(db)
     }
+    setLoading(false)
   }
 
   return (

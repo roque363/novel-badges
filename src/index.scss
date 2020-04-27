@@ -42,56 +42,55 @@ a.link-unstyled {
 .btn {
   padding: 0.375rem 2rem;
   box-shadow: none;
+  transition: 0.2s ease;
+  border: none;
+  white-space: nowrap;
+
   &.btn-primary {
     color: var(--textWhite);
     background-color: #1C2331;
-    border-color: #1C2331;
   }
   &.btn-primary:not(:disabled):not(.disabled):hover {
-    color: #fff;
-    background-color: #1C2331;
-    border-color: #1C2331;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+		transform: scale(1.05, 1.05);
   }
   &.btn-primary:not(:disabled):not(.disabled):active {
-    color: #fff;
     background-color: #1C2331;
-    border-color: #1C2331;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+  &.btn-primary:not(:disabled):not(.disabled):focus {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   }
 
   &.btn-accent {
     color: var(--textWhite);
     background-color: #f2704d;
-    border-color: #f2704d;
   }
   &.btn-accent:not(:disabled):not(.disabled):hover {
-    color: #fff;
-    background-color: #f2704d;
-    border-color: #f2704d;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+		transform: scale(1.05, 1.05);
   }
   &.btn-accent:not(:disabled):not(.disabled):active {
-    color: #fff;
     background-color: #f2704d;
-    border-color: #f2704d;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   }
-  
+  &.btn-accent:not(:disabled):not(.disabled):focus {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
 
   &.btn-danger {
     color: var(--textWhite);
     background-color: #CD4040;
-    border-color: #CD4040;
   }
   &.btn-danger:not(:disabled):not(.disabled):hover {
-    color: #fff;
-    background-color: #CD4040;
-    border-color: #CD4040;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+		transform: scale(1.05, 1.05);
   }
   &.btn-danger:not(:disabled):not(.disabled):active {
-    color: #fff;
     background-color: #CD4040;
-    border-color: #CD4040;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   }  
   &.btn-danger:not(:disabled):not(.disabled):focus {
-    box-shadow: 0000.2remrgba(255, 64, 64, 0.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   }
-
 }

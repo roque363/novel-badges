@@ -1,0 +1,21 @@
+.badge-list {
+  &__container {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    &--buttons {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 1rem;
+    }
+    &--list {
+      padding-bottom: 1rem;
+      & ul>li {
+        margin-bottom: 1.2rem;
+      }
+    }
+  }
+}
