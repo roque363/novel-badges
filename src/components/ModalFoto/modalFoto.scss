@@ -12,7 +12,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 1rem 1rem;
-      background: linear-gradient(rgba(28, 35, 49, 0.8),rgba(28, 35, 49, 0));
+      // background: linear-gradient(rgba(28, 35, 49, 0.8),rgba(28, 35, 49, 0));
       border-radius: 0.3rem;
       h5 {
         color: var(--textWhite);
@@ -22,7 +22,9 @@
         opacity: 1;
         span {
           user-select: none;
-          color: var(--iconWhite);
+          color: var(--iconprimary);
+          text-shadow: 0 1px 0 var(--iconprimary);
+          // border-color: var(--iconprimary);
         }
       }
     }

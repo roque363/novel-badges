@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './badgeNew.scss'
 
-import Badge from '../../components/Badge/Badge';
-import BadgeHero from '../../components/BadgeHero/BadgeHero';
-import BadgeForm from '../../components/BadgeForm/BadgeForm';
+import Badge from 'components/Badge';
+import BadgeHero from 'components/BadgeHero';
+import BadgeForm from 'components/BadgeForm';
 
-import nino_profile from '../../assets/nino_profile.jpg';
-import nino from '../../assets/nino.jpg';
+import nino_profile from 'assets/nino_profile.jpg';
+import nino from 'assets/nino.jpg';
 
 class BadgeNew extends Component {
   state = {

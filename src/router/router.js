@@ -11,7 +11,7 @@ import BadgeNew from 'views/BadgeNew'
 import BadgeDetail from 'views/BadgeDetail'
 import BadgeList from 'views/BadgeList'
 import BadgeRickAndMorty from 'views/BadgeRickAndMorty/BadgeRickAndMorty'
-import NotFound from 'views/NotFound/NotFound'
+import NotFound from 'views/NotFound'
 
 function router() {
   return (
