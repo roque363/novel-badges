@@ -7,7 +7,7 @@ import { BasicLayout } from 'layout'
 // Generic Views
 import Home from 'views/Home'
 import BadgeSearch from 'views/BadgeSearch'
-import BadgeNew from 'views/BadgeNew/BadgeNew'
+import BadgeNew from 'views/BadgeNew'
 import BadgeDetail from 'views/BadgeDetail'
 import BadgeList from 'views/BadgeList'
 import BadgeRickAndMorty from 'views/BadgeRickAndMorty/BadgeRickAndMorty'

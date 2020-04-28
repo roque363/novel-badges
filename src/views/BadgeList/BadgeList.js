@@ -24,7 +24,7 @@ const BadgeList = props => {
       setTimeout(() => {
         setData(data.series)
         setLoading(false)
-      }, 700);
+      }, 800);
     } catch (error) {
       setError(error.message)
       setLoading(false)
