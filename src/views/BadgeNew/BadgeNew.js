@@ -1,75 +1,64 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './badgeNew.scss'
-
-import Badge from 'components/Badge';
+// Components
 import BadgeHero from 'components/BadgeHero';
-import BadgeForm from 'components/BadgeForm';
-
+import { BadgeForm, Badge } from './components';
+// Hooks
+import { useInputValue } from 'hooks/useInputValue';
+// Images
 import nino_profile from 'assets/nino_profile.jpg';
 import nino from 'assets/nino.jpg';
 
-class BadgeNew extends Component {
-  state = {
-    loading: false,
-    error: null,
-    form: {
-      firstName: '',
-      lastName: '',
-      mangaTitle: '',
-      badgeImage: '',
-      avatarImage: ''
-    }
-  };
+function BadgeNew(props) {
+  const [error, setError] = useState('')
 
-  handleChange = e => {
-    this.setState({
-      form: {
-        ...this.state.form,
-        [e.target.name]: e.target.value,
-      },
-    });
-  };
+  const firstName = useInputValue('')
+  const lastName = useInputValue('')
+  const mangaTitle = useInputValue('')
+  const avatarImage = useInputValue('')
+  const badgeImage = useInputValue('')
 
-  handleSubmit = async e => {
+  const handleSubmit = async e => {
     e.preventDefault();
-    this.setState({ loading: true, error: null });
-
+    setError('')
     try {
-      this.setState({ loading: false});
-      this.props.history.push('/badges');
+      // props.history.push('/badges');
     } catch (error) {
-      this.setState({ loading: false, error: error});
+      setError(error.message)
     }
   }
 
-  render() {
-    return (
-      <React.Fragment>
-        <BadgeHero title="New Waifu"/>
-        <div className="container badgeNew-main">
-          <div className="row">
-            <div className="col-md-6">
-              <Badge
-                firstName={this.state.form.firstName || "Nino" }
-                lastName={this.state.form.lastName || "Nakano"}
-                badgeImage={this.state.form.badgeImage || nino}
-                avatarImage={this.state.form.avatarImage || nino_profile}
-                mangaTitle={this.state.form.mangaTitle || "5Toubun no Hanayome"}
-              />
-            </div>
-            <div className="col-md-6">
-              <BadgeForm 
-                onChange={this.handleChange}
-                onSubmit={this.handleSubmit}
-                formValues={this.state.form}
-                error={this.state.error}
-              />
-            </div>
+  return (
+    <div className="badge-new">
+      <BadgeHero
+        title="New Waifu"
+      />
+      <div className="container badge-new__container">
+        <div className="row">
+          <div className="col-md-6">
+            <Badge
+              firstName={firstName.value || "Nino"}
+              lastName={lastName.value || "Nakano"}
+              badgeImage={badgeImage.value || nino}
+              avatarImage={avatarImage.value || nino_profile}
+              mangaTitle={mangaTitle.value || "5Toubun no Hanayome"}
+            />
+          </div>
+          <div className="col-md-6">
+            <BadgeForm
+              firstName={firstName}
+              lastName={lastName}
+              badgeImage={badgeImage}
+              avatarImage={avatarImage}
+              mangaTitle={mangaTitle}
+              onSubmit={handleSubmit}
+              error={error}
+            />
           </div>
         </div>
-      </React.Fragment>
-    );
-  }
+      </div>
+    </div>
+  )
 }
 
 export default BadgeNew;

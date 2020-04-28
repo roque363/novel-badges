@@ -21,7 +21,7 @@ const ModalFoto = props => {
               </div>
               <div className="img-container">
                 {image &&
-                  <img src={VARIABLES.URL_IMAGE + image} alt={name}/>
+                  <img src={VARIABLES.URL_IMAGE + image} alt={name} />
                 }
               </div>
             </div>

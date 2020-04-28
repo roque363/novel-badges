@@ -5,7 +5,7 @@ import db from 'data.json';
 // Constans
 import * as ROUTES from 'constants/routes'
 // Hooks
-import useSearchData from 'hooks/useSearchData';
+import { useSearchSerie } from 'hooks/useSearchData';
 // Components
 import BadgeHero from 'components/BadgeHero';
 import Loader from 'components/Loader';
@@ -16,9 +16,9 @@ const BadgeList = props => {
   const [error, setError] = useState(null)
 
   const [data, setData] = useState([])
-  const { query, setQuery, filteredData } = useSearchData(data);
+  const { query, setQuery, filteredData } = useSearchSerie(data);
 
-  const fetchData = async() => {
+  const fetchData = async () => {
     try {
       const data = db
       setTimeout(() => {
@@ -31,10 +31,10 @@ const BadgeList = props => {
     }
   }
 
-  useEffect(()=> {
+  useEffect(() => {
     fetchData()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   if (error) {
     return <h3>{error}</h3>
@@ -68,21 +68,23 @@ const BadgeList = props => {
             {filteredData.length > 0 ? (
               <ul className="list-unstyled">
                 {filteredData.map((serie) => {
-                  return(
+                  return (
                     <li key={serie.id}>
-                      <SerieItem serie={serie}/>
+                      <SerieItem serie={serie} />
                     </li>
                   )
                 })}
               </ul>
             ) : (
-              <h3>No se encontro ninguna serie</h3>
-            )}
+                <div>
+                  <h3>No se encontro ninguna serie</h3>
+                </div>
+              )}
           </div>
         </div>
       ) : (
-        <Loader/>
-      )}
+          <Loader />
+        )}
     </div>
   )
 }
