@@ -1,19 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 // Utils
-import normalize from 'utils/normalize'
+import normalize from 'utils/normalize';
 
 export function useSearchSerie(data) {
   const [query, setQuery] = useState('');
   const [filteredData, setFilteredData] = useState(data);
 
   React.useMemo(() => {
-    const result = data.filter(serie => {
+    const result = data.filter((serie) => {
       return `${normalize(serie.title)}`
         .toLowerCase()
         .includes(normalize(query.toLowerCase()));
     });
-    setFilteredData(result)
+    setFilteredData(result);
   }, [data, query]);
 
-  return { query, setQuery, filteredData }
+  return { query, setQuery, filteredData };
 }

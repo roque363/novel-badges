@@ -1,14 +1,14 @@
-import React from 'react'
+import React from 'react';
 // Components
-import { Navbar } from './components'
+import { Navbar } from './components';
 
 function BasicLayout(props) {
   return (
     <React.Fragment>
-      <Navbar/>
+      <Navbar />
       {props.children}
     </React.Fragment>
-  )
+  );
 }
 
-export default BasicLayout
+export default BasicLayout;
