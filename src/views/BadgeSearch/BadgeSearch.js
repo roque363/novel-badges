@@ -1,42 +1,41 @@
-import React, { Component } from 'react'
-import './badgeSearch.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import React, { Component } from 'react';
+import './badgeSearch.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-import BadgeHero from '../../components/BadgeHero/BadgeHero';
-import Loader from '../../components/Loader/Loader';
+import BadgeHero from 'components/BadgeHero';
+import Loader from 'components/Loader';
 
 function Genero(props) {
-  const { genres } = props
+  const { genres } = props;
 
   if (genres === 'Comedy') {
-    return( <div style={{background: '#EEA800'}}>{genres}</div> );
+    return <div style={{ background: '#EEA800' }}>{genres}</div>;
   } else if (genres === 'Romance') {
-    return( <div style={{background: '#FD337F'}}>{genres}</div> );
+    return <div style={{ background: '#FD337F' }}>{genres}</div>;
   } else if (genres === 'Romance') {
-    return( <div style={{background: '#8855DD'}}>{genres}</div> );
+    return <div style={{ background: '#8855DD' }}>{genres}</div>;
   } else if (genres === 'Action') {
-    return( <div style={{background: '#006AFA'}}>{genres}</div> );
+    return <div style={{ background: '#006AFA' }}>{genres}</div>;
   } else if (genres === 'Slice of Life') {
-    return( <div style={{background: '#9AB710'}}>{genres}</div> );
+    return <div style={{ background: '#9AB710' }}>{genres}</div>;
   } else if (genres === 'Drama') {
-    return( <div style={{background: '#00B19A'}}>{genres}</div> );
+    return <div style={{ background: '#00B19A' }}>{genres}</div>;
   } else if (genres === 'Sci-Fi') {
-    return( <div style={{background: '#4A20E2'}}>{genres}</div> );
+    return <div style={{ background: '#4A20E2' }}>{genres}</div>;
   } else if (genres === 'Ecchi') {
-    return( <div style={{background: '#C00355'}}>{genres}</div> );
+    return <div style={{ background: '#C00355' }}>{genres}</div>;
   } else if (genres === 'Fantasy') {
-    return( <div style={{background: '#A864B7'}}>{genres}</div> );
+    return <div style={{ background: '#A864B7' }}>{genres}</div>;
   } else {
-    return( <div style={{background: '#8855DD'}}>{genres}</div> );
+    return <div style={{ background: '#8855DD' }}>{genres}</div>;
   }
-
 }
 
 class SearchCard extends React.Component {
   render() {
     const { media } = this.props;
-    return(
+    return (
       <React.Fragment>
         <article className="search-card">
           {/* Header */}
@@ -47,24 +46,30 @@ class SearchCard extends React.Component {
             </div>
           </div>
           {/* Image */}
-          <div className="search-card__img" style={{backgroundImage: `url(${media.coverImage.extraLarge})`}}/>
+          <div
+            className="search-card__img"
+            style={{ backgroundImage: `url(${media.coverImage.extraLarge})` }}
+          />
           <a href={media.siteUrl}>
-            <div className="search-card__img--hover" style={{backgroundImage: `url(${media.coverImage.extraLarge})`}}/>
+            <div
+              className="search-card__img--hover"
+              style={{ backgroundImage: `url(${media.coverImage.extraLarge})` }}
+            />
           </a>
           {/* Content */}
           <div className="search-card__info">
             <h3 className="card-title">{media.title.romaji}</h3>
             <div className="card-genero">
-              {media.genres.map(genres => (
+              {media.genres.map((genres) => (
                 <div className="genero" key={genres}>
-                  <Genero genres={genres}/>
+                  <Genero genres={genres} />
                 </div>
               ))}
             </div>
           </div>
         </article>
       </React.Fragment>
-    )
+    );
   }
 }
 
@@ -81,44 +86,44 @@ class BadgeSearch extends Component {
             currentPage: '',
             lastPage: '',
             hasNextPage: false,
-            perPage: ''
+            perPage: '',
           },
-          media: []
-        }
-      }
-    }
+          media: [],
+        },
+      },
+    },
   };
   _isMounted = true;
 
   componentDidMount() {
     this._isMounted = true;
     this.fetchData();
-  };
+  }
 
   componentWillUnmount() {
     this._isMounted = false;
   }
 
-  handleChange = e => {
+  handleChange = (e) => {
     // console.log({ name: e.target.name, values: e.target.value })
-    if (e.target.name === "search") {
+    if (e.target.name === 'search') {
       this.setState({
-        searchName: e.target.value
-      })
+        searchName: e.target.value,
+      });
     }
-  }
+  };
 
-  handleClick = e => {
+  handleClick = (e) => {
     // console.log( "Button Search was clicked" )
     this.fetchData();
-  }
+  };
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
-  }
+  };
 
-  fetchData = async() => {
-    this.setState({ loading: true, error: null})
+  fetchData = async () => {
+    this.setState({ loading: true, error: null });
 
     var query = `
       query ($id: Int, $page: Int, $perPage: Int, $search: String) {
@@ -160,22 +165,22 @@ class BadgeSearch extends Component {
     var variables = {
       search: this.state.searchName,
       page: 1,
-      perPage: 15
+      perPage: 15,
     };
 
-    var url = 'https://graphql.anilist.co'
+    var url = 'https://graphql.anilist.co';
 
     var options = {
-          method: 'POST',
-          headers: { 
-            'Content-Type': 'application/json',
-            'Accept': 'application/json' 
-          },
-          body: JSON.stringify({
-            query: query,
-            variables: variables
-          })
-        }
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        query: query,
+        variables: variables,
+      }),
+    };
 
     try {
       const response = await fetch(url, options);
@@ -183,13 +188,13 @@ class BadgeSearch extends Component {
 
       if (this._isMounted) {
         console.log(data);
-        this.setState({ 
+        this.setState({
           loading: false,
-          data: data
-        })
+          data: data,
+        });
       }
     } catch (error) {
-      this.setState({ loading: true, error: error})
+      this.setState({ loading: true, error: error });
     }
   };
 
@@ -199,36 +204,39 @@ class BadgeSearch extends Component {
     }
     return (
       <React.Fragment>
-        <BadgeHero title="Buscar Serie"/>
+        <BadgeHero title="Buscar Serie" />
         <div className="container search-main">
           <form className="search-form" action="" onSubmit={this.handleSubmit}>
             <input
               onChange={this.handleChange}
-              type="search" 
+              type="search"
               id="search"
               placeholder="Buscar series ..."
-              name="search"/>
-            <button type="submit" className="search-form__icon" onClick={this.handleClick}>
-                <FontAwesomeIcon icon={faSearch}/>
-              </button>
+              name="search"
+            />
+            <button
+              type="submit"
+              className="search-form__icon"
+              onClick={this.handleClick}>
+              <FontAwesomeIcon icon={faSearch} />
+            </button>
           </form>
         </div>
         <div className="container search-main">
           <div className="row">
-            {this.state.data.data.Page.media.map(media => (
+            {this.state.data.data.Page.media.map((media) => (
               <div className="col-md-6 col-lg-4" key={media.id}>
-                <SearchCard media={media}/>
+                <SearchCard media={media} />
               </div>
             ))}
           </div>
         </div>
 
-        {this.state.loading && ( <Loader/> )}
-        {this.state.data.data.Page.media === 0 && ( <h3>No encontramos datos</h3> )}
-
+        {this.state.loading && <Loader />}
+        {this.state.data.data.Page.media === 0 && <h3>No encontramos datos</h3>}
       </React.Fragment>
-    )
+    );
   }
 }
 
-export default BadgeSearch
+export default BadgeSearch;

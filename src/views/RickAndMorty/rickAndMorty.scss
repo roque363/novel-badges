@@ -1,18 +1,25 @@
+.rick-morty-list {
+  &__cotainer {
+    padding: 1rem;
+  }
+}
 .character-card {
   margin: 1.2rem 0;
-  padding: 1rem 1rem;
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   transition: 0.2s;
   &:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05, 1.05);
   }
-  .name {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  &__name {
     width: 100%;
     text-align: center;
     overflow: hidden;
@@ -23,28 +30,28 @@
     font-weight: 600;
     font-size: 1.7rem;
   }
-  .title {
+  &__status {
     color: white;
-    margin: 0.6rem;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
+    margin-bottom: 0.6rem;
+    padding: 0.2rem 1rem;
+    border-radius: 16px;
     transition: 0.2s;
     cursor: pointer;
-    &--dead {
+    &.dead {
       background-color: #c0392b;
       &:hover {
         box-shadow: 0 0 12px rgba(#c0392b, 0.8);
       }
     }
 
-    &--unknown {
+    &.unknown {
       background-color: #8c14fc;
       &:hover {
         box-shadow: 0 0 12px rgba(#8c14fc, 0.8);
       }
     }
 
-    &--alive {
+    &.alive {
       background-color: #2ecc71;
       &:hover {
         box-shadow: 0 0 12px rgba(#2ecc71, 0.8);
@@ -54,8 +61,8 @@
   img {
     height: 200px;
     width: 100%;
-    max-width: 250px;
     border-radius: 0.2rem;
+    object-fit: cover;
   }
   .desc {
     width: 100%;
