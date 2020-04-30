@@ -10,7 +10,7 @@ function BasicLayout(props) {
   return (
     <React.Fragment>
       <Navbar />
-      <div style={{ minHeight: '85vh' }}>{props.children}</div>
+      <div style={{ minHeight: '88vh' }}>{props.children}</div>
       {isTabletOrMobile && <TabBar />}
     </React.Fragment>
   );

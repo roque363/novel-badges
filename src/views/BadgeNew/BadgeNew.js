@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './badgeNew.scss';
 // Components
 import BadgeHero from 'components/BadgeHero';
@@ -27,6 +27,10 @@ function BadgeNew(props) {
       setError(error.message);
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="badge-new">
