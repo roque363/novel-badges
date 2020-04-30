@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   transition: 0.2s ease;
+  overflow: hidden;
   &__avatar {
     background: #e6e4e4;
     margin-right: 0.8rem;

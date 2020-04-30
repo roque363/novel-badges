@@ -43,15 +43,21 @@ function Home() {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img src={banner1} className="d-block w-100" alt="banner" />
-              <h1>The Quintessential Quintuplets</h1>
+              <div className="carousel-item__title">
+                <h1>The Quintessential Quintuplets</h1>
+              </div>
             </div>
             <div className="carousel-item">
               <img src={banner2} className="d-block w-100" alt="banner" />
-              <h1>Saenai Heroine no Sodatekata</h1>
+              <div className="carousel-item__title">
+                <h1>Saenai Heroine no Sodatekata</h1>
+              </div>
             </div>
             <div className="carousel-item">
               <img src={banner3} className="d-block w-100" alt="banner" />
-              <h1>SSSS. GRIDMAN</h1>
+              <div className="carousel-item__title">
+                <h1>SSSS. GRIDMAN</h1>
+              </div>
             </div>
           </div>
           <a

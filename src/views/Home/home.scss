@@ -12,13 +12,17 @@
           object-fit: cover;
           user-select: none;
         }
-        h1 {
+        &__title {
+          height: 100%;
           position: absolute;
-          top: 38%;
+          top: 0;
           left: 0;
           right: 0;
-          margin-left: auto;
-          margin-right: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        h1 {
           font-family: 'Mali', sans-serif;
           font-weight: 600;
           letter-spacing: 2px;
@@ -34,9 +38,12 @@
         }
         @media only screen and (max-width: 990px) {
           & {
-            max-height: 40vh;
+            max-height: 46vh;
             img {
               height: 40vh;
+            }
+            h1 {
+              top: 10%;
             }
           }
         }
@@ -101,5 +108,11 @@
   &__content {
     padding-top: 3rem;
     padding-bottom: 3rem;
+    @media only screen and (max-width: 990px) {
+      & {
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+      }
+    }
   }
 }

@@ -1,13 +1,12 @@
-
 .card-serie {
-  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
   background-color: #fff;
   width: 100%;
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
-  margin-bottom: 3rem;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.5rem;
   &__header {
     position: absolute;
     padding: 16px;
@@ -37,7 +36,6 @@
     height: 235px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
-  
   }
   &__img--hover {
     transition: 0.2s all ease-out;
@@ -87,18 +85,18 @@
     }
   }
   &:hover {
-    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
     transform: scale(1.04, 1.04);
   }
   &:hover &__img--hover {
     height: 100%;
     opacity: 0.3;
-  }  
+  }
   &:hover &__info {
     background-color: transparent;
     position: relative;
   }
-  
+
   &:hover &__header {
     opacity: 1;
   }
