@@ -1,12 +1,17 @@
 import React from 'react';
+// Dependencies
+import { useMediaQuery } from 'react-responsive';
 // Components
-import { Navbar } from './components';
+import { Navbar, TabBar } from './components';
 
 function BasicLayout(props) {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 990px)' });
+
   return (
     <React.Fragment>
       <Navbar />
-      {props.children}
+      <div style={{ minHeight: '80vh' }}>{props.children}</div>
+      {isTabletOrMobile && <TabBar />}
     </React.Fragment>
   );
 }

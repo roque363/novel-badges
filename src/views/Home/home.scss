@@ -1,35 +1,43 @@
 .home-main {
   &__hero {
-    position:relative;
-    text-align:center;
-    color:white;
+    position: relative;
+    text-align: center;
+    color: white;
     .carousel {
       .carousel-item {
-        max-height: 480px;
+        max-height: 60vh;
         overflow: hidden;
         img {
-          height: 480px;
+          height: 60vh;
           object-fit: cover;
           user-select: none;
         }
         h1 {
           position: absolute;
           top: 38%;
-          left: 0; 
-          right: 0; 
-          margin-left: auto; 
-          margin-right: auto; 
+          left: 0;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
           font-family: 'Mali', sans-serif;
           font-weight: 600;
           letter-spacing: 2px;
-          font-size:48px;
+          font-size: 48px;
           text-decoration: none;
-          text-shadow: 0px 0px 5px #1C2331;
+          text-shadow: 0px 0px 5px #1c2331;
           &::selection {
             background: rgba(28, 35, 49, 0.5); /* WebKit/Blink Browsers */
           }
           &::-moz-selection {
             background: rgba(28, 35, 49, 0.5); /* Gecko Browsers */
+          }
+        }
+        @media only screen and (max-width: 990px) {
+          & {
+            max-height: 40vh;
+            img {
+              height: 40vh;
+            }
           }
         }
       }
@@ -43,17 +51,17 @@
       }
     }
     .waves {
-      position:relative;
+      position: relative;
       width: 100%;
-      height:12vh;
+      height: 12vh;
       margin-top: -9rem;
       margin-bottom: -2rem; /*Fix for safari gap*/
-      min-height:80px;
-      max-height:120px;
+      min-height: 80px;
+      max-height: 120px;
 
       /* Animation */
       .parallax > use {
-        animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+        animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
       }
       .parallax > use:nth-child(1) {
         animation-delay: -2s;
@@ -73,18 +81,18 @@
       }
       @keyframes move-forever {
         0% {
-         transform: translate3d(-90px,0,0);
+          transform: translate3d(-90px, 0, 0);
         }
         100% {
-          transform: translate3d(85px,0,0);
+          transform: translate3d(85px, 0, 0);
         }
       }
     }
     /*Shrinking for mobile*/
     @media (max-width: 768px) {
       .waves {
-        height:40px;
-        min-height:40px;
+        height: 40px;
+        min-height: 40px;
         margin-top: -6rem;
         margin-bottom: -2rem;
       }

@@ -19,6 +19,7 @@ const Navbar = () => {
         <Link className="navbar-brand logo" to={ROUTES.HOME}>
           NovelBadges
         </Link>
+        {/*
         <button
           className="navbar-toggler"
           type="button"
@@ -29,6 +30,7 @@ const Navbar = () => {
           aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
+        */}
         <div className="collapse navbar-collapse" id="navbarContent">
           <ul className="navbar-nav ml-md-auto d-md-flex">
             <Item path={ROUTES.HOME} text="Inicio" />

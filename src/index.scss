@@ -17,14 +17,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --primary: #1C2331;
+  --primary: #1c2331;
   --primaryDark: #000009;
   --primaryLight: #444b5a;
+
   --textWhite: #fff;
 
   --iconWhite: #fff;
-  --iconprimary: #1C2331;
-  
+  --iconprimary: #1c2331;
+
+  --backgroundLight: rgba(28, 35, 49, 0.1);
+
   --white: #fff;
 }
 
@@ -51,14 +54,14 @@ a.link-unstyled {
 
   &.btn-primary {
     color: var(--textWhite);
-    background-color: #1C2331;
+    background-color: #1c2331;
   }
   &.btn-primary:not(:disabled):not(.disabled):hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-		transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
   }
   &.btn-primary:not(:disabled):not(.disabled):active {
-    background-color: #1C2331;
+    background-color: #1c2331;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   }
   &.btn-primary:not(:disabled):not(.disabled):focus {
@@ -71,7 +74,7 @@ a.link-unstyled {
   }
   &.btn-accent:not(:disabled):not(.disabled):hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-		transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
   }
   &.btn-accent:not(:disabled):not(.disabled):active {
     background-color: #f2704d;
@@ -83,16 +86,16 @@ a.link-unstyled {
 
   &.btn-danger {
     color: var(--textWhite);
-    background-color: #CD4040;
+    background-color: #cd4040;
   }
   &.btn-danger:not(:disabled):not(.disabled):hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-		transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
   }
   &.btn-danger:not(:disabled):not(.disabled):active {
-    background-color: #CD4040;
+    background-color: #cd4040;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  }  
+  }
   &.btn-danger:not(:disabled):not(.disabled):focus {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   }
