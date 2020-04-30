@@ -5,7 +5,7 @@
   box-shadow: 0 0px 4px 1px rgba(#000, 0.175);
   border-radius: 8px 8px 0 0;
   overflow: hidden;
-  border: 4px solid #fff;
+  // border: 2px solid #fff;
   display: flex;
   position: sticky;
   flex-shrink: 0;
@@ -34,7 +34,7 @@
     }
   }
   &-overlay {
-    border-radius: 20px;
+    border-radius: 8px;
     background-color: var(--backgroundLight);
     height: 100%;
     width: 25%;
@@ -49,6 +49,10 @@
     transition-duration: 0.3s;
     line-height: 1;
     transform: translate(0, 11px);
+    svg {
+      width: 24px;
+      height: 24px;
+    }
   }
   &__txt {
     display: block;

@@ -50,7 +50,7 @@ class SearchCard extends React.Component {
             className="search-card__img"
             style={{ backgroundImage: `url(${media.coverImage.extraLarge})` }}
           />
-          <a href={media.siteUrl}>
+          <a href={media.siteUrl} target="_blank" rel="noopener noreferrer">
             <div
               className="search-card__img--hover"
               style={{ backgroundImage: `url(${media.coverImage.extraLarge})` }}
