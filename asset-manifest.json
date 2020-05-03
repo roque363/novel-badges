@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/novel-badges/static/css/main.b459981b.chunk.css",
-    "main.js": "/novel-badges/static/js/main.3eb9bb88.chunk.js",
-    "main.js.map": "/novel-badges/static/js/main.3eb9bb88.chunk.js.map",
+    "main.js": "/novel-badges/static/js/main.9672b05f.chunk.js",
+    "main.js.map": "/novel-badges/static/js/main.9672b05f.chunk.js.map",
     "runtime-main.js": "/novel-badges/static/js/runtime-main.0b85164a.js",
     "runtime-main.js.map": "/novel-badges/static/js/runtime-main.0b85164a.js.map",
     "static/css/2.8dfec390.chunk.css": "/novel-badges/static/css/2.8dfec390.chunk.css",
     "static/js/2.7069099e.chunk.js": "/novel-badges/static/js/2.7069099e.chunk.js",
     "static/js/2.7069099e.chunk.js.map": "/novel-badges/static/js/2.7069099e.chunk.js.map",
     "index.html": "/novel-badges/index.html",
-    "precache-manifest.460100551c32863fb1724346d677e1c6.js": "/novel-badges/precache-manifest.460100551c32863fb1724346d677e1c6.js",
+    "precache-manifest.da47cf09f0664ec28e432bc31f2d70b8.js": "/novel-badges/precache-manifest.da47cf09f0664ec28e432bc31f2d70b8.js",
     "service-worker.js": "/novel-badges/service-worker.js",
     "static/css/2.8dfec390.chunk.css.map": "/novel-badges/static/css/2.8dfec390.chunk.css.map",
     "static/css/main.b459981b.chunk.css.map": "/novel-badges/static/css/main.b459981b.chunk.css.map",
@@ -29,6 +29,6 @@
     "static/css/2.8dfec390.chunk.css",
     "static/js/2.7069099e.chunk.js",
     "static/css/main.b459981b.chunk.css",
-    "static/js/main.3eb9bb88.chunk.js"
+    "static/js/main.9672b05f.chunk.js"
   ]
 }
