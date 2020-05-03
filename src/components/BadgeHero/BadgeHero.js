@@ -23,4 +23,4 @@ BadgeHero.propTypes = {
   title: PropTypes.string,
 };
 
-export default BadgeHero;
+export default React.memo(BadgeHero);
