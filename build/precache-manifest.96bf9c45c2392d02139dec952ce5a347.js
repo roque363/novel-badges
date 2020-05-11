@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f0c50402638a8f1e3a3e9a4f270e3bac",
+    "revision": "ebf570a2dbd77153fe01d63dca1a69fc",
     "url": "/novel-badges/index.html"
   },
   {
-    "revision": "de240027e2a7806e333b",
-    "url": "/novel-badges/static/css/2.8dfec390.chunk.css"
+    "revision": "b60b727a991e783ff614",
+    "url": "/novel-badges/static/css/2.69121389.chunk.css"
   },
   {
-    "revision": "12613c4d672602686b37",
-    "url": "/novel-badges/static/css/main.b459981b.chunk.css"
+    "revision": "b4c6ff801f130990fc5f",
+    "url": "/novel-badges/static/css/main.92da9215.chunk.css"
   },
   {
-    "revision": "de240027e2a7806e333b",
-    "url": "/novel-badges/static/js/2.7069099e.chunk.js"
+    "revision": "b60b727a991e783ff614",
+    "url": "/novel-badges/static/js/2.a9fc648e.chunk.js"
   },
   {
-    "revision": "ff98f09881848123577deb30c01b9cd8",
-    "url": "/novel-badges/static/js/2.7069099e.chunk.js.LICENSE.txt"
+    "revision": "7166d7e9be23f5f68594ad63fd9577c6",
+    "url": "/novel-badges/static/js/2.a9fc648e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "12613c4d672602686b37",
-    "url": "/novel-badges/static/js/main.9672b05f.chunk.js"
+    "revision": "b4c6ff801f130990fc5f",
+    "url": "/novel-badges/static/js/main.03ccfe1d.chunk.js"
   },
   {
     "revision": "1e4ba718f179e54cbd28",
