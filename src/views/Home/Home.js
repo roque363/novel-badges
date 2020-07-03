@@ -5,8 +5,8 @@ import db from 'data.json';
 import CardSerie from 'components/CardSerie';
 // Images
 import banner1 from 'assets/images/banner/the_quintessential_quintuplets_banner.jpg';
-import banner2 from 'assets/images/banner/saekano_banner.png';
-import banner3 from 'assets/images/banner/ssss_gridman_banner.jpeg';
+import banner2 from 'assets/images/banner/saekano_banner.jpg';
+import banner3 from 'assets/images/banner/ssss_gridman_banner.jpg';
 // Icons
 import ArrowNext from 'assets/icons/arrow-next.svg';
 import ArrowPrev from 'assets/icons/arrow-prev.svg';
