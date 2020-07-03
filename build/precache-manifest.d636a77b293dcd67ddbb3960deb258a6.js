@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ebf570a2dbd77153fe01d63dca1a69fc",
+    "revision": "30c02c2e7a66774acd1c7ec43721318f",
     "url": "/novel-badges/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/novel-badges/static/css/2.69121389.chunk.css"
   },
   {
-    "revision": "b4c6ff801f130990fc5f",
+    "revision": "87d4468627f3af56ec52",
     "url": "/novel-badges/static/css/main.92da9215.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/novel-badges/static/js/2.a9fc648e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b4c6ff801f130990fc5f",
-    "url": "/novel-badges/static/js/main.03ccfe1d.chunk.js"
+    "revision": "87d4468627f3af56ec52",
+    "url": "/novel-badges/static/js/main.045fdb4d.chunk.js"
   },
   {
     "revision": "1e4ba718f179e54cbd28",
@@ -48,19 +48,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/novel-badges/static/media/nino_profile.740357b0.jpg"
   },
   {
-    "revision": "0df83e363492e8a225fa69f688392656",
-    "url": "/novel-badges/static/media/saekano_banner.0df83e36.png"
+    "revision": "7f59410a2f06ee463ec138bfeef3fe9f",
+    "url": "/novel-badges/static/media/saekano_banner.7f59410a.jpg"
   },
   {
-    "revision": "b74e7b9c40c23328a4f7c127255cc6d0",
-    "url": "/novel-badges/static/media/ssss_gridman_banner.b74e7b9c.jpeg"
+    "revision": "e2ae5bf729729d177c87439a401d4c94",
+    "url": "/novel-badges/static/media/ssss_gridman_banner.e2ae5bf7.jpg"
   },
   {
     "revision": "1d17360a685ac86023b90aa14fd2c62d",
     "url": "/novel-badges/static/media/stars.1d17360a.svg"
   },
   {
-    "revision": "75ea5578f4ed1c3d1b94b5b3758c8107",
-    "url": "/novel-badges/static/media/the_quintessential_quintuplets_banner.75ea5578.jpg"
+    "revision": "e07ee693e39a44edad9acf6c24fa60b0",
+    "url": "/novel-badges/static/media/the_quintessential_quintuplets_banner.e07ee693.jpg"
   }
 ]);
