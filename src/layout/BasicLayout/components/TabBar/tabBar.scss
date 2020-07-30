@@ -1,5 +1,5 @@
 .navigation-tab {
-  height: 65px;
+  height: 56px;
   width: 100%;
   background-color: #fff;
   box-shadow: 0 0px 4px 1px rgba(#000, 0.175);
@@ -34,7 +34,7 @@
     }
   }
   &-overlay {
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
     background-color: var(--backgroundLight);
     height: 100%;
     width: 25%;
@@ -57,7 +57,7 @@
   &__txt {
     display: block;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--iconprimary);
     opacity: 0;
     transition-duration: 0.3s;
