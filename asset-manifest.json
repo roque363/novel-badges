@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/novel-badges/static/css/main.92da9215.chunk.css",
+    "main.css": "/novel-badges/static/css/main.9e3af3cb.chunk.css",
     "main.js": "/novel-badges/static/js/main.045fdb4d.chunk.js",
     "main.js.map": "/novel-badges/static/js/main.045fdb4d.chunk.js.map",
     "runtime-main.js": "/novel-badges/static/js/runtime-main.0b85164a.js",
@@ -9,10 +9,10 @@
     "static/js/2.a9fc648e.chunk.js": "/novel-badges/static/js/2.a9fc648e.chunk.js",
     "static/js/2.a9fc648e.chunk.js.map": "/novel-badges/static/js/2.a9fc648e.chunk.js.map",
     "index.html": "/novel-badges/index.html",
-    "precache-manifest.d636a77b293dcd67ddbb3960deb258a6.js": "/novel-badges/precache-manifest.d636a77b293dcd67ddbb3960deb258a6.js",
+    "precache-manifest.ed428161fb0e1aa813e74cf717e9194f.js": "/novel-badges/precache-manifest.ed428161fb0e1aa813e74cf717e9194f.js",
     "service-worker.js": "/novel-badges/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/novel-badges/static/css/2.69121389.chunk.css.map",
-    "static/css/main.92da9215.chunk.css.map": "/novel-badges/static/css/main.92da9215.chunk.css.map",
+    "static/css/main.9e3af3cb.chunk.css.map": "/novel-badges/static/css/main.9e3af3cb.chunk.css.map",
     "static/js/2.a9fc648e.chunk.js.LICENSE.txt": "/novel-badges/static/js/2.a9fc648e.chunk.js.LICENSE.txt",
     "static/media/arrow-next.svg": "/novel-badges/static/media/arrow-next.7abeb988.svg",
     "static/media/arrow-prev.svg": "/novel-badges/static/media/arrow-prev.64226eee.svg",
@@ -28,7 +28,7 @@
     "static/js/runtime-main.0b85164a.js",
     "static/css/2.69121389.chunk.css",
     "static/js/2.a9fc648e.chunk.js",
-    "static/css/main.92da9215.chunk.css",
+    "static/css/main.9e3af3cb.chunk.css",
     "static/js/main.045fdb4d.chunk.js"
   ]
 }
