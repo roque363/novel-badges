@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
-import './tabBar.scss';
-// Constans
 import * as ROUTES from 'constants/routes';
+import './tabBar.scss';
 
 const LOCATION_PATH = {
   '/': 'tab1',
