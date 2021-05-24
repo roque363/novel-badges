@@ -1,0 +1,24 @@
+/*
+* 1. Reduce browser inconsistencies
+* Source: https://gist.github.com/roque363/3742ac45d42e5e48e7af091561d95d49
+*/
+
+@import './reset.scss';
+
+/*
+* 2. Variables
+*/
+
+@import './vars.scss';
+
+/*
+* 3. Common styles
+*/
+
+@import './global.scss';
+
+/*
+* 4. App styles
+*/
+
+@import './projectStyles.scss';

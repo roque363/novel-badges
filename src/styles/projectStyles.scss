@@ -1,36 +1,3 @@
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  background-color: rgb(244, 244, 247);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  --primary: #1c2331;
-  --primaryDark: #000009;
-  --primaryLight: #444b5a;
-
-  --textWhite: #fff;
-
-  --iconWhite: #fff;
-  --iconprimary: #1c2331;
-
-  --backgroundLight: rgba(28, 35, 49, 0.1);
-
-  --white: #fff;
-}
-
-h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 1.7rem;
-}
-
 a.link-unstyled {
   color: inherit;
   &:hover {
@@ -47,15 +14,16 @@ a.link-unstyled {
   white-space: nowrap;
 
   &.btn-primary {
-    color: var(--textWhite);
-    background-color: #1c2331;
+    color: var(--color-text-white);
+    background-color: var(--color-primary);
   }
   &.btn-primary:not(:disabled):not(.disabled):hover {
+    background-color: var(--color-primary-dark);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    transform: scale(1.05, 1.05);
+    transform: scale(1.02, 1.02);
   }
   &.btn-primary:not(:disabled):not(.disabled):active {
-    background-color: #1c2331;
+    background-color: var(--color-primary-dark);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   }
   &.btn-primary:not(:disabled):not(.disabled):focus {
@@ -63,15 +31,16 @@ a.link-unstyled {
   }
 
   &.btn-accent {
-    color: var(--textWhite);
-    background-color: #f2704d;
+    color: var(--color-text-white);
+    background-color: var(--color-accent);
   }
   &.btn-accent:not(:disabled):not(.disabled):hover {
+    background-color: var(--color-accent-darker);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    transform: scale(1.05, 1.05);
+    transform: scale(1.02, 1.02);
   }
   &.btn-accent:not(:disabled):not(.disabled):active {
-    background-color: #f2704d;
+    background-color: var(--color-accent-darker);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   }
   &.btn-accent:not(:disabled):not(.disabled):focus {
@@ -79,12 +48,12 @@ a.link-unstyled {
   }
 
   &.btn-danger {
-    color: var(--textWhite);
+    color: var(--color-text-white);
     background-color: #cd4040;
   }
   &.btn-danger:not(:disabled):not(.disabled):hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    transform: scale(1.05, 1.05);
+    transform: scale(1.02, 1.02);
   }
   &.btn-danger:not(:disabled):not(.disabled):active {
     background-color: #cd4040;

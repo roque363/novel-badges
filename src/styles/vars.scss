@@ -1,0 +1,47 @@
+:root {
+  // Extra small devices (less than 600px)
+  // No media query since this is the default
+  --break-xs: 0px;
+  // Medium devices (tablets, 600px and up)
+  --break-sm: 600px;
+  // Large devices (desktops, 960px and up)
+  --break-md: 960px;
+  --break-lg: 1280px;
+  // Extra large devices (large desktops, 1920px and up)
+  --break-xl: 1920px;
+
+  /*
+  * 2. Background vars
+  */
+
+  --color-background-body: #f4f4f7;
+  --color-background-base: #fff;
+  --color-background-alt: #444b5a;
+  --color-background-light: rgba(28, 35, 49, 0.102);
+
+  /*
+  * 3. Text vars
+  */
+
+  --color-text-base: #212529;
+  --color-text-primary: #1c2331;
+  --color-text-white: #fff;
+
+  --font-size-base: 1rem;
+
+  /*
+  * 4. Colors vars
+  */
+
+  --color-primary: #1c2331;
+  --color-primary-dark: #000009;
+  --color-primary-light: #444b5a;
+  --color-accent: #5e35b1;
+  --color-accent-light: #d1c4e9;
+  --color-accent-darker: #311b92;
+
+  --color-white: #fff;
+
+  --iconWhite: #fff;
+  --iconprimary: #1c2331;
+}

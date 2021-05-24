@@ -14,12 +14,12 @@ const palette = {
   },
   secondary: {
     contrastText: white,
-    dark: colors.blue[900],
-    main: colors.blue['A400'],
-    light: colors.blue['A400'],
+    dark: colors.deepPurple[900],
+    main: colors.deepPurple[600],
+    light: colors.deepPurple[100],
   },
   text: {
-    // primary: '#0e0e10',
+    primary: '#212529',
     // secondary: '#1f1f23',
   },
   // icon: '#363435',
