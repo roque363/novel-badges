@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
-import * as ROUTES from 'constants/routes';
+import * as ROUTES from 'router/CONSTANTS';
 import './tabBar.scss';
 
 const LOCATION_PATH = {

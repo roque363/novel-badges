@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useResponsive } from 'hooks';
-import * as ROUTES from 'constants/routes';
+import * as ROUTES from 'router/CONSTANTS';
 import styles from './navbar.module.scss';
 // Components
 import { Toolbar } from '@material-ui/core';
