@@ -1,47 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './navbar.scss';
-// Constans
+import { useResponsive } from 'hooks';
 import * as ROUTES from 'constants/routes';
+import styles from './navbar.module.scss';
+// Components
+import { Toolbar } from '@material-ui/core';
 
 const Item = ({ path, text }) => (
-  <li className="nav-item">
-    <Link className="nav-link" to={path}>
+  <li className={styles.item}>
+    <Link className={styles.link} to={path}>
       {text}
     </Link>
   </li>
 );
 
-const Navbar = () => {
+function Navbar() {
+  const { isDesktop } = useResponsive();
   return (
-    <nav className="navbar sticky-top navbar-expand-lg navbar-dark">
-      <div className="container">
-        <Link className="navbar-brand logo" to={ROUTES.HOME}>
+    <nav className={styles.root}>
+      <Toolbar>
+        <Link className={styles.logo} to={ROUTES.HOME}>
           NovelBadges
         </Link>
-        {/*
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarContent"
-          aria-controls="navbarContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        */}
-        <div className="collapse navbar-collapse" id="navbarContent">
-          <ul className="navbar-nav ml-md-auto d-md-flex">
+        <div className={styles.space}></div>
+        {isDesktop && (
+          <ul className={styles.content}>
             <Item path={ROUTES.HOME} text="Inicio" />
             <Item path={ROUTES.SEARCH} text="Buscar" />
             <Item path={ROUTES.BADGES} text="Lista" />
             <Item path={ROUTES.RICKANDMORTY} text="Rick y Morty" />
           </ul>
-        </div>
-      </div>
+        )}
+      </Toolbar>
     </nav>
   );
-};
+}
 
 export default Navbar;

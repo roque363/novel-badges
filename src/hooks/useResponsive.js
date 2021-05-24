@@ -1,6 +1,6 @@
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-function useResponsive() {
+const useResponsive = () => {
   const isMobile = useMediaQuery('(max-width: 600px)');
 
   const isTablet = useMediaQuery('(min-width: 600px) and (max-width: 960px)');
@@ -12,6 +12,6 @@ function useResponsive() {
     isTablet: isTablet,
     isMobile: isMobile,
   };
-}
+};
 
 export default useResponsive;
