@@ -17,3 +17,5 @@ export function useSearchSerie(data) {
 
   return { query, setQuery, filteredData };
 }
+
+export default useSearchSerie;

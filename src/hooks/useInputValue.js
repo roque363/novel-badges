@@ -6,3 +6,5 @@ export const useInputValue = (initialValue) => {
 
   return { value, onChange };
 };
+
+export default useInputValue;
