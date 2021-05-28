@@ -19,7 +19,9 @@
     "react-dom": "^16.14.0",
     "react-infinite-scroll-component": "^4.5.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^4.0.3",
+    "react-swipeable-views": "^0.13.9",
+    "react-swipeable-views-native": "^0.13.2"
   },
   "scripts": {
     "predeploy": "npm run build",

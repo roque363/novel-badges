@@ -1,0 +1,117 @@
+.root {
+  position: fixed;
+  top: auto;
+  bottom: 0px;
+  width: 100%;
+  height: 56px;
+  background-color: var(--color-primary);
+  box-shadow: 0 0px 8px 1px rgba(#000, 0.25);
+  z-index: 1100;
+}
+.wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.8em;
+  padding: 0 36px;
+}
+.border {
+  left: 0;
+  bottom: 98%;
+  width: 10.9em;
+  height: 2.4em;
+  position: absolute;
+  clip-path: url(#menu);
+  will-change: transform;
+  background-color: var(--color-primary);
+  transition: transform 0.7s;
+}
+.item {
+  all: unset;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 0.55em 0 0.85em;
+  will-change: transform;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+  transition: transform 0.7s;
+  &.active {
+    transform: translate3d(0, -0.8em, 0);
+    &::before {
+      transform: scale(1);
+    }
+    .icon {
+      animation: strok 1.5s reverse;
+    }
+  }
+  &--orange {
+    &.active {
+      &::before {
+        background-color: #ff8c00;
+      }
+    }
+  }
+  &--magenta {
+    &.active {
+      &::before {
+        background-color: #f54888;
+      }
+    }
+  }
+  &--geekblue {
+    &.active {
+      &::before {
+        background-color: #4343f5;
+      }
+    }
+  }
+  &--gold {
+    &.active {
+      &::before {
+        background-color: #e0b115;
+      }
+    }
+  }
+  &--cyan {
+    &.active {
+      &::before {
+        background-color: #65ddb7;
+      }
+    }
+  }
+  &::before {
+    content: '';
+    z-index: -1;
+    width: 4.2em;
+    height: 4.2em;
+    border-radius: 50%;
+    position: absolute;
+    transform: scale(0);
+    transition: background-color 0.7s, transform 0.7s;
+  }
+  .icon {
+    width: 26px;
+    height: 26px;
+    stroke: white;
+    fill: transparent;
+    stroke-linejoin: round;
+    stroke-dasharray: 400;
+  }
+}
+.svgContainer {
+  width: 0;
+  height: 0;
+}
+@keyframes strok {
+  100% {
+    stroke-dashoffset: 400;
+    // fill: black;
+  }
+}
