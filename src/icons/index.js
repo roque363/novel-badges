@@ -2,9 +2,13 @@ export { default as ArrowNextIcon } from './ArrowNext';
 
 export { default as ArrowPrevIcon } from './ArrowPrev';
 
+export { default as CalendarOutlineIcon } from './CalendarOutline';
+
 export { default as FolderOutlineIcon } from './FolderOutline';
 
 export { default as ImageOutlineIcon } from './ImageOutline';
+
+export { default as InfoIcon } from './Info';
 
 export { default as KanbanOutlineIcon } from './KanbanOutline';
 

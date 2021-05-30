@@ -68,6 +68,7 @@ const typography = {
     // color: palette.text.primary,
     fontFamily: fontFamily,
     // fontSize: '1.4rem',
+    textTransform: 'none',
   },
 };
 

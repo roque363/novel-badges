@@ -25,7 +25,7 @@
     text-align: center;
     height: 100%;
     width: 100%;
-    // background: rgba(28, 35, 49, 0.4);
+    background: rgba(28, 35, 49, 0.15);
     h2 {
       font-family: 'Mali', sans-serif;
       font-size: 48px;
@@ -63,10 +63,10 @@
     // background: linear-gradient(-45deg, #cc3843 0%, #cb193f 100%);
     opacity: 0.5;
     cursor: pointer;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    // transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     &:hover {
       opacity: 0.85;
-      transform: scale(1.25);
+      // transform: scale(1.25);
     }
     &.active {
       width: 30px;
@@ -137,6 +137,14 @@
   min-height: 80px;
   max-height: 120px;
   z-index: 100;
+  .blur {
+    filter: url(#blurFilter);
+    -webkit-filter: url(#blurFilter);
+    -moz-filter: url(#blurFilter);
+    -o-filter: url(#blurFilter);
+    -ms-filter: url(#blurFilter);
+    // background: white;
+  }
   /* Animation */
   .parallax > use {
     animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;

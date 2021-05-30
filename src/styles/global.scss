@@ -26,11 +26,11 @@ a {
   text-decoration: none;
 }
 a:hover {
-  // color: #000009;
+  color: #7e57c2;
   text-decoration: none;
 }
 a:active {
-  // color: #1c2331;
+  color: #7e57c2;
 }
 ::selection {
   // background-color: rgba(28, 35, 49, 0.5);
@@ -41,10 +41,57 @@ a:active {
 ::-moz-selection {
   background: #7e57c2; /* Gecko Browsers */
 }
-h2 {
+h1,
+h2,
+strong {
+  font-weight: 700;
+}
+h3,
+h4 {
   font-weight: 600;
-  font-size: 1.7rem;
 }
 em {
   font-style: italic;
+}
+h1 {
+  font-size: 2.25rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.625rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1.0625rem;
+}
+p {
+  font-size: 1rem;
+}
+
+@media (min-width: 960px) {
+  h1 {
+    font-size: 2.7849rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.928rem;
+  }
+  h4 {
+    font-size: 1.8219rem;
+  }
+  h5 {
+    font-size: 1.4993rem;
+  }
+  h6 {
+    font-size: 1.0938rem;
+  }
 }

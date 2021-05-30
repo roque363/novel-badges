@@ -1,46 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import './home.scss';
-import db from 'data.json';
+import React from 'react';
+import data from 'data.json';
+import styles from './home.module.scss';
 // Components
 import { CardSerie, MainSlider } from 'components';
+import { Container, Grid } from '@material-ui/core';
 
 function Home() {
-  const [loading, setLoading] = useState(true);
-  const [isMounted, setIsMounted] = useState(true);
-  const [data, setData] = useState({
-    series: [],
-  });
-
-  useEffect(() => {
-    fetchData();
-    return () => {
-      setIsMounted(false);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const fetchData = async () => {
-    if (isMounted) {
-      setData(db);
-    }
-    setLoading(false);
-  };
+  const seriesArray = [...data.series];
 
   return (
-    <div className="home-main">
+    <div className={styles.root}>
       <MainSlider />
-      <div className="container home-main__content">
-        {!loading && (
-          <div className="row">
-            {data.series.map((serie, index) => {
+      <div className={styles.content}>
+        <Container maxWidth="lg">
+          <div className={styles.title}>
+            <h1>Lista de Series</h1>
+          </div>
+          <Grid container spacing={3}>
+            {seriesArray.map((serie, index) => {
               return (
-                <div className="col-md-6 col-lg-4" key={index}>
+                <Grid item xs={12} sm={4} md={3} key={index}>
                   <CardSerie serie={serie} />
-                </div>
+                </Grid>
               );
             })}
-          </div>
-        )}
+          </Grid>
+        </Container>
       </div>
     </div>
   );

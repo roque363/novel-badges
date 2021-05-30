@@ -1,63 +1,55 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
-import './cardSerie.scss'
-// Constanst
-import * as VARIABLES from 'constants/variables'
-// Constans
-import * as ROUTES from 'constants/routes'
-// Utils
-import replacePathParams from 'utils/replacePathParams'
-// Dependencies
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCalendarTimes } from '@fortawesome/free-solid-svg-icons'
-import { faHeart } from '@fortawesome/free-regular-svg-icons'
+import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
+import { replacePathParams } from 'utils';
+import * as VARIABLES from 'constants/variables';
+import * as ROUTES from 'router/CONSTANTS';
+import PropTypes from 'prop-types';
+import styles from './cardSerie.module.scss';
+// Componets
+import { Button } from '@material-ui/core';
+import { InfoIcon } from 'icons';
 
-const CardSerie = props => {
-  const { serie } = props
+const CardSerie = (props) => {
+  const { serie } = props;
   return (
-    <article className="card-serie">
-      {/* Header Oculto */}
-      <div className="card-serie__header">
-        <FontAwesomeIcon className="card-serie__header__like" icon={faHeart} style={{color:'rgb(189, 69, 69)'}}/>
-        <div className="card-serie__header__season">
-          <FontAwesomeIcon icon={faCalendarTimes} style={{color:'rgb(189, 69, 69)'}}/>
-          <span className="time">{serie.season}</span>
+    <RouterLink
+      className={styles.link}
+      to={replacePathParams(ROUTES.BADGES_DETAIL, { slug: serie.slug })}>
+      <article
+        className={styles.root}
+        style={{
+          backgroundImage: `url(${VARIABLES.URL_IMAGE}${serie.cover})`,
+        }}>
+        <div className={styles.top}>{serie.season}</div>
+        <div className={styles.body}>
+          <div className={styles.author}>{serie.story_author}</div>
+          <h4 className={styles.headline}>{serie.title}</h4>
+          <Button
+            disableElevation
+            className={styles.action}
+            startIcon={<InfoIcon />}
+            color="secondary"
+            variant="contained">
+            Mas detalles
+          </Button>
         </div>
-      </div>
-      {/* Header Image */}
-      <div 
-        className="card-serie__img"
-        style={{backgroundImage: `url(${VARIABLES.URL_IMAGE}${serie.cover})`}}
-      />
-      <Link to={replacePathParams(ROUTES.BADGES_DETAIL, { slug: serie.slug })}>
-        <div
-          className="card-serie__img--hover"
-          style={{backgroundImage: `url(${VARIABLES.URL_IMAGE}${serie.cover})`}}
-        />
-      </Link>
-      {/* Header Content */}
-      <div className="card-serie__info">
-        <span className="badge badge-dark">Wiki</span>
-        <h3 className="card-title">{serie.title}</h3>
-        <span className="card-author">{serie.story_author}</span>
-      </div>
-    </article>
-  )
-}
+      </article>
+    </RouterLink>
+  );
+};
 
 CardSerie.defaultProps = {
   serie: {
-    id: "1",
-    title: "The Quintessential Quintuplets",
-    author: "Negi Haruba",
-    season: "Winter 2019",
-    cover: "the_quintessential_quintuplets.jpg",
-  }
+    id: '1',
+    title: '...',
+    author: '...',
+    season: '...',
+    cover: 'the_quintessential_quintuplets.jpg',
+  },
 };
 
 CardSerie.propTypes = {
   serie: PropTypes.object.isRequired,
-}
+};
 
 export default CardSerie;
