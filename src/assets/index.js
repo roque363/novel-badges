@@ -1,3 +1,5 @@
+export { default as BackgroundStars } from './images/stars.svg';
+
 export { default as BannerSaekano } from './images/banner/saekano_banner.jpg';
 
 export { default as BannerGridman } from './images/banner/ssss_gridman_banner.jpg';

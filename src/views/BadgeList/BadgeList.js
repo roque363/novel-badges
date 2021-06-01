@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useSearchSerie } from 'hooks/useSearchData';
 import { Link } from 'react-router-dom';
+import * as ROUTES from 'router/CONSTANTS';
 import './badgeList.scss';
 import db from 'data.json';
-// Constans
-import * as ROUTES from 'constants/routes';
-// Hooks
-import { useSearchSerie } from 'hooks/useSearchData';
 // Components
-import BadgeHero from 'components/BadgeHero';
-import Loader from 'components/Loader';
-import SerieItem from 'components/SerieItem';
+import { BadgeHero, Loader, SerieItem } from 'components';
 
 const BadgeList = (props) => {
   const [loading, setLoading] = useState(true);

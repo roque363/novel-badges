@@ -1,26 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './badgeHero.scss';
+import styles from './badgeHero.module.scss';
+import { BackgroundStars } from 'assets';
 
 const BadgeHero = (props) => {
-  const { title } = props;
+  const { title = '', banner = BackgroundStars } = props;
 
   return (
-    <div className="badge-hero">
-      <div className="badge-hero__container">
-        <h1 className="badge-hero__title">{title}</h1>
+    <div
+      className={styles.root}
+      style={{ background: `url('${banner}'), #1b1b25` }}>
+      <div className={styles.container}>
+        <h1 className={styles.header}>{title}</h1>
       </div>
     </div>
   );
 };
 
-// Especifica los valores por defecto de props:
-BadgeHero.defaultProps = {
-  title: '',
-};
-
 BadgeHero.propTypes = {
   title: PropTypes.string,
+  banner: PropTypes.any,
 };
 
 export default React.memo(BadgeHero);

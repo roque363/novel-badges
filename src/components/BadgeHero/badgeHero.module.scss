@@ -1,0 +1,23 @@
+.root {
+  width: 100%;
+  padding: 2rem 0;
+  background-repeat: repeat !important;
+  background-position: center !important;
+  background-size: auto !important;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+.header {
+  font-family: 'Mali', cursive;
+  color: var(--color-text-white);
+  font-weight: 600;
+  font-size: 2.5rem;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0px 0px 5px #aaa;
+}
