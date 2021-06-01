@@ -1,7 +1,8 @@
 import React from 'react';
 import { useResponsive } from 'hooks';
-// Components
-import { Navbar, TabBar } from './components';
+import Navbar from './Navbar';
+import TabBar from './TabBar';
+import styles from './basicLayout.module.scss';
 
 function BasicLayout(props) {
   const { isDesktop } = useResponsive();
@@ -9,7 +10,7 @@ function BasicLayout(props) {
   return (
     <React.Fragment>
       <Navbar />
-      <div style={{ minHeight: '88vh' }}>{props.children}</div>
+      <div className={styles.root}>{props.children}</div>
       {!isDesktop && <TabBar />}
     </React.Fragment>
   );

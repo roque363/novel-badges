@@ -5,8 +5,9 @@
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: var(--color-primary);
+  background-color: var(--color-background-primary);
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(6px);
   box-sizing: border-box;
   z-index: 1100;
 }
