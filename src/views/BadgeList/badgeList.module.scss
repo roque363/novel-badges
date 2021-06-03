@@ -1,0 +1,29 @@
+.root {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+.list {
+  .form {
+    // max-width: 368px;
+    background-color: var(--color-background-base);
+    box-shadow: var(--shadow-elevation-1);
+    border-radius: 5px;
+    margin-bottom: 16px;
+    padding: 10px 20px;
+  }
+  .count {
+    color: #8b939c;
+    padding-bottom: 8px;
+  }
+  & ul > li {
+    margin-top: 4rem;
+  }
+  .noContent {
+    padding: 24px 0;
+  }
+}

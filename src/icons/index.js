@@ -17,3 +17,5 @@ export { default as LayersOutlineIcon } from './LayersOutline';
 export { default as MenuIcon } from './Menu';
 
 export { default as SearchIcon } from './Search';
+
+export { default as TagIcon } from './Tag';

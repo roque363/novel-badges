@@ -1,30 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchSerie } from 'hooks/useSearchData';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import * as ROUTES from 'router/CONSTANTS';
-import './badgeList.scss';
-import db from 'data.json';
+import styles from './badgeList.module.scss';
+import data from 'data.json';
 // Components
-import { BadgeHero, Loader, SerieItem } from 'components';
+import { BadgeHero, SerieItem } from 'components';
+import { Button, Container, TextField } from '@material-ui/core';
 
-const BadgeList = (props) => {
+function BadgeList(props) {
+  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  const [data, setData] = useState([]);
-  const { query, setQuery, filteredData } = useSearchSerie(data);
+  const [series, setSeries] = useState([]);
+  const { query, setQuery, filteredData } = useSearchSerie(series);
 
   const fetchData = async () => {
-    try {
-      const data = db;
-      setTimeout(() => {
-        setData(data.series);
-        setLoading(false);
-      }, 800);
-    } catch (error) {
-      setError(error.message);
+    setTimeout(() => {
+      setSeries(data.series);
       setLoading(false);
-    }
+    }, 800);
   };
 
   useEffect(() => {
@@ -33,55 +27,55 @@ const BadgeList = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  if (error) {
-    return <h3>{error}</h3>;
-  }
-
   return (
-    <div className="badge-list">
+    <>
       <BadgeHero title="Lista" />
-      {!loading ? (
-        <div className="badge-list__container">
-          <div className="badge-list__container--buttons">
-            <Link to={ROUTES.BADGES_NEW} className="btn btn-primary">
-              Nueva Serie
-            </Link>
-          </div>
-          <div className="badge-list__container--list">
-            <div className="form-group">
-              <label>Buscar Serie</label>
-              <input
-                className="form-control"
-                type="text"
-                value={query}
-                onChange={(e) => {
-                  setQuery(e.target.value);
-                }}
-              />
-            </div>
-            <p>{filteredData.length} series encontradas</p>
-            {filteredData.length > 0 ? (
-              <ul className="list-unstyled">
-                {filteredData.map((serie) => {
-                  return (
-                    <li key={serie.id}>
-                      <SerieItem serie={serie} />
-                    </li>
-                  );
-                })}
-              </ul>
-            ) : (
-              <div>
-                <h3>No se encontro ninguna serie</h3>
-              </div>
-            )}
-          </div>
+      <Container maxWidth="lg" className={styles.root}>
+        <div className={styles.actions}>
+          <Button
+            component={RouterLink}
+            to={ROUTES.BADGES_NEW}
+            variant="contained"
+            color="primary">
+            Nueva Serie
+          </Button>
         </div>
-      ) : (
-        <Loader />
-      )}
-    </div>
+        <div className={styles.list}>
+          <div className={styles.form}>
+            <TextField
+              fullWidth
+              label="Buscar Serie"
+              variant="outlined"
+              margin="dense"
+              type="text"
+              value={query}
+              onChange={(e) => {
+                setQuery(e.target.value);
+              }}
+            />
+          </div>
+          <p className={styles.count}>
+            {filteredData.length} series encontradas
+          </p>
+          {filteredData.length > 0 ? (
+            <ul>
+              {filteredData.map((serie) => {
+                return (
+                  <li key={serie.id}>
+                    <SerieItem serie={serie} />
+                  </li>
+                );
+              })}
+            </ul>
+          ) : (
+            <div className={styles.noContent}>
+              <h5>No se encontro ninguna serie</h5>
+            </div>
+          )}
+        </div>
+      </Container>
+    </>
   );
-};
+}
 
 export default BadgeList;
