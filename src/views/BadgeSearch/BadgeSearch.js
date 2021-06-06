@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './badgeSearch.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import BadgeHero from 'components/BadgeHero';
 import Loader from 'components/Loader';
@@ -217,9 +215,7 @@ class BadgeSearch extends Component {
             <button
               type="submit"
               className="search-form__icon"
-              onClick={this.handleClick}>
-              <FontAwesomeIcon icon={faSearch} />
-            </button>
+              onClick={this.handleClick}></button>
           </form>
         </div>
         <div className="container search-main">
