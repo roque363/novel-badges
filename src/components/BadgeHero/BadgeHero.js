@@ -1,17 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './badgeHero.module.scss';
-import { BackgroundStars } from 'assets';
+import { BackgroundHeader } from 'assets';
+import { Container } from '@material-ui/core';
 
 const BadgeHero = (props) => {
-  const { title = '', banner = BackgroundStars } = props;
+  const { title = '', banner = BackgroundHeader } = props;
 
   return (
     <div
       className={styles.root}
       style={{ background: `url('${banner}'), #1b1b25` }}>
       <div className={styles.container}>
-        <h1 className={styles.header}>{title}</h1>
+        <Container maxWidth="lg">
+          <h1 className={styles.header}>{title}</h1>
+        </Container>
       </div>
     </div>
   );

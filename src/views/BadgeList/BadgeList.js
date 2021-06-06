@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useSearchSerie } from 'hooks/useSearchData';
 import { Link as RouterLink } from 'react-router-dom';
 import * as ROUTES from 'router/CONSTANTS';
@@ -8,28 +8,17 @@ import data from 'data.json';
 import { BadgeHero, SerieItem } from 'components';
 import { Button, Container, TextField } from '@material-ui/core';
 
-function BadgeList(props) {
-  // eslint-disable-next-line no-unused-vars
-  const [loading, setLoading] = useState(true);
-  const [series, setSeries] = useState([]);
-  const { query, setQuery, filteredData } = useSearchSerie(series);
-
-  const fetchData = async () => {
-    setTimeout(() => {
-      setSeries(data.series);
-      setLoading(false);
-    }, 800);
-  };
+function BadgeList() {
+  const array = data.series;
+  const { query, setQuery, filteredData } = useSearchSerie(array);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    fetchData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <>
-      <BadgeHero title="Lista" />
+      <BadgeHero title="Lista de Series" />
       <Container maxWidth="lg" className={styles.root}>
         <div className={styles.actions}>
           <Button

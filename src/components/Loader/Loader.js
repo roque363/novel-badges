@@ -1,11 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './loader.scss';
+import styles from './loader.module.scss';
 
 const Loader = () => {
-  return ReactDOM.createPortal(
-    <div className="loader-container">
-      <div className="loader-container__wavy">
+  return (
+    <div className={styles.root}>
+      <div className={styles.wavy}>
         <span style={{ animationDelay: `0.1s` }}>C</span>
         <span style={{ animationDelay: `0.2s` }}>a</span>
         <span style={{ animationDelay: `0.3s` }}>r</span>
@@ -18,9 +16,8 @@ const Loader = () => {
         <span style={{ animationDelay: `1s` }}>.</span>
         <span style={{ animationDelay: `1.1s` }}>.</span>
       </div>
-    </div>,
-    document.getElementById('loader')
-  )
-}
+    </div>
+  );
+};
 
-export default Loader
+export default Loader;
