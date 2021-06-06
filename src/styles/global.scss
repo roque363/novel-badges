@@ -26,20 +26,8 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #7e57c2;
+  // color: #7e57c2;
   text-decoration: none;
-}
-a:active {
-  color: #7e57c2;
-}
-::selection {
-  // background-color: rgba(28, 35, 49, 0.5);
-  background-color: #7e57c2;
-  color: #fff;
-  // text-shadow: 0px 0px 5px rgba(28, 35, 49, 0.75);
-}
-::-moz-selection {
-  background: #7e57c2; /* Gecko Browsers */
 }
 h1,
 h2,
