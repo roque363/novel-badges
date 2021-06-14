@@ -1,0 +1,102 @@
+.root {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--color-background-base);
+  box-shadow: var(--shadow-elevation-1);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.cover {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease-out;
+  z-index: 1;
+  &:hover {
+    transform: scale(1.15);
+  }
+}
+.content {
+  background-color: var(--color-background-base);
+  padding: 16px;
+  z-index: 10;
+  .status {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: var(--color-text-white);
+    backdrop-filter: blur(3px);
+    border-radius: 16px;
+    padding: 3px 12px;
+    font-weight: 500;
+    user-select: none;
+    transition: 0.2s;
+    &.dead {
+      background-color: rgba(192, 58, 43, 0.6);
+      box-shadow: 0 0 12px rgba(#c0392b, 0.6);
+    }
+    &.unknown {
+      background-color: rgba(140, 20, 252, 0.6);
+      box-shadow: 0 0 12px rgba(#8c14fc, 0.6);
+    }
+    &.alive {
+      background-color: rgba(46, 204, 112, 0.6);
+      box-shadow: 0 0 12px rgba(#2ecc71, 0.6);
+    }
+  }
+  .name {
+    font-size: 28px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 4px;
+  }
+  .desc {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+.character-card {
+  .actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    button {
+      padding: 0.5rem 0.8rem;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      text-transform: uppercase;
+      outline: 0;
+      transition: background-color 0.4s, color 0.4s, transform 0.1s;
+      &:hover {
+        color: white;
+        box-shadow: 0 0 24px rgba(black, 0.2);
+      }
+      &:active {
+        transform: scale(0.95);
+        box-shadow: 0 0 16px rgba(black, 0.3);
+      }
+    }
+    &__trade {
+      &:hover {
+        background-color: #3498db;
+      }
+    }
+
+    &__cancel {
+      &:hover {
+        background-color: #f4d03f;
+      }
+    }
+  }
+}

@@ -1,49 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import './rickAndMorty.scss';
-// Dependencies
+import { rickandmortyService } from 'services';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import styles from './rickAndMorty.module.scss';
 // Components
-import BadgeHero from 'components/BadgeHero';
-import Loader from 'components/Loader';
+import { BadgeHero } from 'components';
+import { Container, Grid } from '@material-ui/core';
+import { BackgroundRickMorty } from 'assets';
+import CharacterCard from './CharacterCard';
 
-const STATUS_STYLE = {
-  Alive: 'alive',
-  Dead: 'dead',
-};
+const LoaderBottom = () => <h4 className={styles.loader}>Cargando...</h4>;
 
-const CharacterCard = (props) => {
-  const { character } = props;
-
-  return (
-    <div className="character-card">
-      <img src={character.image} alt={character.name} />
-      <div className="character-card__content">
-        <h2 className="character-card__name">{character.name}</h2>
-        <div
-          className={`character-card__status ${
-            STATUS_STYLE[character.status] || 'unknown'
-          }`}>
-          {character.status}
-        </div>
-        <div className="desc">Origen: {character.origin.name}</div>
-        <div className="actions">
-          <button className="actions__trade">{character.species}</button>
-          <button className="actions__cancel">{character.gender}</button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const LoaderBottom = () => {
-  return (
-    <React.Fragment>
-      <h4 className="loader-text">Cargando...</h4>
-    </React.Fragment>
-  );
-};
-
-function RickAndMorty(props) {
+function RickAndMorty() {
+  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -56,31 +24,23 @@ function RickAndMorty(props) {
 
   const fetchCharacters = async () => {
     setError(null);
-    try {
-      const response = await fetch(
-        `https://rickandmortyapi.com/api/character?page=${nextPage}`,
-      );
-      const responseData = await response.json();
-      // console.log(responseData);
-      if (response.status === 200) {
-        setData({
-          info: responseData.info,
-          results: [].concat(data.results, responseData.results),
-        });
-        setNextPage(nextPage + 1);
-
-        if (data.info.next !== '') {
-          setHasMore(true);
-        } else {
-          setHasMore(false);
-        }
-
-        setLoading(false);
+    const res = await rickandmortyService.getCharacterList(nextPage);
+    console.log(res);
+    if (!res.info.error) {
+      setData({
+        info: res.data.info,
+        results: [].concat(data.results, res.data.results),
+      });
+      setNextPage(nextPage + 1);
+      if (res.data.info.next !== null) {
+        setHasMore(true);
+      } else {
+        setHasMore(false);
       }
-    } catch (error) {
-      setError(error);
-      setLoading(false);
+    } else {
+      setError(res.info.message);
     }
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -94,25 +54,24 @@ function RickAndMorty(props) {
   }
 
   return (
-    <div className="rick-morty-list">
-      <BadgeHero title="Rick y Morty" />
+    <>
+      <BadgeHero title="Rick y Morty" banner={BackgroundRickMorty} />
       <InfiniteScroll
         dataLength={data.results.length}
         next={fetchCharacters}
         hasMore={hasMore}
         loader={<LoaderBottom />}>
-        <div className="container rick-morty-list__cotainer">
-          <div className="row">
+        <Container maxWidth="lg" className={styles.root}>
+          <Grid container spacing={3}>
             {data.results.map((character) => (
-              <div className="col-md-4 col-lg-3" key={character.id}>
+              <Grid item xs={12} sm={4} md={3} key={character.id}>
                 <CharacterCard character={character} />
-              </div>
+              </Grid>
             ))}
-          </div>
-        </div>
+          </Grid>
+        </Container>
       </InfiniteScroll>
-      {loading && <Loader />}
-    </div>
+    </>
   );
 }
 
