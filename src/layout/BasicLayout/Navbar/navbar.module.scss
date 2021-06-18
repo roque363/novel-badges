@@ -2,14 +2,32 @@
   display: flex;
   flex-shrink: 0;
   flex-direction: column;
-  position: sticky;
-  top: 0;
+  position: fixed;
   width: 100%;
-  background-color: var(--color-background-primary);
-  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.28);
-  backdrop-filter: blur(6px);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: linear-gradient(
+    360deg,
+    rgba(28, 35, 49, 0) 0%,
+    rgba(28, 35, 49, 0.8) 100%
+  );
   box-sizing: border-box;
+  transition: all 0.4s ease;
   z-index: 1100;
+  &.affix {
+    position: fixed;
+    padding: 0;
+    background: var(--color-primary);
+  }
+  @media only screen and (max-width: 990px) {
+    &,
+    &.affix {
+      position: sticky;
+      background: var(--color-primary);
+      padding: 0;
+      box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.28);
+    }
+  }
 }
 .logo {
   font-family: 'Mali', cursive;
@@ -32,11 +50,13 @@
   text-align: center;
   .link {
     padding: 0.5rem 1rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-text-white);
     position: relative;
     text-decoration: none;
     font-size: 18px;
+    font-weight: 600;
     user-select: none;
+    transition: background-color 0.5s ease;
     &::before,
     &::after {
       content: '';
@@ -46,33 +66,31 @@
       transition: all 0.35s ease;
       opacity: 0;
     }
-
     &::before {
       content: '';
       right: 0;
       top: 0;
-      border-top: 3px solid white;
-      border-right: 3px solid white;
+      border-top: 3px solid var(--color-white);
+      border-right: 3px solid var(--color-white);
       transform: translate(-100%, 50%);
     }
-
     &:after {
       content: '';
       left: 0;
       bottom: 0;
-      border-bottom: 3px solid white;
-      border-left: 3px solid white;
+      border-bottom: 3px solid var(--color-white);
+      border-left: 3px solid var(--color-white);
       transform: translate(100%, -50%);
     }
-
     &:hover:before,
     &:hover:after {
       transform: translate(0, 0);
       opacity: 1;
     }
-
     &:hover {
-      color: white !important;
+      color: var(--color-white);
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
     }
   }
 }

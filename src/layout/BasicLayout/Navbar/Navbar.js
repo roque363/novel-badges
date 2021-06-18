@@ -1,10 +1,11 @@
 import React from 'react';
+import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 import { useResponsive } from 'hooks';
 import * as ROUTES from 'router/CONSTANTS';
 import styles from './navbar.module.scss';
 // Components
-import { Toolbar, Slide, useScrollTrigger } from '@material-ui/core';
+import { Toolbar, useScrollTrigger } from '@material-ui/core';
 
 const Item = ({ path, text }) => (
   <li className={styles.item}>
@@ -14,21 +15,23 @@ const Item = ({ path, text }) => (
   </li>
 );
 
-const HideOnScroll = (props) => {
+const ElevationScroll = (props) => {
   const { children } = props;
-  const trigger = useScrollTrigger();
 
-  return (
-    <Slide appear={false} direction="down" in={!trigger}>
-      {children}
-    </Slide>
-  );
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 180,
+  });
+
+  return React.cloneElement(children, {
+    className: clsx(styles.root, trigger && styles.affix),
+  });
 };
 
 function Navbar() {
   const { isDesktop } = useResponsive();
   return (
-    <HideOnScroll>
+    <ElevationScroll>
       <nav className={styles.root}>
         <Toolbar>
           <Link className={styles.logo} to={ROUTES.HOME}>
@@ -45,7 +48,7 @@ function Navbar() {
           )}
         </Toolbar>
       </nav>
-    </HideOnScroll>
+    </ElevationScroll>
   );
 }
 
