@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { rickandmortyService } from 'services';
-import InfiniteScroll from 'react-infinite-scroll-component';
-import styles from './rickAndMorty.module.scss';
-// Components
-import { BadgeHero } from 'components';
 import { Container, Grid } from '@material-ui/core';
+import { Skeleton } from '@material-ui/lab';
+import InfiniteScroll from 'react-infinite-scroll-component';
+
+import { rickandmortyService } from 'services';
 import { BackgroundRickMorty } from 'assets';
+import { BadgeHero } from 'components';
 import CharacterCard from './CharacterCard';
+import styles from './rickAndMorty.module.scss';
 
 const LoaderBottom = () => <h4 className={styles.loader}>Cargando...</h4>;
 
 function RickAndMorty() {
-  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
   const [nextPage, setNextPage] = useState(1);
   const [hasMore, setHasMore] = useState(false);
   const [data, setData] = useState({
@@ -25,7 +24,7 @@ function RickAndMorty() {
   const fetchCharacters = async () => {
     setError(null);
     const res = await rickandmortyService.getCharacterList(nextPage);
-    console.log(res);
+    // console.log(res);
     if (!res.info.error) {
       setData({
         info: res.data.info,
@@ -50,27 +49,48 @@ function RickAndMorty() {
   }, []);
 
   if (error) {
-    return `Error:${error.message}`;
+    return (
+      <>
+        <BadgeHero title="Rick y Morty" banner={BackgroundRickMorty} />
+        <h5> Error:{error.message}</h5>
+      </>
+    );
   }
 
   return (
     <>
       <BadgeHero title="Rick y Morty" banner={BackgroundRickMorty} />
-      <InfiniteScroll
-        dataLength={data.results.length}
-        next={fetchCharacters}
-        hasMore={hasMore}
-        loader={<LoaderBottom />}>
+      {loading ? (
         <Container maxWidth="lg" className={styles.root}>
           <Grid container spacing={3}>
-            {data.results.map((character) => (
-              <Grid item xs={12} sm={4} md={3} key={character.id}>
-                <CharacterCard character={character} />
+            {Array.from(new Array(8)).map((item, index) => (
+              <Grid item xs={12} sm={4} md={3} key={index}>
+                <Skeleton
+                  variant="rect"
+                  height={410}
+                  style={{ borderRadius: '4px' }}
+                />
               </Grid>
             ))}
           </Grid>
         </Container>
-      </InfiniteScroll>
+      ) : (
+        <InfiniteScroll
+          dataLength={data.results.length}
+          next={fetchCharacters}
+          hasMore={hasMore}
+          loader={<LoaderBottom />}>
+          <Container maxWidth="lg" className={styles.root}>
+            <Grid container spacing={3}>
+              {data.results.map((character) => (
+                <Grid item xs={12} sm={4} md={3} key={character.id}>
+                  <CharacterCard character={character} />
+                </Grid>
+              ))}
+            </Grid>
+          </Container>
+        </InfiniteScroll>
+      )}
     </>
   );
 }

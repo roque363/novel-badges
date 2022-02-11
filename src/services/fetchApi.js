@@ -1,14 +1,10 @@
 async function fetchApi(data) {
-  const { url, options, dataType, message } = data;
+  const { url, options, message } = data;
 
   const response = {
     info: { status: null, error: false, message: null },
     data: {},
   };
-
-  if (dataType) {
-    response.data = dataType;
-  }
 
   try {
     const res = await fetch(url, options);

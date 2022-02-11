@@ -1,17 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { withRouter, Link as RouterLink, useLocation } from 'react-router-dom';
-// import { cls } from 'utils';
-import * as ROUTES from 'router/CONSTANTS';
 import clsx from 'clsx';
-import styles from './tabBar.module.scss';
+
 import {
   FolderOutlineIcon,
-  // ImageOutlineIcon,
   MenuIcon,
   SearchIcon,
   LayersOutlineIcon,
-  // KanbanOutlineIcon,
 } from 'icons';
+import * as ROUTES from 'router/CONSTANTS';
+import styles from './tabBar.module.scss';
 
 const TabBarItem = ({ itemRef, href, icon: Icon, color }) => {
   const colorClass = `item--${color}`;
@@ -35,7 +33,6 @@ const TabBar = (props) => {
   const item2Ref = useRef(null);
   const item3Ref = useRef(null);
   const item4Ref = useRef(null);
-  // const item5Ref = useRef(null);
 
   const LOCATION_REF = {
     '/': item1Ref,
@@ -107,14 +104,6 @@ const TabBar = (props) => {
           icon={FolderOutlineIcon}
           color="cyan"
         />
-        {/*
-          <TabBarItem
-            itemRef={item5Ref}
-            href={ROUTES.BADGES_NEW}
-            icon={ImageOutlineIcon}
-            color="gold"
-          />
-          */}
         <div className={styles.border} ref={menuBorderRef}></div>
       </div>
       <div className={styles.svgContainer}>

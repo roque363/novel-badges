@@ -24,6 +24,9 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.1);
   }
+  @media (min-width: 768px) {
+    align-items: flex-end;
+  }
 }
 .header {
   position: relative;
@@ -40,6 +43,9 @@
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #176a83;
+  @media (min-width: 768px) {
+    margin-bottom: 24px;
+  }
   @media (max-width: 768px) {
     text-align: center;
   }

@@ -9,3 +9,5 @@ export { default as MainSlider } from './MainSlider';
 export { default as ModalFoto } from './ModalFoto';
 
 export { default as SerieItem } from './SerieItem';
+
+export { default as Tag } from './Tag';

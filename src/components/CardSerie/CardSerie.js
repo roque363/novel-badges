@@ -1,25 +1,25 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { replacePathParams } from 'utils';
-import * as VARIABLES from 'constants/variables';
-import * as ROUTES from 'router/CONSTANTS';
-import PropTypes from 'prop-types';
-import styles from './cardSerie.module.scss';
-// Componets
 import { Button } from '@material-ui/core';
+import PropTypes from 'prop-types';
+
 import { InfoIcon } from 'icons';
+import { replacePathParams } from 'utils';
+import { URL_IMAGE } from 'constants/variables';
+import { BADGES_DETAIL } from 'router/CONSTANTS';
+import styles from './cardSerie.module.scss';
 
 const CardSerie = (props) => {
   const { serie } = props;
+
+  const path = replacePathParams(BADGES_DETAIL, { slug: serie.slug });
+  const image = URL_IMAGE + serie.cover;
+
   return (
-    <RouterLink
-      className={styles.link}
-      to={replacePathParams(ROUTES.BADGES_DETAIL, { slug: serie.slug })}>
+    <RouterLink className={styles.link} to={path}>
       <article
         className={styles.root}
-        style={{
-          backgroundImage: `url(${VARIABLES.URL_IMAGE}${serie.cover})`,
-        }}>
+        style={{ backgroundImage: `url(${image})` }}>
         <div className={styles.top}>{serie.season}</div>
         <div className={styles.body}>
           <div className={styles.author}>{serie.story_author}</div>

@@ -1,0 +1,33 @@
+.root {
+  display: inline-block;
+  padding: 0px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: white;
+  background: #8855dd;
+  &.comedy {
+    background: #eea800;
+  }
+  &.romance {
+    background: #fd337f;
+  }
+  &.action {
+    background: #006afa;
+  }
+  &.slice-of-life {
+    background: #9ab710;
+  }
+  &.drama {
+    background: #00b19a;
+  }
+  &.sci-fi {
+    background: #4a20e2;
+  }
+  &.ecchi {
+    background: #c00355;
+  }
+  &.fantasy {
+    background: #8855dd;
+  }
+}

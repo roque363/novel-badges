@@ -1,127 +1,45 @@
-import React, { Component } from 'react';
-import './badgeSearch.scss';
+import React, { useEffect, useState, useCallback } from 'react';
+import { Container, Grid, InputBase, IconButton } from '@material-ui/core';
 
-import BadgeHero from 'components/BadgeHero';
-import Loader from 'components/Loader';
+import { anilistService } from 'services';
+import { BadgeHero, Loader } from 'components';
+import { SearchIcon } from 'icons';
+import MediaCard from './MediaCard';
+import styles from './badgeSearch.module.scss';
 
-function Genero(props) {
-  const { genres } = props;
-
-  if (genres === 'Comedy') {
-    return <div style={{ background: '#EEA800' }}>{genres}</div>;
-  } else if (genres === 'Romance') {
-    return <div style={{ background: '#FD337F' }}>{genres}</div>;
-  } else if (genres === 'Romance') {
-    return <div style={{ background: '#8855DD' }}>{genres}</div>;
-  } else if (genres === 'Action') {
-    return <div style={{ background: '#006AFA' }}>{genres}</div>;
-  } else if (genres === 'Slice of Life') {
-    return <div style={{ background: '#9AB710' }}>{genres}</div>;
-  } else if (genres === 'Drama') {
-    return <div style={{ background: '#00B19A' }}>{genres}</div>;
-  } else if (genres === 'Sci-Fi') {
-    return <div style={{ background: '#4A20E2' }}>{genres}</div>;
-  } else if (genres === 'Ecchi') {
-    return <div style={{ background: '#C00355' }}>{genres}</div>;
-  } else if (genres === 'Fantasy') {
-    return <div style={{ background: '#A864B7' }}>{genres}</div>;
-  } else {
-    return <div style={{ background: '#8855DD' }}>{genres}</div>;
-  }
-}
-
-class SearchCard extends React.Component {
-  render() {
-    const { media } = this.props;
-    return (
-      <React.Fragment>
-        <article className="search-card">
-          {/* Header */}
-          <div className="search-card__header">
-            <span className="badge badge-dark">{media.type}</span>
-            <div className="search-card__header__year">
-              <span className="time">{media.startDate.year}</span>
-            </div>
-          </div>
-          {/* Image */}
-          <div
-            className="search-card__img"
-            style={{ backgroundImage: `url(${media.coverImage.extraLarge})` }}
-          />
-          <a href={media.siteUrl} target="_blank" rel="noopener noreferrer">
-            <div
-              className="search-card__img--hover"
-              style={{ backgroundImage: `url(${media.coverImage.extraLarge})` }}
-            />
-          </a>
-          {/* Content */}
-          <div className="search-card__info">
-            <h3 className="card-title">{media.title.romaji}</h3>
-            <div className="card-genero">
-              {media.genres.map((genres) => (
-                <div className="genero" key={genres}>
-                  <Genero genres={genres} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </article>
-      </React.Fragment>
-    );
-  }
-}
-
-class BadgeSearch extends Component {
-  state = {
-    loading: false,
-    error: null,
-    searchName: '',
-    data: {
-      data: {
-        Page: {
-          pageInfo: {
-            total: '',
-            currentPage: '',
-            lastPage: '',
-            hasNextPage: false,
-            perPage: '',
-          },
-          media: [],
-        },
-      },
+function BadgeSearch() {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [isMounted, setMounted] = useState(true);
+  const [search, setSearch] = useState('');
+  const [series, setSeries] = useState({
+    pageInfo: {
+      total: '',
+      currentPage: '',
+      lastPage: '',
+      hasNextPage: false,
+      perPage: '',
     },
-  };
-  _isMounted = true;
+    media: [],
+  });
 
-  componentDidMount() {
-    this._isMounted = true;
-    this.fetchData();
-  }
-
-  componentWillUnmount() {
-    this._isMounted = false;
-  }
-
-  handleChange = (e) => {
-    // console.log({ name: e.target.name, values: e.target.value })
+  const handleChange = (e) => {
     if (e.target.name === 'search') {
-      this.setState({
-        searchName: e.target.value,
-      });
+      setSearch(e.target.value);
     }
   };
 
-  handleClick = (e) => {
-    // console.log( "Button Search was clicked" )
-    this.fetchData();
+  const handleClick = (e) => {
+    fetchData();
   };
 
-  handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
   };
 
-  fetchData = async () => {
-    this.setState({ loading: true, error: null });
+  const fetchData = useCallback(async () => {
+    setLoading(true);
+    setError(null);
 
     var query = `
       query ($id: Int, $page: Int, $perPage: Int, $search: String) {
@@ -133,13 +51,15 @@ class BadgeSearch extends Component {
             hasNextPage
             perPage
           }
-          media (id: $id, search: $search) {
+          media (id: $id, search: $search, sort: [POPULARITY_DESC]) {
             id
             title {
               romaji
               native
             }
+            description
             type
+            format
             season
             startDate {
               year
@@ -151,9 +71,22 @@ class BadgeSearch extends Component {
             chapters
             volumes
             genres
+            isAdult
+            averageScore,
             siteUrl
             coverImage {
               extraLarge
+              color
+            }
+            popularity
+            studios {
+              edges {
+                isMain
+                node {
+                  id
+                  name
+                }
+              }
             }
           }
         }
@@ -161,78 +94,78 @@ class BadgeSearch extends Component {
     `;
 
     var variables = {
-      search: this.state.searchName,
+      search: search,
       page: 1,
-      perPage: 15,
+      perPage: 18,
     };
 
-    var url = 'https://graphql.anilist.co';
+    const res = await anilistService.getMediaList({
+      query: query,
+      variables: variables,
+    });
 
-    var options = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: JSON.stringify({
-        query: query,
-        variables: variables,
-      }),
-    };
-
-    try {
-      const response = await fetch(url, options);
-      const data = await response.json();
-
-      if (this._isMounted) {
-        console.log(data);
-        this.setState({
-          loading: false,
-          data: data,
-        });
+    if (isMounted) {
+      if (!res.info.error) {
+        setSeries(res.data.Page);
+      } else {
+        setError(res.info.message);
       }
-    } catch (error) {
-      this.setState({ loading: true, error: error });
     }
-  };
 
-  render() {
-    if (this.state.error) {
-      return `Error:${this.state.error.message}`;
-    }
-    return (
-      <React.Fragment>
-        <BadgeHero title="Buscar Serie" />
-        <div className="container search-main">
-          <form className="search-form" action="" onSubmit={this.handleSubmit}>
-            <input
-              onChange={this.handleChange}
-              type="search"
-              id="search"
-              placeholder="Buscar series ..."
-              name="search"
-            />
-            <button
+    setLoading(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [search]);
+
+  useEffect(() => {
+    fetchData();
+    return () => {
+      setMounted(false);
+    };
+  }, [fetchData]);
+
+  return (
+    <>
+      <BadgeHero title="Buscar Series" />
+      <Container maxWidth="lg">
+        <div className={styles.wrap}>
+          <form className={styles.search} action="" onSubmit={handleSubmit}>
+            <IconButton
+              className={styles.iconButton}
               type="submit"
-              className="search-form__icon"
-              onClick={this.handleClick}></button>
+              aria-label="search"
+              onClick={handleClick}>
+              <SearchIcon />
+            </IconButton>
+            <InputBase
+              className={styles.input}
+              id="search"
+              name="search"
+              type="text"
+              value={search}
+              onChange={handleChange}
+              placeholder="Buscar series ..."
+              inputProps={{ 'aria-label': 'search google maps' }}
+            />
           </form>
         </div>
-        <div className="container search-main">
-          <div className="row">
-            {this.state.data.data.Page.media.map((media) => (
-              <div className="col-md-6 col-lg-4" key={media.id}>
-                <SearchCard media={media} />
-              </div>
-            ))}
+        {!error ? (
+          <div className={styles.wrap}>
+            <Grid container spacing={3}>
+              {series.media.map((media) => (
+                <Grid item key={media.id} xs={6} sm={4} md={3} lg={2}>
+                  <MediaCard media={media} />
+                </Grid>
+              ))}
+            </Grid>
           </div>
-        </div>
-
-        {this.state.loading && <Loader />}
-        {this.state.data.data.Page.media === 0 && <h3>No encontramos datos</h3>}
-      </React.Fragment>
-    );
-  }
+        ) : (
+          `Error: ${error.message}`
+        )}
+      </Container>
+      {loading && <Loader />}
+      {series.media === 0 && <h3>No encontramos datos</h3>}
+    </>
+  );
 }
 
 export default BadgeSearch;

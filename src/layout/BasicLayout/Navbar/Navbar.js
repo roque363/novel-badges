@@ -1,11 +1,11 @@
-import React from 'react';
-import clsx from 'clsx';
+import { cloneElement } from 'react';
 import { Link } from 'react-router-dom';
+import { Toolbar, useScrollTrigger } from '@material-ui/core';
+import clsx from 'clsx';
+
 import { useResponsive } from 'hooks';
 import * as ROUTES from 'router/CONSTANTS';
 import styles from './navbar.module.scss';
-// Components
-import { Toolbar, useScrollTrigger } from '@material-ui/core';
 
 const Item = ({ path, text }) => (
   <li className={styles.item}>
@@ -23,7 +23,7 @@ const ElevationScroll = (props) => {
     threshold: 180,
   });
 
-  return React.cloneElement(children, {
+  return cloneElement(children, {
     className: clsx(styles.root, trigger && styles.affix),
   });
 };

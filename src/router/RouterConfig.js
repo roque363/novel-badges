@@ -1,9 +1,19 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-import * as ROUTES from 'router/CONSTANTS';
+
 import RouteWithLayout from './RouteWithLayout';
 import { BasicLayout } from 'layout';
 import { Loader } from 'components';
+import {
+  HomeView,
+  BadgeSearchView,
+  BadgeListView,
+  BadgeNewView,
+  BadgeDetailView,
+  RickAndMortyView,
+  NotFoundView,
+} from 'views';
+import * as ROUTES from 'router/CONSTANTS';
 
 const Routes = () => {
   return (
@@ -13,43 +23,40 @@ const Routes = () => {
           <RouteWithLayout
             exact
             layout={BasicLayout}
-            component={lazy(() => import('views/Home'))}
+            component={HomeView}
             path={ROUTES.HOME}
           />
           <RouteWithLayout
             exact
             layout={BasicLayout}
-            component={lazy(() => import('views/BadgeSearch'))}
+            component={BadgeSearchView}
             path={ROUTES.SEARCH}
           />
           <RouteWithLayout
             exact
             layout={BasicLayout}
-            component={lazy(() => import('views/BadgeList'))}
+            component={BadgeListView}
             path={ROUTES.BADGES}
           />
           <RouteWithLayout
             exact
             layout={BasicLayout}
-            component={lazy(() => import('views/BadgeNew'))}
+            component={BadgeNewView}
             path={ROUTES.BADGES_NEW}
           />
           <RouteWithLayout
             exact
             layout={BasicLayout}
-            component={lazy(() => import('views/BadgeDetail'))}
+            component={BadgeDetailView}
             path={ROUTES.BADGES_DETAIL}
           />
           <RouteWithLayout
             exact
             layout={BasicLayout}
-            component={lazy(() => import('views/RickAndMorty'))}
+            component={RickAndMortyView}
             path={ROUTES.RICKANDMORTY}
           />
-          <Route
-            path={ROUTES.NOT_FOUND}
-            component={lazy(() => import('views/NotFound'))}
-          />
+          <Route path={ROUTES.NOT_FOUND} component={NotFoundView} />
           <Redirect from="*" to={ROUTES.NOT_FOUND} />
         </Switch>
       </Suspense>

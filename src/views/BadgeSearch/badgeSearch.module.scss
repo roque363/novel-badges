@@ -1,0 +1,26 @@
+.wrap {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 54px;
+  background: var(--color-background-base);
+  box-sizing: border-box;
+  box-shadow: var(--shadow-elevation-1);
+  border-radius: 8px;
+  padding: 4px 8px;
+  .input {
+    flex: 1;
+    margin-left: 8px;
+  }
+  .iconButton {
+    padding: 8px;
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
