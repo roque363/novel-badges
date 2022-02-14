@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/novel-badges/static/css/main.b2e8c317.chunk.css",
-    "main.js": "/novel-badges/static/js/main.b052dbfa.chunk.js",
-    "main.js.map": "/novel-badges/static/js/main.b052dbfa.chunk.js.map",
+    "main.css": "/novel-badges/static/css/main.25a0cee8.chunk.css",
+    "main.js": "/novel-badges/static/js/main.280aa7ae.chunk.js",
+    "main.js.map": "/novel-badges/static/js/main.280aa7ae.chunk.js.map",
     "runtime-main.js": "/novel-badges/static/js/runtime-main.0c09b63d.js",
     "runtime-main.js.map": "/novel-badges/static/js/runtime-main.0c09b63d.js.map",
-    "static/css/2.4c97ca4f.chunk.css": "/novel-badges/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.b145937c.chunk.js": "/novel-badges/static/js/2.b145937c.chunk.js",
-    "static/js/2.b145937c.chunk.js.map": "/novel-badges/static/js/2.b145937c.chunk.js.map",
+    "static/js/2.16bd2a52.chunk.js": "/novel-badges/static/js/2.16bd2a52.chunk.js",
+    "static/js/2.16bd2a52.chunk.js.map": "/novel-badges/static/js/2.16bd2a52.chunk.js.map",
     "index.html": "/novel-badges/index.html",
-    "static/css/2.4c97ca4f.chunk.css.map": "/novel-badges/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.b2e8c317.chunk.css.map": "/novel-badges/static/css/main.b2e8c317.chunk.css.map",
-    "static/js/2.b145937c.chunk.js.LICENSE.txt": "/novel-badges/static/js/2.b145937c.chunk.js.LICENSE.txt",
+    "static/css/main.25a0cee8.chunk.css.map": "/novel-badges/static/css/main.25a0cee8.chunk.css.map",
+    "static/js/2.16bd2a52.chunk.js.LICENSE.txt": "/novel-badges/static/js/2.16bd2a52.chunk.js.LICENSE.txt",
     "static/media/notFound.scss": "/novel-badges/static/media/error.c1e4a7b5.gif",
+    "static/media/header.2c58c1b9.png": "/novel-badges/static/media/header.2c58c1b9.png",
     "static/media/nino.5ec2c0d3.jpg": "/novel-badges/static/media/nino.5ec2c0d3.jpg",
     "static/media/nino_profile.1665000a.jpg": "/novel-badges/static/media/nino_profile.1665000a.jpg",
+    "static/media/rick_morty.ccbe1e13.jpeg": "/novel-badges/static/media/rick_morty.ccbe1e13.jpeg",
     "static/media/saekano_banner.d4f42975.jpg": "/novel-badges/static/media/saekano_banner.d4f42975.jpg",
     "static/media/ssss_gridman_banner.ed063700.jpg": "/novel-badges/static/media/ssss_gridman_banner.ed063700.jpg",
     "static/media/stars.7544bae9.svg": "/novel-badges/static/media/stars.7544bae9.svg",
-    "static/media/the_quintessential_quintuplets_banner.9e6c5c7d.jpg": "/novel-badges/static/media/the_quintessential_quintuplets_banner.9e6c5c7d.jpg"
+    "static/media/the_quintessential_quintuplets_banner.9e6c5c7d.jpg": "/novel-badges/static/media/the_quintessential_quintuplets_banner.9e6c5c7d.jpg",
+    "static/media/topbanner.46881b3b.jpg": "/novel-badges/static/media/topbanner.46881b3b.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.0c09b63d.js",
-    "static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.b145937c.chunk.js",
-    "static/css/main.b2e8c317.chunk.css",
-    "static/js/main.b052dbfa.chunk.js"
+    "static/js/2.16bd2a52.chunk.js",
+    "static/css/main.25a0cee8.chunk.css",
+    "static/js/main.280aa7ae.chunk.js"
   ]
 }
