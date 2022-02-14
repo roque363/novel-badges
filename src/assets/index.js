@@ -1,5 +1,7 @@
 export { default as BackgroundHeader } from './images/background/header.png';
 
+export { default as BackgroundHeader2 } from './images/background/topbanner.jpg';
+
 export { default as BackgroundRickMorty } from './images/background/rick_morty.jpeg';
 
 export { default as BackgroundStars } from './images/background/stars.svg';

@@ -5,6 +5,7 @@ import { anilistService } from 'services';
 import { BadgeHero, Loader } from 'components';
 import { SearchIcon } from 'icons';
 import MediaCard from './MediaCard';
+import { BackgroundHeader2 } from 'assets';
 import styles from './badgeSearch.module.scss';
 
 function BadgeSearch() {
@@ -125,7 +126,7 @@ function BadgeSearch() {
 
   return (
     <>
-      <BadgeHero title="Buscar Series" />
+      <BadgeHero title="Buscar Series" banner={BackgroundHeader2} />
       <Container maxWidth="lg">
         <div className={styles.wrap}>
           <form className={styles.search} action="" onSubmit={handleSubmit}>

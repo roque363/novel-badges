@@ -1,0 +1,50 @@
+.root {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+.paper {
+  &:global(.MuiPaper-root) {
+    box-shadow: var(--shadow-elevation-1);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+}
+.cover {
+  width: 100%;
+  margin-bottom: 1rem;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    user-select: none;
+  }
+}
+.info {
+  padding: 16px;
+}
+.title {
+  margin-bottom: 10px;
+}
+.body {
+  & > :not(style) + :not(style) {
+    margin-top: 10px;
+  }
+}
+.text {
+  color: #506176;
+  letter-spacing: 0.0175px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  p {
+    font-size: 15px;
+    color: rgb(92, 114, 138);
+    padding-right: 5px;
+  }
+  h6 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+}

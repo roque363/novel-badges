@@ -1,49 +1,58 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import './modalFoto.scss';
-// Constanst
-import * as VARIABLES from 'constants/variables';
+import { Modal, IconButton } from '@material-ui/core';
+
+import { useResponsive } from 'hooks';
+import { XIcon } from 'icons';
+import { URL_IMAGE } from 'constants/variables';
+import styles from './modalFoto.module.scss';
 
 const ModalFoto = (props) => {
-  const { image, name } = props;
+  const { open, handleClose, image, name } = props;
+  const { isMobile } = useResponsive();
 
   return (
-    <div className="nb-modal-foto">
-      <div
-        className="modal fade"
-        id="imageModal"
-        tabIndex="-1"
-        role="dialog"
-        aria-labelledby="imageModalLabel"
-        aria-hidden="true">
-        <div className="modal-dialog modal-dialog-centered" role="document">
-          <div className="modal-content">
-            <div className="modal-body">
-              <div className="img-header">
-                <h5 className="modal-title" id="imageModalLabel">
-                  {/*{name}*/}
-                </h5>
-                <button
-                  type="button"
-                  className="close"
-                  data-dismiss="modal"
-                  aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div className="img-container">
-                {image && <img src={VARIABLES.URL_IMAGE + image} alt={name} />}
-              </div>
-            </div>
-          </div>
+    <Modal
+      open={open}
+      onClose={handleClose}
+      className={styles.dialog}
+      role="dialog"
+      aria-labelledby="image-modal-label"
+      aria-describedby="image-modal-description"
+      aria-hidden="true"
+      BackdropProps={{
+        style: {
+          backgroundColor: '#000',
+          transitionProperty: 'opacity',
+          opacity: '0.9',
+        },
+      }}>
+      <div className={styles.root}>
+        <div className={styles.header}>
+          <h5 className={styles.title} id="imageModalLabel">
+            {name}
+          </h5>
+          {!isMobile && (
+            <IconButton
+              className={styles.action}
+              color="inherit"
+              size="small"
+              data-dismiss="modal"
+              aria-label="Close"
+              onClick={handleClose}>
+              <XIcon strokeWidth={3} />
+            </IconButton>
+          )}
+        </div>
+        <div className={styles.container}>
+          {image && <img src={URL_IMAGE + image} alt={name} />}
         </div>
       </div>
-    </div>
+    </Modal>
   );
 };
 
 ModalFoto.propTypes = {
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
   name: PropTypes.string,
 };
 

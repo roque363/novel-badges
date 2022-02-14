@@ -26,7 +26,7 @@ function BadgeList() {
             to={ROUTES.BADGES_NEW}
             variant="contained"
             color="primary">
-            Nueva Serie
+            Nueva Waifu
           </Button>
         </div>
         <div className={styles.list}>

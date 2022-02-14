@@ -1,0 +1,29 @@
+.title {
+  margin-bottom: 16px;
+}
+.form {
+  & > :not(style) + :not(style) {
+    margin: 16px 0px 0px;
+  }
+}
+.group {
+  display: flex;
+  align-items: center;
+  .label {
+    flex-shrink: 0;
+    width: 100px;
+    text-align: end;
+    padding-right: 16px;
+  }
+  :global(.MuiFormControl-root) {
+    flex-grow: 1;
+  }
+}
+.actions {
+  text-align: end;
+}
+.btn {
+  &:global(.MuiButton-root) {
+    width: 50%;
+  }
+}

@@ -19,3 +19,5 @@ export { default as MenuIcon } from './Menu';
 export { default as SearchIcon } from './Search';
 
 export { default as TagIcon } from './Tag';
+
+export { default as XIcon } from './X';

@@ -1,22 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import './badgeNew.scss';
-// Components
-import BadgeHero from 'components/BadgeHero';
-import { BadgeForm, Badge } from './components';
-// Hooks
+import { useState, useEffect } from 'react';
+import { Container, Grid, Paper } from '@material-ui/core';
+
 import { useInputValue } from 'hooks/useInputValue';
-// Images
+import { BadgeHero } from 'components';
+import { BadgeForm, Badge } from './components';
 import nino_profile from 'assets/nino_profile.jpg';
 import nino from 'assets/nino.jpg';
+import styles from './badgeNew.module.scss';
 
 function BadgeNew(props) {
   const [error, setError] = useState('');
-
-  const firstName = useInputValue('');
-  const lastName = useInputValue('');
-  const mangaTitle = useInputValue('');
-  const avatarImage = useInputValue('');
-  const badgeImage = useInputValue('');
+  const firstName = useInputValue('Nino');
+  const lastName = useInputValue('Nakano');
+  const mangaTitle = useInputValue('5Toubun no Hanayome');
+  const avatarImage = useInputValue(nino);
+  const badgeImage = useInputValue(nino_profile);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,33 +31,37 @@ function BadgeNew(props) {
   }, []);
 
   return (
-    <div className="badge-new">
+    <>
       <BadgeHero title="New Waifu" />
-      <div className="container badge-new__container">
-        <div className="row">
-          <div className="col-md-6">
-            <Badge
-              firstName={firstName.value || 'Nino'}
-              lastName={lastName.value || 'Nakano'}
-              badgeImage={badgeImage.value || nino}
-              avatarImage={avatarImage.value || nino_profile}
-              mangaTitle={mangaTitle.value || '5Toubun no Hanayome'}
-            />
-          </div>
-          <div className="col-md-6">
-            <BadgeForm
-              firstName={firstName}
-              lastName={lastName}
-              badgeImage={badgeImage}
-              avatarImage={avatarImage}
-              mangaTitle={mangaTitle}
-              onSubmit={handleSubmit}
-              error={error}
-            />
-          </div>
-        </div>
-      </div>
-    </div>
+      <Container maxWidth="lg" className={styles.root}>
+        <Paper elevation={0} className={styles.card}>
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={6}>
+              <div className={styles.alt}>
+                <Badge
+                  firstName={firstName.value}
+                  lastName={lastName.value}
+                  badgeImage={badgeImage.value}
+                  avatarImage={avatarImage.value}
+                  mangaTitle={mangaTitle.value}
+                />
+              </div>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <BadgeForm
+                firstName={firstName}
+                lastName={lastName}
+                badgeImage={badgeImage}
+                avatarImage={avatarImage}
+                mangaTitle={mangaTitle}
+                onSubmit={handleSubmit}
+                error={error}
+              />
+            </Grid>
+          </Grid>
+        </Paper>
+      </Container>
+    </>
   );
 }
 

@@ -1,0 +1,20 @@
+.root {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+.card {
+  padding: 16px;
+  overflow: hidden;
+  &:global(.MuiPaper-root) {
+    box-shadow: var(--shadow-elevation-1);
+    border-radius: 5px;
+  }
+}
+.alt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background-color: #f2f6fe;
+  border-radius: 5px;
+}

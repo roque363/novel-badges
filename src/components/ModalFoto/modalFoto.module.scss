@@ -1,0 +1,51 @@
+.root {
+  max-width: 448px;
+  max-height: calc(100% - 64px);
+  position: relative;
+  overflow-y: auto;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+}
+.dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  width: 100%;
+  color: #fff;
+  padding: 20px 0;
+  .title {
+    flex-grow: 1;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .action {
+    flex-shrink: 0;
+  }
+  @media (max-width: 960px) {
+    padding: 10px 0;
+    .title {
+      padding: 0 10px;
+    }
+  }
+}
+.container {
+  height: 100%;
+  width: 100%;
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.2s ease;
+    // border-radius: 0.3rem;
+  }
+}
