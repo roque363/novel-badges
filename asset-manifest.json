@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/novel-badges/static/css/main.25a0cee8.chunk.css",
-    "main.js": "/novel-badges/static/js/main.280aa7ae.chunk.js",
-    "main.js.map": "/novel-badges/static/js/main.280aa7ae.chunk.js.map",
+    "main.js": "/novel-badges/static/js/main.74ed13e7.chunk.js",
+    "main.js.map": "/novel-badges/static/js/main.74ed13e7.chunk.js.map",
     "runtime-main.js": "/novel-badges/static/js/runtime-main.0c09b63d.js",
     "runtime-main.js.map": "/novel-badges/static/js/runtime-main.0c09b63d.js.map",
-    "static/js/2.16bd2a52.chunk.js": "/novel-badges/static/js/2.16bd2a52.chunk.js",
-    "static/js/2.16bd2a52.chunk.js.map": "/novel-badges/static/js/2.16bd2a52.chunk.js.map",
+    "static/js/2.83328f58.chunk.js": "/novel-badges/static/js/2.83328f58.chunk.js",
+    "static/js/2.83328f58.chunk.js.map": "/novel-badges/static/js/2.83328f58.chunk.js.map",
     "index.html": "/novel-badges/index.html",
     "static/css/main.25a0cee8.chunk.css.map": "/novel-badges/static/css/main.25a0cee8.chunk.css.map",
-    "static/js/2.16bd2a52.chunk.js.LICENSE.txt": "/novel-badges/static/js/2.16bd2a52.chunk.js.LICENSE.txt",
+    "static/js/2.83328f58.chunk.js.LICENSE.txt": "/novel-badges/static/js/2.83328f58.chunk.js.LICENSE.txt",
     "static/media/notFound.scss": "/novel-badges/static/media/error.c1e4a7b5.gif",
     "static/media/header.2c58c1b9.png": "/novel-badges/static/media/header.2c58c1b9.png",
     "static/media/nino.5ec2c0d3.jpg": "/novel-badges/static/media/nino.5ec2c0d3.jpg",
@@ -23,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0c09b63d.js",
-    "static/js/2.16bd2a52.chunk.js",
+    "static/js/2.83328f58.chunk.js",
     "static/css/main.25a0cee8.chunk.css",
-    "static/js/main.280aa7ae.chunk.js"
+    "static/js/main.74ed13e7.chunk.js"
   ]
 }
