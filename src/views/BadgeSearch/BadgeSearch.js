@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { Container, Grid, InputBase, IconButton } from '@material-ui/core';
 
-import { anilistService } from 'services';
+import { searchRequest } from 'utils/makeRequestCreator';
 import { BadgeHero, Loader } from 'components';
 import { SearchIcon } from 'icons';
 import MediaCard from './MediaCard';
@@ -11,7 +11,7 @@ import styles from './badgeSearch.module.scss';
 function BadgeSearch() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [isMounted, setMounted] = useState(true);
+  const [isMounted, setMounted] = useState(false);
   const [search, setSearch] = useState('');
   const [series, setSeries] = useState({
     pageInfo: {
@@ -97,31 +97,23 @@ function BadgeSearch() {
     var variables = {
       search: search,
       page: 1,
-      perPage: 18,
+      perPage: 24,
     };
 
-    const res = await anilistService.getMediaList({
-      query: query,
-      variables: variables,
-    });
+    const options = { query: query, variables: variables };
 
-    if (isMounted) {
-      if (!res.info.error) {
-        setSeries(res.data.Page);
-      } else {
-        setError(res.info.message);
-      }
-    }
+    const res = await searchRequest(options);
+    const page = res?.data?.Page;
+
+    setSeries(page);
 
     setLoading(false);
+    setMounted(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
 
   useEffect(() => {
     fetchData();
-    return () => {
-      setMounted(false);
-    };
   }, [fetchData]);
 
   return (
@@ -152,7 +144,7 @@ function BadgeSearch() {
         {!error ? (
           <div className={styles.wrap}>
             <Grid container spacing={3}>
-              {series.media.map((media) => (
+              {series?.media.map((media) => (
                 <Grid item key={media.id} xs={6} sm={4} md={3} lg={2}>
                   <MediaCard media={media} />
                 </Grid>
@@ -163,8 +155,8 @@ function BadgeSearch() {
           `Error: ${error.message}`
         )}
       </Container>
-      {loading && <Loader />}
-      {series.media === 0 && <h3>No encontramos datos</h3>}
+      {loading && !isMounted && <Loader />}
+      {series?.media === 0 && <h3>No encontramos datos</h3>}
     </>
   );
 }
